@@ -1,0 +1,49 @@
+<!-- Header start -->
+<header class="header">
+    <div class="container d-flex align-items-center">
+      <div class-="w-padding-5" style="display: inline;">
+        <a class="logo" href="/">
+            <img src="assets/images/logo-product.png" alt="">
+        </a>
+        
+      </div>
+      <span class="home-title-font w-margin-left-50 d-none d-lg-block">{{apptitle | uppercase}}</span>
+      <nav class="primary-menu text-md-right">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <span class="text-white">
+            {{inUsername}}
+          </span>
+          <mat-icon class="text-white">arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+        <!--
+        <span *ngIf="inOklogin" matTooltip = "{{inFullname}}">
+            {{inUsername}}
+        </span>
+      -->
+        <span *ngIf="inErrorlogin" matTooltip = "{{inFullname}}">
+        
+         
+          <a  (click)="callLogin()" class="login btn btn-primary btn-sm">
+            <span class="text-white">{{'GLOBAL.LOGIN' | translate}}</span>
+          </a>
+       
+        </span>
+      </nav>
+    </div>
+  </header>
+  <!-- Header end -->
+  

@@ -1,0 +1,848 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 23, 2021, 3:17:51 PM
+    Author     : xnava
+*/
+
+.w-super-script {
+    position: relative;
+    top: -10px;
+    font-size: 10px;
+}
+.w-font-r85 {
+    font-size: .85rem;
+}
+.w-font-r75 {
+    font-size: .75rem;
+}
+
+.w-font-r100 {
+    font-size: 1rem;
+}
+.w-font-r150 {
+    font-size: 1.5rem;
+}
+
+.w-font-8 {
+    font-size: 8px !important;
+}
+
+.w-font-10 {
+    font-size: 10px !important;
+}
+
+
+.w-font-12 {
+    font-size: 12px !important;
+}
+
+.w-font-14 {
+    font-size: 14px !important;
+}
+
+.w-font-16 {
+    font-size: 16px !important;
+}
+.w-font-18 {
+    font-size: 18px !important;
+}
+
+.w-font-r25 {
+    font-size: 1.2rem !important;
+}
+
+.w-font-emphasized-color {
+    color: #6c757d;
+}
+.w-font-emphasized-family {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+}
+.w-font-unconspicuous {
+    color: #828c97;
+    font-size: 12px;
+    font-weight: 600;
+}
+.w-uppercase {
+    text-transform:  uppercase;
+}
+@media screen and (max-width: 767px) {
+   
+    .wigo_normal_error {
+        font-size: 14px!important;
+        color:  red!important;
+        font-weight:  400;
+        font-style:  normal;
+    }
+
+    .w-font-main-para {
+        font-family: Verdana, Arial, Helvetica, sans-serif; 
+        font-size: 16.6667px; 
+    }
+    .w-font-main-para-sm {
+        font-family: Verdana, Arial, Helvetica, sans-serif; 
+        font-size: 12.6667px; 
+    }
+    .w-h4 {
+        font-size: 1.0rem;
+        color: #000000; 
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-warn-text {
+        font-size: .8rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-margin-hdr-left {
+        margin-left: 10px;
+    }
+    
+    .w-h6-blue {
+        color: #007bff;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-size: .8rem;
+    }
+    
+    .w-h6-white {
+        color: #ffffff!important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-size: .8rem!important;
+    }
+    
+    .w-h6-gray {
+        font-size: .8rem;
+        color:  #6c757d;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-h7 {
+        font-size: .6rem;
+        color:  #000000;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-emphasized-text-s5 {
+        font-size: .75rem;
+       color: #6c757d;
+       font-weight: 700;
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-emphasized-text-s6 {
+         font-size: .8rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-emphasized-text-s6_5 {
+         font-size: 1.0rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+   
+    .w-emphasized-text-s7 {
+         font-size: .7rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+     .w-h5 {
+        font-size: .75rem;
+        color:  #000000;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-h5-gray {
+        font-size: .75rem;
+        color:  #6c757d;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+   
+    /* Moved from wigobranding.css */
+     .wigo_header_level_1 {
+        font-size: 18px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_3 {
+        font-size: 16px!important;
+        color: #b94a48!important;
+        font-weight:  600;
+        font-style: normal;
+    }
+    .wigo_header_normal_level_3 {
+        font-size: 16px!important;
+        font-weight:  600;
+       
+    }
+    
+     .wigo_header_level_3_blue {
+        font-size: 16px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_4 {
+        font-size: 14px!important;
+        color:  #b94a48!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+    
+    .wigo_header_normal_level_4 {
+        font-size: 14px!important;
+        color:  #0072b1!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+    .wigo_header_level_5 {
+        font-size: 12px!important;
+        color:  #0072b1!important;
+        font-weight:  500;
+        font-style: normal;
+    }
+    
+     .wigo-textfield-view-font-font {
+
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 14px;
+        color:  #333;
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+
+    }
+   
+}
+    
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .wigo_normal_error {
+        font-size: 16px!important;
+        color:  red!important;
+        font-weight:  400;
+        font-style:  normal;
+    }
+    .w-font-main-para {
+        font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; 
+        font-size: 16.6667px; 
+    }
+    .w-font-main-para-sm {
+        font-family: Verdana, Arial, Helvetica, sans-serif; 
+        font-size: 14.6667px; 
+    }
+    .w-warn-text {
+        font-size: .8rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-margin-hdr-left {
+        margin-left: 10px;
+    }
+    
+    .w-h3 {
+        font-size: 1.3rem;
+        color:  #000000;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+
+    .w-h4 {
+        font-size: 1.0rem;
+        color: #000000; 
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+
+    .w-h5 {
+        font-size: .75rem;
+        color:  #000000;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-h5-gray {
+        font-size: .75rem;
+        color:  #6c757d;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+
+    .w-h6 {
+        font-size: 1.0rem;
+        color:  #000000;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-h6-gray {
+        font-size: 1.0rem;
+        color:  #6c757d;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-h6-blue {
+        color: #007bff;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-size: 1rem;
+    }
+    
+    .w-h6-white {
+        color: #ffffff!important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-size: .8rem!important;
+    }
+    
+    .w-h7 {
+        font-size: .6rem;
+        color:  #000000;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+
+    
+    .w-normal-7 {
+        font-size: .8rem;
+        font-weight: 400;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        color: #000000; 
+    }
+
+   
+    .w-emphasized-text-s4 {
+         font-size: 1.3rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-emphasized-text-s5 {
+        font-size: .75rem;
+       color: #6c757d;
+       font-weight: 700;
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-emphasized-text-s6 {
+         font-size: .8rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+     .w-emphasized-text-s6_5 {
+         font-size: 1.0rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+   
+     .w-emphasized-text-s7 {
+         font-size: .7rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    /* from wigobranding.css */
+     .wigo_header_level_1 {
+        font-size: 18px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_3 {
+        font-size: 14px!important;
+        color: #b94a48!important;
+        font-weight:  600;
+        font-style: normal;
+    }
+    .wigo_header_normal_level_3 {
+        font-size: 14px!important;
+        font-weight:  600;
+       
+    }
+    
+     .wigo_header_level_3_blue {
+        font-size: 14px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_4 {
+        font-size: 14px!important;
+        color:  #b94a48!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+    
+    .wigo_header_normal_level_4 {
+        font-size: 14px!important;
+        color:  #0072b1!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+  
+    .wigo_header_level_5 {
+        font-size: 12px!important;
+        color:  #0072b1!important;
+        font-weight:  500;
+        font-style: normal;
+    }
+  
+    .wigo-textfield-view-font-font {
+
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 14px;
+        color:  #333;
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+
+    }
+   
+}
+    
+@media (min-width: 992px) and (max-width: 1199px) {
+    .wigo_normal_error {
+        font-size: 1.2rem!important;
+        color:  red!important;
+        font-weight:  400;
+        font-style:  normal;
+    }
+    .w-font-main-para {
+        font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; 
+        font-size: 18.6667px; 
+    }
+    .w-font-main-para-sm {
+        font-family: Verdana, Arial, Helvetica, sans-serif; 
+        font-size: 16.6667px; 
+    }
+    .w-warn-text {
+        font-size: 1.0rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-margin-hdr-left {
+       
+    }
+    
+    .w-h3 {
+    font-size: 1.75rem;
+    color:  #000000;
+    font-weight: 600;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   
+}
+
+.w-h4 {
+    font-size: 1.5rem;
+    color: #000000; 
+    font-weight: 600;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   
+}
+
+.w-h5 {
+    font-size: 1.1rem;
+    color:  #000000;
+    font-weight: 600;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   
+}
+
+.w-h5-gray {
+    font-size: 1.1rem;
+    color:  #6c757d;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+}
+
+.w-h6 {
+    font-size: 1.0rem;
+    color:  #000000;
+    font-weight: 600;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   
+}
+.w-h6-gray {
+    font-size: 1.0rem;
+    color:  #6c757d;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+}
+    
+.w-h6-blue {
+    color: #007bff;
+    font-weight: 600;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-size: 1rem;
+}
+.w-h6-white {
+        color: #ffffff!important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-size: 1rem!important;
+    }
+       
+
+.w-h7 {
+    font-size: 1rem;
+    color:  #000000;
+    font-weight: 600;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    
+}
+
+.w-normal-7 {
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    color: #000000; 
+}
+
+.w-emphasized-text-s4 {
+     font-size: 1.5rem;
+    color: #6c757d;
+    font-weight: 700;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   
+}
+.w-emphasized-text-s5 {
+        font-size: 1.1rem;
+       color: #6c757d;
+       font-weight: 700;
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+.w-emphasized-text-s6 {
+       font-size: 1.0rem;
+      color: #6c757d;
+      font-weight: 700;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+  }
+  .w-emphasized-text-s6_5 {
+         font-size: 1.1rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+   
+  .w-emphasized-text-s7 {
+         font-size: .7rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    /* form wigobranding.css */
+    .wigo_header_level_1 {
+        font-size: 22px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_3 {
+        font-size: 18px!important;
+        color: #b94a48!important;
+        font-weight:  600;
+        font-style: normal;
+    }
+    .wigo_header_normal_level_3 {
+        font-size: 18px!important;
+        font-weight:  600;
+       
+    }
+    
+     .wigo_header_level_3_blue {
+        font-size: 18px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_4 {
+        font-size: 16px!important;
+        color:  #b94a48!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+    
+    .wigo_header_normal_level_4 {
+        font-size: 16px!important;
+        color:  #0072b1!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+    .wigo_header_level_5 {
+        font-size: 14px!important;
+        color:  #0072b1!important;
+        font-weight:  500;
+        font-style: normal;
+    }
+   
+    .wigo-textfield-view-font-font {
+
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 16px;
+        color:  #333;
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+
+    }
+   
+}
+
+@media screen and (min-width: 1200px) {
+    .wigo_normal_error {
+        font-size: 1.2rem!important;
+        color:  red!important;
+        font-weight:  400;
+        font-style:  normal;
+    }
+    
+    .w-font-main-para {
+        font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; 
+        font-size: 18.6667px; 
+    }
+    .w-font-main-para-sm {
+        font-family: Verdana, Arial, Helvetica, sans-serif; 
+        font-size: 16.6667px; 
+    }
+    .w-warn-text {
+        font-size: 1.2rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-margin-hdr-left {
+        
+    }
+    
+   .w-h3 {
+    font-size: 1.75rem;
+    color:  #000000;
+    font-weight: 600;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   
+    }
+
+    .w-h4 {
+        font-size: 1.5rem;
+        color: #e11010;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
+
+    .w-h5 {
+        font-size: 1.2rem;
+        color:  #000000;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-h5-gray {
+        font-size: 1.2rem;
+        color:  #6c757d;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+
+    .w-h6 {
+        font-size: 1.0rem;
+        color:  #000000;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+
+    .w-h6-gray {
+        font-size: 1.0rem;
+        color:  #6c757d;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-h6-blue {
+           color: #007bff;
+           font-weight: 600;
+           font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+           font-size: 1rem;
+    }
+    .w-h6-white {
+        color: #ffffff!important;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-size: 1rem!important;
+    }
+    
+    .w-h7 {
+        font-size: 1rem;
+        color:  #000000;
+        font-weight: 600;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+
+    .w-normal-7 {
+        font-size: .8rem;
+        font-weight: 400;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        color: #000000; 
+    }
+
+    .w-emphasized-text-s4 {
+         font-size: 1.5rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    
+    .w-emphasized-text-s5 {
+        font-size: 1.2rem;
+       color: #6c757d;
+       font-weight: 700;
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-emphasized-text-s6 {
+        font-size: 1.0rem;
+       color: #6c757d;
+       font-weight: 700;
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-emphasized-text-s6 {
+        font-size: 1.0rem;
+       color: #6c757d;
+       font-weight: 700;
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    .w-emphasized-text-s6_5 {
+         font-size: 1.2rem;
+        color: #6c757d;
+        font-weight: 700;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+   
+    .w-emphasized-text-s7 {
+         font-size: .7rem;
+        color: #6c757d;
+        font-weight: 500;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+    }
+    /* From wigobranding.css */
+    
+    .wigo_header_level_1 {
+        font-size: 22px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_3 {
+        font-size: 18px!important;
+        color: #b94a48!important;
+        font-weight:  600;
+        font-style: normal;
+    }
+    .wigo_header_normal_level_3 {
+        font-size: 18px!important;
+        font-weight:  600;
+       
+    }
+    
+     .wigo_header_level_3_blue {
+        font-size: 18px!important;
+        color: #0072b1; 
+        font-weight:  600;
+        font-style: normal;
+    }
+    
+    .wigo_header_level_4 {
+        font-size: 16px!important;
+        color:  #b94a48!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+    
+    .wigo_header_normal_level_4 {
+        font-size: 16px!important;
+        color:  #0072b1!important;
+        font-weight:  600;
+        font-style:  normal;
+    }
+  
+    .wigo_header_level_5 {
+        font-size: 14px!important;
+        color:  #0072b1!important;
+        font-weight:  500;
+        font-style: normal;
+    }
+     .wigo-textfield-view-font-font {
+
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 18px;
+        color:  #333;
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+
+    }
+   
+}
+
+.w-text-white {
+    color: #ffffff !important;
+}
+
+.w-text-faded {
+    color: grey!important;
+}
+
+.w-bg-faded {
+    background-color: grey!important;
+    color: #ffffff!important;
+}
+.w-bold {
+    font-weight: 900 !important;
+}

@@ -1,0 +1,1779 @@
+/* 
+    Document   : wigocols
+    Created on : Oct 30, 2018, 8:30:18 AM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* Clear floats after the columns */
+
+.w-hide-upload {
+        display: inline-block;
+}
+    
+.w-hide-upload input[type=file] {
+  display:none;
+}
+
+.w-rect-text {
+      height: 90px;
+      width: 90px;
+      color: white;
+      display: flex;
+      background-color: rgb(77, 77, 77);
+      border-radius: 7px;
+      justify-content: center;
+      align-items: center;
+}
+.wigo-top-border {
+    border-top: 2px solid #000;
+}
+
+.wigo-bottom-border {
+    border-bottom: 2px solid #000;
+}
+
+.wigo-right-border {
+    border-right: 2px solid #000;
+}
+
+.wigo-left-border {
+    border-left: 2px solid #000;
+}
+
+.wigo-left-border-white {
+    border-left: 2px solid #fff;
+}
+
+.wigo-comments-div {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wigo-comments-div-5 {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.wigo-table-header {
+    background-color: 	#E5F7F9;
+    color: #000000;
+    font-weight: 600;
+    
+}
+
+.wigo-table-rows {
+    background-color: 	#ffffff;
+    color: #000000;
+    display: table-cell;
+}
+
+.w-table-header-borders {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+
+.wigo-table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+    
+.wigo-table-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wigo-separate-divs {
+    position: relative; 
+    top: 25px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.wigo-separate-divs-top-10 {
+    position: relative; 
+    top: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.wigo-separate-divs-top-5 {
+    position: relative; 
+    top: 5px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.wigo-separate-divs-top-5-offset-10 {
+    position: relative; 
+    top: -10px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    
+}
+
+
+.wigo-separate-divs-10 {
+    position: relative; 
+    top: 10px;
+    
+}
+
+.wigo-cols-neg-offset-minus20{
+    margin-left: -40px;
+    
+}
+
+
+.wigo-cols-rm-padding-right {
+   
+    
+}
+.w-float-right {
+    float: right!important;
+}
+
+@media screen and (max-width: 767px) {
+    .w-resp-text-right {
+        text-align: left!important;
+    }
+    .w-resp-horiz-flex {
+        display: flex;
+    }
+    .w-float-lg-right {
+        float: left!important;
+    }
+    .w-hidden-sm {
+        display: none;
+    }
+     .w-resp-pad-left-50 {
+        padding-left: 10px;
+    }
+    .w-resp-pad-left-100 {
+        padding-left: 10px;
+    }
+    .w-resp-pad-left-200 {
+        padding-left: 10px;
+    }
+    .w-xs-block-md-flex {
+        display: block;
+    }
+    .w-fright-xs-left {
+        float: left!important;
+    }
+    .w-container-fluid {
+        padding-right: 5px!important;
+        padding-left: 5px!important;
+    }
+    .wigo-cols-xs-12 {
+        width: 100%;
+        
+
+    }
+    
+    .wigo-cols-xs-3 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-cols-xs-7 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-xs-noshow {
+        display: none;
+    }
+    .w-show-if-md-minus {
+        display: block;
+        
+    }
+    .w-inlineblock-if-md-minus {
+        display: inline-block;
+        
+    }
+    .w-lg-text-right {
+        text-align: left !important;
+    }
+    .w-resp-90-50 {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-resp-text-right {
+        text-align: left!important;
+    }
+    .w-resp-horiz-flex {
+        display: flex;
+    }
+    .w-float-lg-right {
+        float: left!important;
+    }
+    
+    .w-hidden-md {
+        display: none;
+    }
+    .w-xs-block-md-flex {
+        display: block;
+    }
+    .w-fright-xs-left {
+        float: left!important;
+    }
+    
+    .w-container-fluid {
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+    }
+    .wigo-cols-sm-12 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-cols-sm-3 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-cols-sm-7 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-sm-font-size {
+        font-size: 11px;
+    }
+    
+    .wigo-sm-noshow {
+        display: none;
+    }
+    .w-resp-pad-left-50 {
+        padding-left: 10px;
+    }
+    
+    .w-resp-pad-left-100 {
+        padding-left: 10px;
+    }
+    .w-resp-pad-left-200 {
+        padding-left: 10px;
+    }
+    .w-show-if-md-minus {
+        display: block;
+        
+    }
+    .w-show-if-md-minus-flex {
+        display: flex;
+        
+    }
+    .w-inlineblock-if-md-minus {
+        display: inline-block;
+        
+    }
+    .w-lg-text-right {
+        text-align: left !important;
+    }
+    .w-resp-90-50 {
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-resp-text-right {
+        text-align: right!important;
+    }
+    .w-resp-horiz-flex {
+        display: inline;
+    }
+    .w-float-lg-right {
+        float: right!important;
+    }
+    .w-hidden-lg {
+        display: none;
+    }
+    .w-xs-block-md-flex {
+        display: flex;
+    }
+     .w-fright-xs-left {
+        float: right!important;
+    }
+    .w-container-fluid {
+        padding-left: 100px!important;
+        padding-right: 100px!important;
+
+    }
+    .wigo-cols-md-12 {
+        width: 100%;
+        display: table-cell;
+
+    }
+    
+    .wigo-cols-md-2 {
+        float: left;
+        width: 16.6%;
+       
+        
+
+    }
+    
+    .wigo-cols-md-4 {
+        float: left;
+        width: 33.3%;
+    }
+    
+    
+    
+    .wigo-cols-md-7 {
+        width: 58.33%;
+        float: left;
+        
+    }
+    
+    .wigo-md-noshow {
+        display: none;
+    }
+    
+    .w-resp-pad-left-50 {
+        padding-left: 50px!important;
+    }
+    .w-resp-pad-left-100 {
+        padding-left: 100px!important;
+    }
+    .w-resp-pad-left-200 {
+        padding-left: 200px;
+    }
+    .w-show-if-md-minus {
+        display: none;
+    }
+    .w-show-if-md-minus-flex {
+        display: none;
+        
+    }
+     .w-inlineblock-if-md-minus {
+        display: none;
+        
+    }
+    .w-lg-text-right {
+        text-align: right !important;
+    }
+    .w-resp-90-50 {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .w-resp-text-right {
+        text-align: right!important;
+    }
+    .w-resp-horiz-flex {
+        display: inline;
+    }
+    .w-float-lg-right {
+        float: right!important;
+    }
+    .w-hidden-xl {
+        display: none;
+    }
+    .w-xs-block-md-flex {
+        display: flex;
+    }
+     .w-fright-xs-left {
+        float: right!important;
+    }
+    .w-container-fluid {
+        padding-left: 150px!important;
+        padding-right: 150px!important;
+    }
+     .wigo-cols-lg-12 {
+        width: 100%;
+        margin-left: 5px;
+        display: table-cell;
+
+    }
+    
+     .wigo-cols-lg-2 {
+        float: left;
+        width: 16.6%;
+       
+        
+
+    }
+    
+    .wigo-cols-lg-4 {
+        float: left;
+        width: 33.3%;
+    }
+    
+    
+    
+    .wigo-cols-lg-7 {
+        width: 58.33%;
+        float: left;
+        
+    }
+    
+    .wigo-lg-noshow {
+        display: none;
+    }
+    .w-resp-pad-left-50 {
+        padding-left: 50px!important;
+    }
+    .w-resp-pad-left-100 {
+        padding-left: 100px!important;
+    }
+    .w-resp-pad-left-200 {
+        padding-left: 200px!important;
+    }
+    .w-show-if-md-minus {
+        display: none;
+    }
+    .w-show-if-md-minus-flex {
+        display: none;
+        
+    }
+     .w-inlineblock-if-md-minus {
+        display: none;
+        
+    }
+    .w-lg-text-right {
+        text-align: right !important;
+    }
+    .w-resp-90-50 {
+        width: 50%;
+    }
+}
+
+table-rezizable {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+td-resizable {
+  border: 2px solid black;
+  padding: 0;
+  margin: 0px;
+  overflow: auto;
+}
+
+th-resizable {
+  border: 2px solid black;
+  padding: 0;
+  margin: 0px;
+  overflow: auto;
+}
+
+div-rezizable {
+  resize: both;
+  overflow: auto;
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid black;
+  display:block;
+
+}
+
+td div-rezizable {
+  border: 0;
+  width: auto;
+  height: auto;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+/* 
+    Document   : wigocols
+    Created on : Oct 30, 2018, 8:30:18 AM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* Clear floats after the columns */
+
+
+
+.w-circle {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.w-align-bottom {
+    bottom: 5px !important;
+    position: absolute;
+}
+
+.w-font-r65 {
+    font-size: .65rem;
+}
+
+
+.w-font-r75 {
+    font-size: .75rem;
+}
+
+
+.w-font-r85 {
+    font-size: .85rem;
+}
+.w-font-8 {
+    font-size: 8px !important;
+}
+
+.w-font-10 {
+    font-size: 10px !important;
+}
+
+
+.w-font-12 {
+    font-size: 12px !important;
+}
+
+.w-font-14 {
+    font-size: .875rem !important;
+}
+
+.w-font-16 {
+    font-size: 16px !important;
+}
+
+.w-font-r25 {
+    font-size: 1.2rem !important;
+}
+.w-table-draggable {
+    padding: 5px;
+    cursor: move;
+    
+}
+.w-m-height-50 {
+    min-height: 50px !important;
+}
+
+.w-m-height-80 {
+    min-height: 80px !important;
+}
+.w-m-height-100 {
+    min-height: 100px !important;
+}
+
+.w-m-height-150 {
+    min-height: 150px !important;
+}
+
+.w-cursor-link {
+    cursor: pointer;
+    
+}
+.w-cursor-disabled {
+    cursor: not-allowed;
+}
+.w-cursor-grab {
+    cursor:  grab;
+}
+
+.w-background-white {
+    background-color: #ffffff;
+}
+
+.w-background-hdrs {
+    background-color: #f2fbfd !important;
+}
+
+.w-col-red {
+    color: red !important;
+}
+
+.w-col-darkgrey {
+    color: #a9a9a9!important;
+}
+
+.w-col-green {
+    color: green !important;
+}
+
+.w-col-blue {
+    color: blue !important;
+}
+
+.w-col-magnenta {
+    color: #ff9900 !important;
+}
+
+.w-col-yellow {
+    color: yellow !important;
+}
+
+.w-col-purple {
+    color:  #800080 !important;
+}
+
+.w-col-brown {
+    color: #A52A2A !important;
+}
+.w-col-link {
+    color:  #007bff !important;
+}
+
+.w-col-white {
+    color: #ffffff !important;
+}
+
+.w-col-black {
+    color: #000000 !important;
+}
+
+.w-divider-1-0 {
+    border: 1px solid  #dddddd;
+}
+
+
+.w-divider-1-5-5 {
+    border: 1px solid  #dddddd;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.w-divider-2 {
+    border: 2px solid #dddddd;
+}
+
+.w-border-plain {
+    border: 1px solid #000000;
+}
+.w-border-bottom-1 {
+   border-bottom: 1px solid #dddddd; 
+}
+.w-border-top-1 {
+   border-top: 1px solid #dddddd; 
+}
+.w-border-dashed-1 {
+    border: 1px dashed #dddddd;
+}
+
+.w-border-right-primary {
+    border-right: 1px solid #007BFF;
+}
+.w-v-divider {
+     width: 1px; 
+     border-left: 1px solid  #dddddd;
+}
+
+.w-cursor-drag {
+    cursor: move;
+}
+
+.w-top-300 {
+    margin-top: 300px!important;
+}
+
+.w-top-200 {
+    margin-top: 200px!important;
+}
+.w-top-150 {
+    margin-top: 150px;
+}
+
+.w-top-140 {
+    margin-top: 140px;
+}
+.w-top-130 {
+    margin-top: 130px;
+}
+.w-top-120 {
+    margin-top: 120px;
+}
+.w-top-110 {
+    margin-top: 110px;
+}
+.w-top-100 {
+    margin-top: 100px;
+}
+
+.w-top-60 {
+    margin-top: 60px !important;
+}
+
+.w-top--60 {
+    margin-top: -60px !important;
+}
+
+.w-top-70 {
+    margin-top: 70px !important;
+}
+
+.w-top-50 {
+    margin-top: 50px;
+}
+
+
+.w-top--50 {
+    margin-top: -50px !important;
+}
+
+.w-top--35 {
+    margin-top: -30px;
+}
+
+.w-top-30 {
+    margin-top: 30px;
+}
+
+.w-top--30 {
+    margin-top: -30px;
+}
+
+
+.w-top-20 {
+    margin-top: 20px;
+}
+
+
+.w-top--20 {
+    margin-top: -20px;
+}
+
+.w-top--15 {
+    margin-top: -15px;
+}
+
+.w-top-10 {
+    margin-top: 10px;
+}
+.w-top--10 {
+    margin-top: -10px;
+}
+.w-top-5 {
+    margin-top: 5px !important;
+}
+
+.w-bottom-5 {
+    margin-bottom: 5px !important;
+}
+.w-bottom-10 {
+    margin-bottom: 10px !important;
+}
+.w-bottom-20 {
+    margin-bottom: 20px !important;
+}
+
+.w-bottom-50 {
+    margin-bottom: 50px;
+}
+
+.w-bottom-100 {
+    margin-bottom: 100px;
+}
+
+.w-bottom-200 {
+    margin-bottom: 200px;
+}
+
+.w-bottom-300 {
+    margin-bottom: 300px;
+}
+.w-margin-left-5 {
+    margin-left: 5px;
+}
+
+.w-margin-left-10 {
+    margin-left: 10px !important;
+}
+
+
+.w-margin-left-minus-10 {
+    margin-left: -10px !important;
+}
+
+.w-margin-left-minus-30 {
+    margin-left: -30px !important;
+}
+
+.w-margin-left-15 {
+    margin-left: 15px !important;
+}
+
+.w-margin-left--15 {
+    margin-left: -15px !important;
+}
+.w-margin-left-20 {
+    margin-left: 20px !important;
+}
+
+.w-margin-left-minus-20 {
+    margin-left: -20px !important;
+}
+
+.w-margin-left-30 {
+    margin-left: 30px !important;
+}
+
+.w-margin-left-minus-30 {
+    margin-left: -30px !important;
+}
+
+.w-margin-left-50 {
+    margin-left: 50px !important;
+}
+
+.w-margin-left-60 {
+    margin-left: 60px !important;
+}
+
+
+.w-padding-left-0 {
+    padding-left: 0px !important;
+}
+
+.w-padding-left-5 {
+    padding-left: 5px !important;
+}
+
+.w-padding-left-10 {
+    padding-left: 10px;
+}
+.w-padding-left-20 {
+    padding-left: 20px!important;
+}
+
+.w-padding-left-25p {
+    padding-left: 25%;
+}
+.w-padding-left-50 {
+    padding-left: 50px!important;
+}
+.w-padding-left-250 {
+    padding-left: 250px!important;
+}
+
+.w-padding-right-5 {
+    padding-right: 5px !important;
+}
+.w-padding-right-10 {
+    padding-right: 10px !important;
+}
+
+
+.w-padding-right-20 {
+    padding-right: 20px !important;
+}
+.w-padding-right-50 {
+    padding-right: 50px !important;
+}
+
+
+.w-padding-bottom-5 {
+    padding-bottom: 5px !important;
+}
+
+.w-margin-right-5 {
+    margin-right: 5px;
+}
+
+.w-margin-right-10 {
+    margin-right: 10px;
+}
+
+.w-margin-right-20 {
+    margin-right: 20px;
+}
+
+
+.w-margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.w-margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.w-margin-bottom-100 {
+    margin-bottom: 100px;
+}
+.w-margin-bottom-200 {
+    margin-bottom: 200px;
+}
+
+.w-padding-5 {
+    padding: .31rem;
+}
+
+.w-padding-10 {
+    padding: .65rem;
+}
+
+.w-padding-20 {
+    padding: .80rem;
+}
+
+.w-padding-25-p {
+    padding: 25%;
+}
+
+.w-padding-30 {
+    padding: 30px;
+}
+
+.w-padding-100 {
+    padding: 3rem;
+}
+.w-padding-150 {
+    padding: 6rem!important;
+}
+.w-padding-top-0 {
+    padding-top: 0px;
+}
+
+.w-padding-right-5 {
+    padding-right: 5px;
+}
+
+.w-padding-right-30 {
+    padding-right: 30px;
+}
+
+.w-padding-right-50 {
+    padding-right: 50px;
+}
+
+
+.w-padding-right-20 {
+    padding-right: 20px;
+}
+
+.w-padding-right-100 {
+    padding-right: 100px;
+}
+
+.w-padding-bottom-0 {
+    padding-bottom: 0px;
+}
+
+.w-padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.w-padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.w-padding-bottom-30 {
+    padding-bottom: 30px;
+}
+.w-padding-bottom-40 {
+    padding-bottom: 40px;
+}
+
+.w-padding-bottom-50 {
+    padding-bottom: 50px;
+}
+
+.w-padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
+.w-padding-top-10 {
+    padding-top: 10px;
+}
+
+.w-padding-top-15 {
+    padding-top: 15px!important;
+}
+
+.w-padding-top-20 {
+    padding-top: 20px!important;
+}
+
+.w-padding-top-30 {
+    padding-top: 30px;
+}
+
+.w-width-0 {
+    width: 0%;
+}
+
+
+.w-width-5 {
+    width: 5%;
+}
+
+.w-width-10 {
+    width: 10% !important;
+}
+
+
+.w-width-15 {
+    width: 15% !important;
+}
+
+.w-width-20 {
+    width: 20%;
+}
+.w-width-20p {
+    width: 20px;
+}
+
+
+.w-width-30 {
+    width: 30%;
+}
+
+.w-width-40 {
+    width: 40%;
+}
+.w-width-50 {
+    width: 50%;
+}
+.w-width-70 {
+    width: 70%;
+}
+
+.w-width-80 {
+    width: 80%;
+}
+
+.w-width-85 {
+    width: 85% !important;
+}
+
+.w-width-90 {
+    width: 90% !important;
+}
+.w-width-90p {
+    width: 90px !important;
+}
+.w-width-95 {
+    width: 95%;
+}
+
+
+.w-width-full {
+    width: 100% !important;
+}
+
+.w-width-200p {
+    width: 200px;
+}
+
+.w-width-300p {
+    width: 300px;
+}
+.w-pull-right {
+    float: right;
+}
+
+.w-top-border-light {
+    border-top: 1px solid  #dddddd;
+}
+
+.wigo-top-border {
+    border-top: 2px solid #000;
+}
+
+.w-bottom-border-light {
+    border-bottom: 1px solid #dddddd;
+    
+}
+.wigo-bottom-border {
+    border-bottom: 2px solid #000;
+}
+
+.wigo-right-border {
+    border-right: 2px solid #000;
+}
+
+.wigo-right-border-gray {
+    border-right: 1px solid  #dddddd;
+}
+
+
+.wigo-left-border {
+    border-left: 2px solid #000;
+}
+
+.wigo-left-border-white {
+    border-left: 2px solid #fff;
+}
+
+.w-img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.wigo-comments-div {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wigo-comments-div-5 {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.wigo-table-header {
+    background-color: 	#E5F7F9;
+    color: #000000;
+    font-weight: 600;
+    
+}
+
+.wigo-table-rows {
+    background-color: 	#ffffff;
+    color: #000000;
+    display: table-cell;
+}
+
+.w-table-header-borders {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+
+.wigo-table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+    
+.wigo-table-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wigo-separate-divs {
+    position: relative; 
+    top: 25px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.wigo-separate-divs-top-10 {
+    position: relative; 
+    top: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.wigo-separate-divs-top-5 {
+    position: relative; 
+    top: 5px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.wigo-separate-divs-top-5-offset-10 {
+    position: relative; 
+    top: -10px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    
+}
+
+
+.wigo-separate-divs-10 {
+    position: relative; 
+    top: 10px;
+    
+}
+
+.wigo-cols-neg-offset-minus20{
+    margin-left: -40px;
+    
+}
+
+
+.wigo-cols-rm-padding-right {
+   
+    
+}
+
+
+.w-scale-30 {
+   
+    width: 100px;
+    height: 100px;
+    transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    -o-transform: scale(0.3);
+}
+
+.w-scale-50 {
+   
+  
+    width: 100px;
+    height: 100px;
+    transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .w-width-lg-80-md-90 {
+        width: 90%;
+    }
+
+    .w-padding-left-lg-100 {
+        padding-left: 10px!important;
+    }
+    .w-sm-left-md-right {
+        text-align: left!important;
+    }
+    .w-width-sm-100-md-20 {
+        width: 100%;
+    }
+    .w-width-sm-100-md-40 {
+        width: 100%;
+    }
+  
+    
+    .w-width-50-no-sm {
+        
+    }
+   
+    .w-width-50-sm-100 {
+        width: 100%!important;
+    }
+    .w-width-50-sm-95 {
+        width: 95%!important;
+    }
+    .w-width-50-sm-90 {
+        width: 90%!important;
+    }
+    .w-center-circle {
+        display: block;
+        width: 250px;
+        height: 250px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        margin-left: -125px;
+        margin-right: -125px;
+    }
+    
+    
+    .w-margin-right-md-20 {
+    }
+    .w-margin-right-md-30 {
+    }
+
+    .w-padding-right-md-30 {
+    }
+    .w-padding-right-md-40 {
+    }
+
+    .wigo-cols-xs-12 {
+        width: 100%;
+        
+
+    }
+    
+    .wigo-cols-xs-3 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-cols-xs-7 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-xs-noshow {
+        display: none;
+    }
+    
+    .wigo-sm-font-size {
+        font-size: 12px !important;
+    }
+    
+    .wigo-lg-font-size {
+        font-size: 1.0rem !important;
+    }
+    
+    .w-side-mnu-font {
+        font-size: .75rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-width-lg-80-md-90 {
+        width: 90%;
+    }
+
+    .w-padding-left-lg-100 {
+        padding-left: 10px!important;
+    }
+    .w-sm-left-md-right {
+        text-align: left!important;
+    }
+    
+    .w-width-sm-100-md-20 {
+        width: 40%;
+    }
+    .w-width-sm-100-md-40 {
+        width: 50%;
+    }
+  
+   
+    .w-width-50-sm-100 {
+        width: 100%!important;
+    }
+    .w-width-50-sm-95 {
+        width: 95%!important;
+    }
+    .w-width-50-sm-90 {
+        width: 90%!important;
+    }
+    .w-width-50-no-sm {
+        
+    }
+    .w-center-circle {
+        display: block;
+        width: 250px;
+        height: 250px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        position: absolute;
+         top: 110%;
+        left: 50%;
+        margin-left: -125px;
+        margin-right: -125px;
+    }
+    
+    .w-margin-right-md-20 {
+    }
+    .w-margin-right-md-30 {
+    }
+    .w-padding-right-md-30 {
+    }
+    .w-padding-right-md-40 {
+    }
+
+    .wigo-cols-sm-12 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-cols-sm-3 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-cols-sm-7 {
+        width: 100%;
+        display: block;
+
+    }
+    
+    .wigo-sm-font-size {
+        font-size: 12px !important;
+    }
+    .wigo-lg-font-size {
+        font-size: 1rem !important;
+    }
+    .wigo-sm-x-font-size {
+        font-size: 12px !important;
+    }
+    
+    .wigo-sm-noshow {
+        display: none;
+    }
+    
+    .w-side-mnu-font {
+        font-size: .80rem !important;
+    }
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-width-lg-80-md-90 {
+        width: 80%;
+    }
+
+    .w-padding-left-lg-100 {
+        padding-left: 50px!important;
+    }
+    .w-sm-left-md-right {
+        text-align: right!important;
+    }
+    
+    .w-width-sm-100-md-20 {
+        width: 30%;
+    }
+    .w-width-sm-100-md-40 {
+        width: 40%;
+    }
+  
+    
+    .w-width-50-sm-100 {
+        width: 50%!important;
+    }
+    .w-width-50-sm-95 {
+        width: 50%!important;
+    }
+    .w-width-50-sm-90 {
+        width: 50%!important;
+    }
+    .w-width-50-no-sm {
+        width: 50%!important;
+    }
+    .w-center-circle {
+        display: block;
+        width: 450px;
+        height: 450px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        position: absolute;
+         top: 40%;
+        left: 50%;
+        margin-left: -225px;
+        margin-right: -225px;
+    }
+    
+    .w-margin-right-md-20 {
+        margin-right: 20px !important;
+    }
+    .w-margin-right-md-30 {
+        margin-right: 30px !important;
+    }
+    .w-padding-right-md-30 {
+        padding-right: 30px !important;
+    }
+
+     .w-padding-right-md-40 {
+         padding-right: 40px !important;
+    }
+
+    .wigo-cols-md-12 {
+        width: 100%;
+        display: table-cell;
+
+    }
+    
+    .wigo-cols-md-2 {
+        float: left;
+        width: 16.6%;
+       
+        
+
+    }
+    
+    .wigo-cols-md-4 {
+        float: left;
+        width: 33.3%;
+    }
+    
+    
+    
+    .wigo-cols-md-7 {
+        width: 58.33%;
+        float: left;
+        
+    }
+    
+    
+    
+    .wigo-md-noshow {
+        display: none;
+    }
+    
+    .wigo-sm-font-size {
+        font-size: 14px !important;
+    }
+    .wigo-lg-font-size {
+        font-size: 1.1rem !important;
+    }
+    
+    .w-side-mnu-font {
+        font-size: 1.0rem !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .w-width-lg-80-md-90 {
+        width: 80%;
+    }
+
+    .w-padding-left-lg-100 {
+        padding-left: 100px!important;
+    }
+    .w-sm-left-md-right {
+        text-align: right!important;
+    }
+    
+    .w-width-sm-100-md-20 {
+        width: 20%;
+    }
+    .w-width-sm-100-md-40 {
+        width: 40%;
+    }
+  
+   
+    .w-width-50-sm-100 {
+        width: 50%!important;
+    }
+    .w-width-50-sm-95 {
+        width: 50%!important;
+    }
+    .w-width-50-sm-90 {
+        width: 50%!important;
+    }
+    .w-width-50-no-sm {
+        width: 50%!important;
+    }
+    .w-center-circle {
+        display: block;
+        width: 450px;
+        height: 450px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        position: absolute;
+         top: 40%;
+        left: 50%;
+        margin-left: -225px;
+        margin-right: -225px;
+    }
+    
+    .w-margin-right-md-20 {
+        margin-right: 20px !important;
+    }
+    .w-margin-right-md-30 {
+        margin-right: 30px !important;
+    }
+    .w-padding-right-md-40 {
+        padding-right: 40px !important;
+    }
+
+     .wigo-cols-lg-12 {
+        width: 100%;
+        margin-left: 5px;
+        display: table-cell;
+
+    }
+    
+     .wigo-cols-lg-2 {
+        float: left;
+        width: 16.6%;
+       
+        
+
+    }
+    
+    .wigo-cols-lg-4 {
+        float: left;
+        width: 33.3%;
+    }
+    
+    
+    
+    .wigo-cols-lg-7 {
+        width: 58.33%;
+        float: left;
+        
+    }
+    
+    .wigo-lg-noshow {
+        display: none;
+    }
+ 
+    .wigo-sm-font-size {
+        font-size: 14px !important;
+    }
+    
+    .wigo-lg-font-size {
+        font-size: 1.3rem !important;
+    }
+    
+    .w-side-mnu-font {
+        font-size: 1.0rem !important;
+    }
+}
+
+table-rezizable {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+td-resizable {
+  border: 2px solid black;
+  padding: 0;
+  margin: 0px;
+  overflow: auto;
+}
+
+th-resizable {
+  border: 2px solid black;
+  padding: 0;
+  margin: 0px;
+  overflow: auto;
+}
+
+div-rezizable {
+  resize: both;
+  overflow: auto;
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid black;
+  display:block;
+
+}
+
+td div-rezizable {
+  border: 0;
+  width: auto;
+  height: auto;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .wboard-container {
+    }
+    
+    .w-top-container {
+        margin-top: 70px !important;
+    }
+    .w-dinline {
+        display: block!important;
+    }
+    .w-xs-noshow {
+        display: none;
+    }
+    .w-sm-noshow {
+        display: none;
+    }
+    .w-md-noshow {
+    }
+    .w-lg-noshow {
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .wboard-container {
+    }
+    
+     .w-top-container {
+        margin-top: 70px !important;
+    }
+    .w-dinline {
+        display: block!important;
+    }
+    .w-xs-noshow {
+        display: none;
+    }
+    .w-sm-noshow {
+        display: none;
+    }
+    .w-md-noshow {
+    }
+    .w-lg-noshow {
+    }
+    
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .wboard-container {
+       
+    }
+    
+     .w-top-container {
+        margin-top: 100px !important;
+    }
+    .w-dinline {
+        display: inline!important;
+    }
+    .w-xs-noshow {
+    }
+    .w-sm-noshow {
+    }
+    .w-md-noshow {
+        display: none;
+    }
+    .w-lg-noshow {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .wboard-container {
+
+    }
+    
+    .w-top-container {
+        margin-top: 100px !important;
+    }
+    .w-dinline {
+        display: inline!important;
+    }
+    .w-xs-noshow {
+    }
+    .w-sm-noshow {
+    }
+    .w-md-noshow {
+        display: none;
+    }
+    .w-lg-noshow {
+        display: none;
+    }
+
+}
