@@ -1,0 +1,220 @@
+/* 
+    Document   : innomaster
+    Created on : Mar 9, 2019, 3:39:15 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+ .comm-main-dash {
+    position: relative; 
+    top: 10%; 
+    left: 20%; 
+    width: 80%; 
+    height: 80px; 
+}
+
+
+.inno_phase_prop  {
+    background: #ffff00!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+    
+}
+
+.inno_phase_lrev  {
+    background: #ffc000!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+.inno_phase_eval  {
+    background: #ff6600!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+.inno_phase_appr  {
+    background: #66FF33!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+.inno_phase_impl  {
+    background: #00B050!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+.inno_phase_inpr  {
+    background: #00CCFF!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+.inno_phase_fini  {
+    background: #00004d!important; 
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+
+.inno_phase_rand  {
+    background: #cce6ff!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+.inno_phase_arch  {
+    background: #07B0E3!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+
+.inno_phase_reje  {
+    background: #07B0E3!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -webkit-border-radius: 50%!important;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .w-ws-left-pad {
+        padding-left: 5px;
+    }
+    #innomaster_show_more_opts {
+        margin-top: 0px;
+    }
+    
+    .w-no-innos-img {
+        width: 250px;
+        height: 250px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+       
+    }
+    
+    .dateinfo-right-margin {
+        margin-left: 0px;
+    }
+    /* committee dashboard */
+   
+                       
+    /* end committee dashboard */
+   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-ws-left-pad {
+        padding-left: 5px;
+    }
+    #innomaster_show_more_opts {
+        margin-top: 0px;
+    }
+     .w-no-innos-img {
+        width: 250px;
+        height: 250px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+       
+    }
+    .dateinfo-right-margin {
+        margin-left: 0px;
+    }
+   
+     /* committee dashboard */
+  
+                       
+    /* end committee dashboard */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-ws-left-pad {
+        padding-left: 30px;
+    }
+    #innomaster_show_more_opts {
+        margin-top: -20px;
+    }
+     .w-no-innos-img {
+        width: 350px;
+        height: 350px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+       
+    }
+    .dateinfo-right-margin {
+        margin-right: 50px;
+    }
+   
+}
+
+@media screen and (min-width: 1200px) {
+    .w-ws-left-pad {
+        padding-left: 50px;
+    }
+    #innomaster_show_more_opts {
+        margin-top: -25px;
+    }
+     .w-no-innos-img {
+        width: 350px;
+        height: 350px;
+        background: #E6E7ED;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+       
+    }
+    .dateinfo-right-margin {
+        margin-right: 50px;
+    }
+   
+}

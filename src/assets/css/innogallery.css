@@ -1,0 +1,46 @@
+/* 
+    Document   : innohome
+    Created on : Dec 10, 2018, 5:06:09 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+@media screen and (max-width: 767px) {
+    .gallery-logo {
+        width: auto;
+        height: auto;
+        max-height: 200px;
+        max-width: 200px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .gallery-logo {
+        width: auto;
+        height: auto;
+        max-height: 200px;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .gallery-logo {
+        width: auto;
+        height: auto;
+        max-height: 200px;
+        max-width: 200px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .gallery-logo {
+        width: auto;
+        height: auto;
+        max-height: 200px;
+        max-width: 200px;
+    }
+}
+

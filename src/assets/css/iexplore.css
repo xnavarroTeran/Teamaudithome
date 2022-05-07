@@ -1,0 +1,249 @@
+/* 
+    Document   : iexplore
+    Created on : Dec 1, 2018, 3:55:16 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.wigo-postit {
+   
+}
+
+.wigo-postit-body {
+  text-decoration:none;
+  display:block;
+ 
+  padding:1em;
+  /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+
+.wigo-postit div {
+    
+}
+
+
+
+.wigo-postit h5  {
+    color: #000!important;
+}
+
+.postit-data-content {
+    display: table;
+    width: 100%;
+    padding: 1.5rem;
+    min-height: 140px;
+}
+
+.postit-data-header {
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.postit-data-footer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+    line-height: 20px;
+    /*background: #fff;*/
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+
+    /*position: absolute;
+    left: 0;
+    bottom: 0;*/
+    padding: 10px 15px;
+    border-top: 1px solid white;
+    
+}
+
+.ul.postit-tools { 
+    padding: 5px; 
+    color: #000!important;
+}
+
+ul.postit-tools li {
+    position: relative;
+    float: right;
+    width: auto;
+    margin: 0 0 0 12px;
+    display: inline;
+    font-size: 13px;
+    line-height: 1;
+    color: #000;
+}
+ul.postit-tools li i { font-size: 16px; }
+ul.postit-tools .cta-vote .voted i { color: #000; }
+ul.postit-tools li a { font-size: 16px; color: #000!important;}
+
+ul.postit-tools-G li a, ul.postit-tools-A li a, ul.postit-tools-I li a,
+ul.postit-tools-D li a, ul.postit-tools-S li a {
+    font-size: 16px; 
+    color: #000!important;
+}
+
+ul.postit-tools-C li a, ul.postit-tools-E li a, 
+ul.postit-tools-P li a, ul.postit-tools-R li a, ul.postit-tools-Y li a {
+    font-size: 16px; 
+    color: #000!important;
+}
+
+board .postit-data-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.postit-data-footer .category {
+    position: relative;
+    line-height: 20px;
+    float: left;
+}
+.postit-data-footer .category span { line-height: inherit; }
+.postit-data-footer .category i { margin-top: 5px; }
+.postit-data-footer .owners {
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+}
+.postit-data-footer .owners a { color: #07b0e3; }
+.postit-data-footer .owners a:hover { color: #046380; }
+
+.postit-data-header span,
+.postit-data-footer .category span {
+    position: relative;
+    display: inline;
+    float: left;
+    font-size: 12px; 
+    line-height: 1;
+}
+
+
+.postit-data-content p {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    font-family:arial,sans-serif;
+}
+
+.postit-data-content h5 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family:arial,sans-serif;
+}
+
+
+.postit-notification-sing {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ef0707;
+}
+
+.wigo-postit-font-normal {
+    color: #000!important;
+    
+}
+
+.wigo-postit-font-white {
+    color: #fff!important;
+    
+}
+
+.postit-a-G a, .postit-a-A a, .postit-a-I a, postit-a-D, .postit-a-S a {
+    color: #000!important;
+    font-size: 14px!important;
+    font-weight: 600!important;
+}
+
+.postit-a-C a, .postit-a-E a, .postit-a-P a, .postit-a-R a, .postit-a-Y a {
+    color: #000!important;
+    font-size: 14px!important;
+    font-weight: 600!important;
+    
+}
+
+
+.postit-post-time {
+    float: right;
+    color: #000;
+    font-size: 14px;
+    line-height: 1;
+    
+}
+
+.postit-post-time-G, .postit-post-time-A, .postit-post-time-I, .postit-post-time-S,m.postit-post-time-D {
+    float: right;
+    color: #000;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.postit-post-time-C, .postit-post-time-E, .postit-post-time-P,
+.postit-post-time-R, .postit-post-time-Y {
+    float: right;
+    color: #000;
+    font-size: 14px;
+    line-height: 1;
+    
+}
+
+
+.wigo-postit-entry {
+    border: 2px dotted black;
+    background-color: white;
+     border-radius: 15px!important;
+    -moz-border-radius: 15px!important;
+    -webkit-border-radius: 15px!important;
+    z-index: 999;
+}
+
+.postit-removevotes{
+    color:  #fff!important;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .wigo-postit-entry-width {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .wigo-postit-entry-width {
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .wigo-postit-entry-width {
+        width: 50%;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .wigo-postit-entry-width {
+        width: 50%;
+    }
+}
+
+
+

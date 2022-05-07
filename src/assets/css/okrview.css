@@ -1,0 +1,536 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 10, 2019, 8:13:42 AM
+    Author     : xavier
+*/
+
+
+.circle-strat {
+  position: relative;
+  display: block;
+  
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+}
+
+.circle-strat:after {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #66B3D7;
+  content: "";
+}
+
+
+.circle-tactical {
+  position: relative;
+  display: block;
+  
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+}
+
+.circle-tactical:after {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #A10000;
+  content: "";
+}
+
+
+.circle-innos {
+  position: relative;
+  display: block;
+  
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+}
+
+.circle-innos:after {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #40CEE3;
+  content: "";
+}
+
+.circle__inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circle__wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circle__content {
+  display: table-cell;
+  padding: 1em;
+  vertical-align: middle;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+.circle__tact_content {
+  display: table-cell;
+  padding: .8em;
+  vertical-align: middle;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+@media (min-width: 480px) {
+  .circle__content {
+    font-size: .5em;
+    font-weight: 600;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle__content {
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+  }
+}
+
+.okr-sel-owner {
+    
+    font-size: 12px!important;
+}
+
+
+.okr-sel-owner-md {
+    
+    font-size: 16px!important;
+}
+    
+.okr-strategic {
+    color: #000000;
+    font-weight: 600; 
+    margin-bottom: 30px;
+    position: relative;
+    clear: left;
+    background: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out ;
+    -ms-transition: all .15s ease-out ;
+    -o-transition: all .15s ease-out ;
+    transition: all .15s ease-out ;
+}
+
+.okr-strategic:hover {
+    border: 1px solid rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+.okr-strategic-hdr {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.okr-strategic a {
+    
+    font-style: italic;
+    font-weight: 600;
+}
+
+.okr-strategic-lbl {
+    color: green;
+}
+
+.okr-tactical-lbl {
+    color: red;
+}
+
+.okr-innovation-lbl {
+    color: blue;
+}
+.kr-check-in {
+    background-color: #F2DEDE;
+    color: #000000;
+    font-weight: 600; 
+    margin-top: 10px;
+}
+
+.kr-check-in input {
+    background-color: #F2DEDE;
+}
+
+
+.kr-check-in textarea {
+    background-color: #F2DEDE;
+}
+
+@media screen and (max-width: 767px) {
+    .resp-top-menu {
+        text-align: left;
+    }
+    .kr-title-font {
+        font-size: 10px;
+    }
+    .container-okr {
+      
+    }
+    .okr-main {
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        
+    }
+    
+    .okr-main a {
+        font-weight: 700;
+        font-style:  italic;
+    }
+    .okr-submain {
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+    }
+    
+    .kr-main {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    
+    .okr-obj {
+       
+        font-size: 14px;
+        
+    }
+    
+    .okr-obj-conjunctions {
+        
+        font-weight: 500;
+        font-size: 10px;
+        
+    }
+    .okr-kr-tables {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    
+    .okr-kr-tables-hdr {
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .okr-tables {
+        font-size: 9px;
+        font-weight: 600;
+        color: #000000;
+        padding-left: 1px !important;
+        padding-right: 1px !important;
+    }
+    
+    
+    .okr-strat-align {
+   
+        width: 120px;
+        height: 120px;
+    }
+    
+    .circle__content {
+        font-size: .8em;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .circle__tact_content {
+        font-size: .7em;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .check-in-main {
+        font-size: 10px;
+        margin-left: -20px;
+        margin-right: -25px;
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .resp-top-menu {
+        text-align: left;
+    }
+    .kr-title-font {
+        font-size: 14px;
+    }
+    
+    .container-okr {
+      
+    }
+    .okr-main {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    
+    .okr-main a {
+        font-weight: 700;
+        font-style:  italic;
+    }
+    
+    .okr-submain {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+   
+    .kr-main {
+       
+    }
+    
+    .okr-obj {
+       
+        font-size: 14px;
+        
+    }
+    
+    .okr-obj-conjunctions {
+       
+        font-weight: 500;
+        font-size: 10px;
+    }
+    .okr-kr-tables {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    
+    .okr-kr-tables-hdr {
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    
+    .okr-tables {
+        font-size: 11px;
+        weight: 600;
+        color: #000000;
+        padding-left: 1px !important;
+        padding-right: 1px !important;
+    }
+    
+     .okr-strat-align {
+   
+        width: 200px;
+        height: 200px;
+       
+    }
+
+    .circle__content {
+        font-size: 1em;
+        font-weight: 600;
+        color: #ffffff;
+     }
+     
+    .circle__tact_content {
+        font-size: .8em;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .check-in-main {
+        font-size: 11px;
+        margin-left: -20px;
+        margin-right: -25px;
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .resp-top-menu {
+        text-align: right;
+    }
+    .kr-title-font {
+        font-size: 18px;
+    }
+    .container-okr {
+      
+    }
+    .okr-main {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    
+    .okr-main a {
+        
+        font-weight: 700;
+        font-style:  italic;
+    }
+    
+    .okr-submain {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .kr-main {
+       
+    }
+    
+    .okr-obj {
+       
+        font-size: 18px;
+        
+    }
+    
+    .okr-obj-conjunctions {
+        
+        font-weight: 500;
+        
+    }
+    .okr-kr-tables {
+        font-size: 12px;
+        font-weight: 600;
+        
+    }
+    
+    .okr-kr-tables-hdr {
+        font-size: 12px;
+        text-align: center;
+    }
+    .okr-tables {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+    }
+    
+     .okr-strat-align {
+   
+        width: 60px;
+        height: 60px;
+       
+    }
+    .okr-strat-align {
+   
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    .circle__content {
+        font-size: 1em;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .circle__tact_content {
+        font-size: .8em;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .check-in-main {
+       font-size: 14px;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .resp-top-menu {
+        text-align: right;
+    }
+    .kr-title-font {
+        font-size: 18px;
+    }
+    .container-okr {
+      
+    }
+    .okr-main {
+    }
+    
+    .okr-main a {
+        font-weight: 700;
+        font-style:  italic;
+    }
+    
+    .okr-submain {
+        
+    }
+    .kr-main {
+       
+    }
+    
+    .okr-obj {
+       
+        font-size: 18px;
+        
+    }
+    
+    .okr-obj-conjunctions {
+        
+        font-weight: 500;
+        
+    }
+    .okr-kr-tables {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .okr-kr-tables-hdr {
+        font-size: 12px;
+        text-align: center;
+    }
+    .okr-tables {
+        font-size: 14px;
+        font-weight: 600;
+        color:   #000000;
+    }
+    
+     .okr-strat-align {
+   
+        width: 200px;
+        height: 200px;
+      
+    }
+    
+    .circle__content {
+        font-size: 1em;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .circle__tact_content {
+        font-size: .8em;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .check-in-main {
+        font-size: 14px;
+        
+    }
+}

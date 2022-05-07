@@ -1,21 +1,16 @@
 import {Component, AfterViewInit,ViewChild} from "@angular/core";
-import { faHandshake } from '@fortawesome/free-regular-svg-icons';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
-import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
-import { faRectangleList } from '@fortawesome/free-regular-svg-icons';
-import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import { InputEmailComponent } from "src/app/shared-components/input-email/input-email.component";
+import { VmenuMainComponent } from "src/app/shared-components/vmenu-main/vmenu-main.component";
 import { LoginServiceService } from 'src/app/shared-services/login-service.service';
-import * as indexcontroller from '../../../assets/js/wigocontrollers/indexcontroller.js'
+import { LoadingIndicatorComponent } from 'src/app/shared-components/loading-indicator/loading-indicator.component';
+import { UsersServiceService } from 'src/app/shared-services/users-service.service';
+import { FramecommonService } from 'src/app/shared-services/framecommon.service';
 import { ActivatedRoute } from "@angular/router";
+import { FormControl } from '@angular/forms';
 
 declare let $: any;
 declare var TweenMax: any;
-
-interface Food {
-  value: string;
-  viewValue: string;
-}
 
 
 @Component({
@@ -27,13 +22,17 @@ export class TeamauditHomeComponent implements AfterViewInit {
 
   
   @ViewChild(InputEmailComponent)
+  title = 'angular-responsive-sidebar';
   primaryInputEmailComponent!: InputEmailComponent;
  
+
   "loginB": boolean = true;
   "loginEm": boolean = false;
   "loginPw": boolean = true;
   "selcomp": boolean = false;
   "jsonobj": JSON;
+  menubgcolor: string = '#000000';
+  menufgcolor: string = '#ffffff';
   selected: string = 'option2';
   
   // data
@@ -41,25 +40,35 @@ export class TeamauditHomeComponent implements AfterViewInit {
   inFullname: string = '';
   inOklogin: boolean = true;
   inErrorlogin: boolean = false;
+  menuhtml: string = '';
+  vmenustyle: string = 'blue';
+  filtersviewop: boolean = true;
+  
 
-  constructor(private router: ActivatedRoute,private logservices: LoginServiceService) 
+  // fields setup
+  filtersview = false;
+  constructor(
+    private router: ActivatedRoute,
+    private logservices: LoginServiceService,
+    private frameserv: FramecommonService,private userserv: UsersServiceService
+    ) 
   {
     console.log("route is ==> ", this.router.url);
   }
 
+  json:  any = {};
   onAppReady()
   {
-   
+    
+
   }
+  
   ngAfterViewInit(): void {
-     indexcontroller.onIndexInit();
-   
+   // this.menuhtml = this.frameserv.formVMenu('innodtl-vert-menu', '006400');
     
   }
-  fahandshake = faHandshake;
-  fascale = faScaleBalanced;
-  farectlist = faRectangleList;
-  fapeoplegroup = faPeopleGroup;
+  selectedFW = new FormControl();
+  
   fatimescircle = faTimesCircle;
   initialization() {
     this.router.queryParams
@@ -78,11 +87,16 @@ export class TeamauditHomeComponent implements AfterViewInit {
           this.inFullname = "";
           this.inOklogin = false;
           this.inErrorlogin = true;
+          this.vmenustyle = '#000000';
+          this.menubgcolor = 'darkseagreen';
+          this.menufgcolor = '#ffffff';
         } else {
-          this.inUsername = "xnavarroTeran";
-          this.inFullname = "Xavier Navarro";
+          this.inUsername = json.username;
+          this.inFullname = json.firstname + " " + json.lastname;
           this.inOklogin = true;
           this.inErrorlogin = false;
+          this.menubgcolor = 'darkseagreen'; //json.bgcolor;
+          this.menufgcolor = '#ffffff'; //json.fgcolor;
       
         }
         this.onAppReady();
@@ -91,48 +105,46 @@ export class TeamauditHomeComponent implements AfterViewInit {
       
     );
 
-    // ============================
-    // Button Animation
-    // ============================
-    $(".btn").on("mouseenter mousemove",  (e: { pageX: number; pageY: number; }) => {
-      var parentOffset = $(this).offset(),
-        relX = e.pageX - parentOffset.left,
-        relY = e.pageY - parentOffset.top;
-      $(this).find(".bh").css({top: relY, left: relX});
-      var origin = relX + "px" + " " + relY + "px";
-    }).on("mouseout",  (e: { pageX: number; pageY: number; }) => {
-      var parentOffset = $(this).offset(),
-        relX = e.pageX - parentOffset.left,
-        relY = e.pageY - parentOffset.top;
-      $(this).find(".bh").css({top: relY, left: relX});
-    });
 
-    // ============================
-    // Tweenmax
-    // ============================
-
-  
+    
   }
 
   ngOnInit() {
     this.initialization();
    }
 
-  wigoLogin(){
-    this.loginB = false;
-    this.loginEm = true;
-    
-  }
-  
-  hideLogin(){
-    this.loginB = true;
-    this.loginEm = false;
-    
+  openBoardFilters()
+  {
+
+    this.filtersview = !this.filtersview;
+    this.filtersviewop = !this.filtersviewop;
+    if (this.filtersview) {
+      this.loadAuditors();
+    }
   }
 
-  getJsonBack() {
-    console.log("Came to the parent func *********************************", this.jsonobj);
-  }
- 
+  lstauditors: string[] = [];
+  auditorsloaded: boolean = false;
+  loadingauditors: boolean = false;
 
+  loadAuditors()
+  {
+
+    if (this.auditorsloaded) 
+      return;
+      this.loadingauditors = true;
+      this.userserv.getAuditors().subscribe((res)=>{
+      this.json = res;
+      this.loadingauditors = false;
+      this.lstauditors = [];
+      for (var nx = 0; nx < this.json.data.length; nx++) {
+        var name = this.json.data[nx].firstname + " " + this.json.data[nx].lastname;
+        this.lstauditors.push(name);
+      }
+      this.auditorsloaded = true;
+      console.log(" loaded aditors ... ==>", this.json);
+    });
+      
+  }
 }
+

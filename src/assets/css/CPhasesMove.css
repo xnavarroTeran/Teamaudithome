@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 24, 2021, 4:11:08 PM
+    Author     : xnava
+*/
+
+.chph_title_1 {
+    height: 30px;
+    position: absolute;
+    
+}
+.chph_title_2 {
+    height: 30px;
+    position: absolute;
+}
+.chph_general {
+    height: 90px!important;
+    position: absolute;
+    padding: 10px;
+}
+.chph_general_top_eval {
+    top: 60px;
+}
+.chph_general_top_impl {
+    top: 200px;
+}
+.chph_separator {
+    width: 30px!important;
+    height: 90px!important;
+    padding-top: 30px;
+    position: absolute;
+}
+.chph_separator_opt {
+    width: 50px!important;
+    height: 90px!important;
+    padding-top: 30px;
+    padding-left: 10px;
+    position: absolute;
+    border-left: 1px dashed #000000;
+    font-color: #DFDFDF!important;
+}
+.chph_prop  {
+    background: #d0d004!important;
+   
+   
+}
+
+.chph_lrev  {
+    background: #ffc000!important;
+}
+
+.chph_eval  {
+    background: #ff6600!important;
+}
+
+.chph_appr  {
+    background: #66FF33!important;
+}
+
+.chph_impl  {
+    background: #00B050!important;
+}
+
+.chph_inpr  {
+    background: #00CCFF!important;
+}
+
+.chph_fini  {
+    background: #00004d!important; 
+}
+
+
+.chph_rand  {
+    background: #cce6ff!important;
+}
+
+.chph_arch  {
+    background: #d9534f!important;
+}
+
+
+.chph_reje  {
+    background: #d9534f!important;
+
+}

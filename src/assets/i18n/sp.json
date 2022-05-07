@@ -21,6 +21,19 @@
         "REMEMBERME": "Recordar",
         "RESEND": "Reenviar"
     },
+    "MENU": {
+        "MYACCT":"Mi Cuenta",
+        "SETTINGS": "Configuración",
+        "MASTERTABLES": "Tablas Maestras",
+        "HOME":"Inicio",
+        "FILTERS":"Filtros",
+        "REPORTS":"Reportes",
+        "ADDAUDIT": "Agregar Auditoria"
+   
+    },
+    "APPHOME": {
+        "SELAUDITOR": "Seleccione los Auditores"
+    },
     "ERRORS": {
         "REQUIRED": "Campo es requirido, no puede quedar vacio.",
         "NOEMAIL": "Correo electrónico no existe en el catalogo de usuarios. ",

@@ -18,6 +18,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatChipsModule } from '@angular/material/chips';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from './app.component';
@@ -30,6 +32,8 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {HttpClient} from "@angular/common/http";
 import { LoadingIndicatorComponent } from './shared-components/loading-indicator/loading-indicator.component';
 import { TeamauditHomeComponent } from './components/teamaudit-home/teamaudit-home.component';
+import { MyAcctComponent } from './components/myacct/myacct.component';
+import { VmenuMainComponent } from './shared-components/vmenu-main/vmenu-main.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -42,8 +46,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     PageHeaderComponent,
     InputEmailComponent,
     LoadingIndicatorComponent,
-    TeamauditHomeComponent
+    TeamauditHomeComponent,
+    MyAcctComponent,
+    VmenuMainComponent
   ],
+  
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -64,6 +71,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatSortModule,
     MatChipsModule,
     MatMenuModule,
+    MatSidenavModule,
+    MatDividerModule,
     FlexLayoutModule,
     AppRoutingModule,
     FontAwesomeModule,

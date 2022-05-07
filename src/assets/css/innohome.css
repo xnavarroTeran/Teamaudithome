@@ -1,0 +1,310 @@
+/* 
+    Document   : innohome
+    Created on : Dec 10, 2018, 5:06:09 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.innohome-panels {
+    background-color: white;
+    
+}
+
+.mvv-container {
+    background-color: #ffffff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+   
+}
+
+
+.mvv-divider {
+    border:   #EF8B11 solid 1px;
+    width: 100%; 
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+
+
+.board-new-ui-milleniun22 {
+    overflow: hidden;
+    margin-left: -10px;
+    padding-right: 20px;
+    padding-left: 5px!important;
+    padding-bottom: 20px;
+    position: relative;
+    clear: left;
+    background: #fff;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out ;
+    -ms-transition: all .15s ease-out ;
+    -o-transition: all .15s ease-out ;
+    transition: all .15s ease-out ;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+
+}
+
+.board-new-ui-milleniun22:hover {
+        background-color:  #ffffff;
+}
+
+.bgoals-ui-milleniun22 {
+    overflow: hidden;
+    padding-right: 20px;
+    padding-left: 5px!important;
+    padding-bottom: 20px;
+    position: relative;
+    clear: left;
+    background: #fff;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out ;
+    -ms-transition: all .15s ease-out ;
+    -o-transition: all .15s ease-out ;
+    transition: all .15s ease-out ;
+}
+
+.bgoals-ui-milleniun22:hover {
+        background-color:  #e6e9ed;
+}
+
+.board-floating-add-button22 {
+    display: none;
+    
+}
+
+.board-new-ui-milleniun22:hover + .board-floating-add-button22 {
+       display: block;
+}
+
+
+.board-new-ui-milleniun-header22 {
+    padding-top: 15px!important;
+    padding-left: 20px!important;
+}
+
+@media screen and (max-width: 767px) {
+    #innohome-menu-sub { 
+        background-color: white; 
+        margin-top: 20px;
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    #xs-user-dashboard {
+        margin-left: 15px;
+        
+    }
+    
+    #innohome_active_boards_ui_new {
+        margin-left: 2%;
+    }
+    
+    .xs-style {
+        margin-top: 3px !important;
+        margin-right: -10px !important;
+    }
+    
+    .public-private-indicator {
+        margin-left: 0px !important;
+    }
+    
+    .xs-board-format {
+        width: 120% !important;
+        margin-left: -25px !important;
+    }
+    
+    .xs-new-iu-millenium-header {
+        width: 120% !important;
+        margin-left: -25px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .innohome-search-box {
+      
+        width: 150px;
+    }
+  
+    #innohome-menu-sub { 
+        background-color: white; 
+        margin-top: 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .innohome-search-box {
+      
+        width: 180px;
+    }
+    #innohome-menu-sub { 
+        background-color: white; 
+        margin-top: 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    #xs-user-dashboard {
+        margin-left: 15px;
+        display: none;
+    }
+    
+    #xs-main-menu {
+        
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+     .innohome-search-box {
+      
+        width: 225px;
+    }
+    #innohome-menu-sub { 
+        background-color: white; 
+        margin-top: 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+     #xs-user-dashboard {
+        margin-left: 15px;
+        display: none;
+    }
+    
+    #xs-main-menu {
+        
+        display: none;
+    }
+}
+
+.public-private-indicator {
+    width: 100%;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 10px;
+    
+}
+
+.public-private-indicator-right {
+    width: 100%;
+    text-align: right;
+    margin-left: 25px;
+    margin-top: 10px;
+    
+}
+
+.public-dot {
+  height: 10px;
+  width: 10px;
+  background-color:  orange;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.private-dot {
+  height: 10px;
+  width: 10px;
+  background-color:   #0080ff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.innovate-dot {
+  height: 10px;
+  width: 10px;
+  background-color:  #007fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.explore-dot {
+  height: 10px;
+  width: 10px;
+  background-color:  #00a300;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.define-dot {
+  height: 10px;
+  width: 10px;
+  background-color:  #EC3B3B;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.innocounts-popup {
+    text-align: left;
+    border: 1px solid #00CCFF;
+    background-color: #FFFFFF;
+    color: white;
+    border-radius: 10px!important;
+    -moz-border-radius: 10px!important;
+    -webkit-border-radius: 10px!important;
+}
+
+.innocounts-poup-graph {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.innocounts-poup-graph-large {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.innohome-title-panel {
+    margin-top: -25px; 
+    margin-left: 5px; 
+    color: white;
+    font-weight: 600;
+}
+#userNewsFeed {
+    background-color: white; 
+    min-height: 650px;
+}
+
+#innohome_activity_report {
+   background-color: white; 
+    border-top: solid 25px  #EC3B3B;
+    min-height: 650px; 
+    margin-left: 15px;
+}
+
+#innohome_activity_report_title {
+    margin-top: -25px; 
+    margin-left: 5px; 
+    color: white;
+    font-weight: 600;
+}
+ 
+ 
+
+
+
+

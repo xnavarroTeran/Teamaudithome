@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 22, 2021, 10:14:08 AM
+    Author     : xnava
+*/
+
+@media screen and (max-width: 767px) {
+    .w-search-iwidth {
+        width: 80%;
+    }
+    .w-search-bwidth {
+        width: 20%;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-search-iwidth {
+        width: 90%;
+    }
+    .w-search-bwidth {
+        width: 10%;
+    }
+}
+
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+   .w-search-iwidth {
+        width: 95%;
+    }
+    .w-search-bwidth {
+        width: 5%;
+    }
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+
+    .w-search-iwidth {
+        width: 95%;
+    }
+    .w-search-bwidth {
+        width: 5%;
+    }
+}

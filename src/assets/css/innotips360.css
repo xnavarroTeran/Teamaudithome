@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 23, 2021, 3:10:11 PM
+    Author     : xnava
+*/
+
+
+@media screen and (max-width: 480px) {
+    .icoms-idea-desc {
+       
+    }
+    .icoms-menu-font {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .icoms-menu-box {
+        padding-top: 5px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+   .icoms-idea-desc {
+        
+    }
+    .icoms-menu-font {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .icoms-menu-box {
+        padding-top: 5px;
+        height: 90px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+   .icoms-idea-desc {
+        padding: 5px;
+    }
+    .icoms-menu-font {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .icoms-menu-box {
+        padding-top: 10px;
+        height: 70px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+   .icoms-idea-desc {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .icoms-menu-font {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .icoms-menu-box {
+        padding-top: 10px;
+        height: 70px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .icoms-idea-desc {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .icoms-menu-font {
+        font-size: 18px;
+    }
+    .icoms-menu-box {
+        padding-top: 10px;
+        height: 70px;
+    }
+}
+
+

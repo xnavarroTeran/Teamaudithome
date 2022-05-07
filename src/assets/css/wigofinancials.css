@@ -1,0 +1,86 @@
+/* 
+    Document   : wigofinancials
+    Created on : Dec 18, 2018, 3:35:21 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.wigo_fin_header_level_2 {
+        font-size: 20px!important;
+        color:  #0072b1!important;
+        font-weight:  500;
+        
+ }
+ 
+.wigo_fin_header_level_4 {
+        font-size: 1.4rem!important;
+        color:  #0072b1!important;
+        font-weight:  500;
+ }
+ 
+ .wigo_fin_header_level_5 {
+        font-size: 1.5rem!important;
+        color:  #0072b1!important;
+        font-weight:  500;
+ }
+ 
+ .w-background-hdrs {
+     background-color: #e6f7fc!important;
+ }
+ 
+ .wigo_fin_cost_title {
+        font-size: 1.2rem!important;
+        color:   red!important;
+        font-weight:  500;
+ }
+ .wigo_fin_revenue_title {
+        font-size: 1.2rem!important;
+        color:   green!important;
+        font-weight:  500;
+ }
+ 
+ .wigo_fin_normal_level {
+        font-size: 1.2rem!important;
+        color:  #000000!important;
+        font-weight:  500;
+        
+ }
+
+ @media screen and (max-width: 767px) {
+     .w-hdr-align {
+        
+     }
+     .w-is-inp {
+         width: 80px;
+    }
+     
+     
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-hdr-align {
+    }
+     .w-is-inp {
+         width: 100px;
+     }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-hdr-align {
+         margin-left: -50px!important;
+     }
+     .w-is-inp {
+         width: 120px;
+     }
+}
+
+@media screen and (min-width: 1200px) {
+     .w-hdr-align {
+         margin-left: -50px!important;
+     }
+      .w-is-inp {
+         width: 120px;
+     }
+}

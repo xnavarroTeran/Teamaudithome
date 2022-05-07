@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 26, 2020, 5:06:35 PM
+    Author     : Xavier Navarro
+*/
+
+.w-input-underline {
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid gray;
+    
+}
+
+w-input-underline:focus {
+    border-right: 0px !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-bottom: 1px solid  #007bff !important;
+}
+

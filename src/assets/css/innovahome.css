@@ -1,0 +1,36 @@
+/* 
+    Document   : innovahome
+    Created on : Mar 11, 2018, 1:19:58 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#div_innovahome_carets_menu {
+    padding-bottom: 0px;
+}
+
+#show-notif-indicator {
+    color: red;
+    cursor: pointer;
+    
+}
+
+#innovahome_confrooms_panel {
+    overflow: hidden;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    min-height: 30px;
+    position: relative;
+    background: white!important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out ;
+    -ms-transition: all .15s ease-out ;
+    -o-transition: all .15s ease-out ;
+    transition: all .15s ease-out ;
+}

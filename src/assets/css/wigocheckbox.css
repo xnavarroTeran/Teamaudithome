@@ -1,0 +1,68 @@
+/* 
+    Document   : wigocheckbox
+    Created on : Mar 2, 2019, 8:40:06 AM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@media screen and (max-width: 767px) {
+    .wcheckbox-label {
+        font-size: 12px;
+        font-weight: 500; 
+
+    }
+    .wigo_checkheader {
+        font-size: 14px!important;
+        color:  #0072b1!important;
+        font-weight:  200;
+        font-style: italic;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+   .wcheckbox-label {
+        font-size: 14px;
+        font-weight: 500; 
+
+    }
+    .wigo_checkheader {
+        font-size: 14px!important;
+        color:  #0072b1!important;
+        font-weight:  200;
+        font-style: italic;
+    }
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .wcheckbox-label {
+        font-size: 16px;
+        font-weight: 500; 
+
+    }
+    
+    .wigo_checkheader {
+        font-size: 18px!important;
+        color:  #0072b1!important;
+        font-weight:  200;
+        font-style: italic;
+    }
+ 
+}
+
+@media screen and (min-width: 1200px) {
+  .wcheckbox-label {
+        font-size: 16px;
+        font-weight: 500; 
+
+    }
+    
+    .wigo_checkheader {
+        font-size: 18px!important;
+        color:  #0072b1!important;
+        font-weight:  200;
+        font-style: italic;
+    }
+    
+}

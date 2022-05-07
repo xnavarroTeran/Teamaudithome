@@ -1,0 +1,41 @@
+/* 
+    Document   : wigocheckbox
+    Created on : Mar 2, 2019, 8:40:06 AM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+    @Copyright Wigo Technologies 2019,2020,2021. All rights reserved.
+*/
+
+
+.w-mcbtn {
+    display: inline;
+    padding: 5px!important;
+    border: 1px solid #007bff;
+    cursor: pointer;
+ 
+}
+
+@media screen and (max-width: 767px) {
+   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+   
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+  
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .mc-yes-width {
+        width: 25px;
+    }
+    .mc-no-width {
+        width: 25px;
+    }
+}

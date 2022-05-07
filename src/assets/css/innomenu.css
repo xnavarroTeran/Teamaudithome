@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 14, 2020, 2:58:21 PM
+    Author     : xnava
+*/
+
+
+.w-mnu-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.w-menu-col {
+    background-color: #007bff!important;
+    position: absolute;
+    z-index: 99999;
+    
+}
+
+.w-menu-col a {
+    color: #ffffff!important;
+}
+
+.w-fixed {
+    position: fixed;
+}
+.w-mnu-pos {
+  position: fixed;  
+  margin-left: -25px !important;
+}
+
+.w-mnu-sm {
+    position: fixed;
+    display: block;
+    z-index: 9999;
+    opacity: 1.0;
+    background: white;
+    border: 1px solid gray;
+    padding: 20px;
+    width: 40%;
+    margin-left: -15px!important;
+    background-color: white;
+}
+
+
+@media screen and (max-width: 767px) {
+    .w-mnu-disp {
+       display: block;
+    }
+    .w-mnu-main {
+        display: block;
+        right: 0px;
+        background-color: #1F8898!important;
+        color: #ffffff!important;
+        width: 100%;
+    }
+   
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-mnu-disp {
+       display: block;
+    }
+    .w-mnu-main {
+        display: block;
+        right: 0px;
+        background-color: #1F8898!important;
+        color: #ffffff!important;
+        width: 100%;
+    }
+   
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-mnu-disp {
+       display: none;
+    }
+    .w-mnu-main {
+        display: block;
+        right: 0px;
+        background-color: #1F8898!important;
+        color: #ffffff!important;
+        width: 50%;
+    }
+   
+}
+
+
+@media screen and (min-width: 1200px) {
+   .w-mnu-disp {
+       display: none;
+    }
+  
+    .w-mnu-main {
+        display: block;
+        right: 0px;
+        background-color: #1F8898!important;
+        color: #ffffff!important;
+        width: 50%;
+    }
+   
+}

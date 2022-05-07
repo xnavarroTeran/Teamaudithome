@@ -1,139 +1,50 @@
 
-
-<div class="home-one">
+  <div class=" container-fluid home-one">
+    
     <app-page-header inUsername="{{inUsername}}" inFullname="{{inFullname}}" [inOklogin]=inOklogin [inErrorlogin]=inErrorlogin>
         
     </app-page-header>
-    <!-- Banner section start -->
-    <section class="banner v1">
-      <div class="container">
-        <div class="row">
-            <div class="d-none d-lg-flex col-lg-2"></div>
-            <div class="col-lg-8">
-              <div class="ban-content text-center text-white">
-                <span class='h2'>{{'LANDING.MAIN_TITLE' | translate}}</span>
-              </div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="d-none d-lg-flex col-lg-2"></div>
-          <div class="col-12 col-lg-8">
-            <div class="container">
-              <div class="row">
-                <div class="d-none d-lg-flex col-lg-4"></div>
-                <div class="col-12 col-lg-4">
-                  <div class="divider-lp"></div>
-                </div>
-              </div>
-            </div>     
-          </div>     
-        </div>
-        <div *ngIf="loginB" id="lpMainMsg" class="row w-top-30 ph01Subbody">
-            <div class="d-none d-lg-flex col-lg-2"></div>
-            <div class="col-12 col-lg-8">
-             
-              <div class="w-top-20 text-center">
-                <span class="h4 text-white">{{'LANDING.SUB_TITLE' | translate}}</span>
-              </div>
-              <div class="w-top-20 text-center">
-                <a  (click)="wigoLogin()" class="login btn btn-outline btn-success btn-round btn-lg">
-                  <span class="bh"></span>
-                  <span class="text-white">{{'GLOBAL.LOGIN' | translate}}</span>
-                </a>
-              </div>
-              
-            </div>
-        </div>
-        <div *ngIf="loginEm" id="lpMainMsg" class="row ph01Subbody">
-          <div class="d-none d-lg-flex col-lg-2"></div>
-          <div class="col-12 col-lg-8">
-            <div class="container-fluid">
-              <div class="row w-top-20">
-                <div class="d-none d-lg-flex col-lg-2"></div>
-                <div class="col-12 col-lg-8">
-                  <div class="w-width-full text-right">
-                    <span (click)="hideLogin()" class="w-cursor-link">
-                      <fa-icon [icon]="fatimescircle" size="2x" color="lightblue" 
-                        [styles]="{'stroke': 'white', 'color': 'white'}">
-                      </fa-icon>
-                    </span>
-                  </div>
-                  <app-input-email inpwidth="100%" (cancelLogin)="hideLogin()" (sendJsonBack)="getJsonBack()"></app-input-email>
-                  
-                </div >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Banner section end -->
-    
   
-    <!-- Overview section start -->
-    <section class="overview">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5">
-            <div class="content-box">
-              <h2>Departamento de Auditoria Interna</h2>
-              <p>Ayudando a Casa Pellas a cumplir sus objetivos aportando un enfoque sistemático y disciplinado para evaluar y mejorar la eficacia de los procesos de gestión de riesgos, control y
-                gobierno. </p>
-            </div>
-          </div>
-          <div class="col-md-6 offset-md-1">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="iconBox mb100">
-                   <div class="w-bottom-20">
-                        <fa-icon [icon]="fahandshake" size="3x" color="lightblue" 
-                                 [styles]="{'stroke': 'lightblue', 'color': 'lightblue'}">
-                        </fa-icon>
-                    </div>
-  
-                  <h5><a href="javascript:void(0)">Integridad y Etica</a></h5>
-                  <p>comportarnos con rectitud y honestidad en todas nuestras relaciones profesionales.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="iconBox mb100">
-                    <div class="w-bottom-20">
-                        <fa-icon [icon]="farectlist" size="3x" color="lightblue" 
-                                 [styles]="{'stroke': 'lightblue', 'color': 'lightblue'}">
-                        </fa-icon>
-                    </div>
-                    <h5><a href="javascript:void(0)">Compromiso</a></h5>
-                    <p>Mantener nuestros conocimientos y habilidades profesionales en el nivel requerido para servir mejor a nuestros clientes internos.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="iconBox">
-                    <div class="w-bottom-20">
-                        <fa-icon [icon]="fascale" size="3x" color="lightblue" 
-                                 [styles]="{'stroke': 'lightblue', 'color': 'lightblue'}">
-                        </fa-icon>
-                    </div>
-                  <h5><a href="javascript:void(0)">Objetividad </a></h5>
-                  <p>Somos imparciales en nuestro juicio profesional, sin permitir conflicto de intereses de ninguna indole.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="iconBox">
-                    <div class="w-bottom-20">
-                        <fa-icon [icon]="fapeoplegroup" size="3x" color="lightblue" 
-                                 [styles]="{'stroke': 'lightblue', 'color': 'lightblue'}">
-                        </fa-icon>
-                    </div>
-  
-                  <h5><a href="javascript:void(0)">Lealtad</a></h5>
-                  <p>cumplimos con las leyes vigentes y evitamos prácticas que pudiesen desacreditar la profesión o nuestra empresa.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-   
   </div>
-  
+
+  <div id="boardmaster-panel-main" class="container-fluid wheader-main">
+    <div class="row">
+      <div id="innodtl-vert-menu" [ngStyle]="{ background: menubgcolor, color: menufgcolor}" class="col-2 col-md-1  whead-vmenu21 w-padding-50">
+          <app-vmenu-main bgcolor="{{menubgcolor}}" fgcolor="{{menufgcolor}}"></app-vmenu-main>
+      </div>
+      <div id="innoview-comms" class="col-10 col-md-11 w-resp-pad-left-20 w-top-30 border-bottom w-top-120 w-padding-bottom-100">
+        <div class="container-fluid w-top-20">
+          <div class="row">
+            <div class="d-none d-lg-flex col-lg-1"></div>
+            <div class="col-12 col-lg-3">
+         
+              <a href="javascript: void(0);" (click)="openBoardFilters()">
+                  <i *ngIf="filtersviewop" class="fas fa-filter"></i>
+                  <i *ngIf="!filtersviewop" class="fas fa-angle-up"></i>
+                  <span class="wigo-sm-font-size">
+                    {{'MENU.FILTERS' | translate}}
+                  </span>&nbsp;
+                 
+              </a>
+            </div>
+          </div>
+          <div *ngIf="filtersview" class="row">
+            <div class="d-none d-lg-flex col-lg-1"></div>
+            <div class="col-12 col-lg-3">
+              <mat-form-field appearance="outline" class="w-width-full">
+                <mat-label> {{'APPHOME.SELAUDITOR' | translate}}</mat-label>
+                <mat-select multiple [formControl]="selectedFW">
+                  <mat-option *ngFor="let one of json.data" [value]="json.id">
+                  {{ json.firstname }}
+                 </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <app-loading-indicator *ngIf="loadingauditors"></app-loading-indicator>
+            </div>
+          </div>
+        </div>
+        
+         
+      </div>
+    </div>
+  </div>

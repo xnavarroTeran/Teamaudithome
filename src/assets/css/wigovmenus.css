@@ -1,0 +1,295 @@
+/* 
+    Document   : wigovmenus
+    Created on : Jul 24, 2019, 2:14:46 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.whead-vmenu {
+    min-height: 1600px;
+    background-color:  #428bca; 
+    margin-left: -30px!important;
+}
+
+.whead-vmenu21 {
+    min-height: 1600px;
+    background-color:  #FFFFFF; 
+   
+}
+
+.wigovmenu {
+    font-size: 14px;
+}
+
+.wigovmenu:hover {
+    font-weight: 600;
+}
+
+.wigovmenu-active {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.wigo-v-menu-divider {
+    border:  lightslategray solid 1px;
+    width: 100%; 
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+.wigo-v-menu-divider-active {
+    border:  #ffffff solid 1px;
+    width: 100%; 
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+.wigo-vtransp-menu-divider-info {
+    border:   #BBB solid 1px;
+    width: 100%; 
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .wigo-vtransp-menu-divider {
+        border:   #BBB solid 1px;
+        width: 100%; 
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+
+    .wigo-vtransp-menu-divider-active {
+
+    }
+    
+    #innohome-vert-menu {
+        min-height: 1200px; 
+        margin-left: -15px !important; 
+        margin-top: -30px !important; 
+        padding-bottom: 10px;
+    }
+    
+    .fa-bullseye {
+        font-size: 1.4em;
+    }
+    
+    .fa-inbox {
+        font-size: 1.4em;
+    }
+    
+    .fa-lightbulb {
+        font-size: 1.4em;
+    }
+    
+    .fa-users {
+        font-size: 1.2em;
+    }
+    
+    .fa-handshake {
+        font-size: 1.2em;
+    }
+    
+    .fa-project-diagram {
+        font-size: 1.2em;
+    }
+    
+    .fa-file-archive {
+        font-size: 1.2em;
+    }
+    
+    .img-no-bizgoals {
+        height: 150px !important;
+        width: 150px !important;
+    }
+    
+    .emptyMessage {
+        font-size: 14px !important;
+    }
+    
+    .img-no-ideas {
+        height: 150px !important;
+        width: 150px !important;
+    }
+    
+    .wigovmenu {
+        margin-left: 10px;
+    }
+    
+    .update-button-position-filter {
+        right: 18% !important;
+    }
+    
+    .info-title {
+        color: #428bca;
+        font-size: 16px;
+    }
+    
+    .info-description {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .wigo-vtransp-menu-divider {
+        border:   #BBB solid 1px;
+        width: 100%; 
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+
+    .wigo-vtransp-menu-divider-active {
+
+    }
+    
+    #innohome-vert-menu {
+        min-height: 1200px; 
+        margin-left: -30px !important; 
+        margin-top: -30px !important; 
+        padding-bottom: 10px;
+    }
+    
+    .img-no-bizgoals {
+        height: 200px !important;
+        width: 200px !important;
+    }
+    
+    .emptyMessage {
+        font-size: 15px !important;
+    }
+    
+    .img-no-ideas {
+        height: 200px !important;
+        width: 200px !important;
+    }
+    
+    .wigovmenu {
+       
+    }
+    
+    .update-button-position-filter {
+        right: 36% !important;
+    }
+    
+    .info-title {
+        color: #428bca;
+        font-size: 17px;
+    }
+    
+    .info-description {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .wigo-vtransp-menu-divider {
+        border:   #BBB solid 1px;
+        width: 100%; 
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+
+    .wigo-vtransp-menu-divider-active {
+        border:  #000 solid 1px;
+        width: 100%; 
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+    
+    #innohome-vert-menu {
+        min-height: 1500px; 
+        margin-left: -30px !important; 
+        margin-top: -30px !important; 
+        padding-bottom: 10px;
+    }
+    
+    .img-no-bizgoals {
+        height: 250px !important;
+        width: 250px !important;
+    }
+    
+    .emptyMessage {
+        font-size: 16px !important;
+    }
+    
+    .img-no-ideas {
+        height: 250px !important;
+        width: 250px !important;
+    }
+    
+    .wigovmenu {
+        
+    }
+    
+    .update-button-position-filter {
+        right: 28% !important;
+    }
+    
+    .info-title {
+        color: #428bca;
+        font-size: 18px;
+    }
+    
+    .info-description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .wigo-vtransp-menu-divider {
+        border:   #BBB solid 1px;
+        width: 100%; 
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+
+    .wigo-vtransp-menu-divider-active {
+        border:  #000 solid 1px;
+        width: 100%; 
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+    
+    #innohome-vert-menu {
+        min-height: 1500px; 
+        margin-left: -30px !important; 
+        margin-top: -30px !important; 
+        padding-bottom: 10px;
+    }
+    
+    .img-no-bizgoals {
+        
+    }
+    
+    .emptyMessage {
+        
+    }
+    
+    .img-no-ideas {
+
+    }
+    
+    .wigovmenu {
+        
+    }
+    
+    .update-button-position-filter {
+        right: 37% !important;
+    }
+    
+    .info-title {
+        color: #428bca;
+        font-size: 18px;
+    }
+    
+    .info-description {
+        font-size: 16px;
+    }
+}

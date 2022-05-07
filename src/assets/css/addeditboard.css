@@ -1,0 +1,206 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 23, 2021, 3:46:03 PM
+    Author     : xnava
+*/
+
+.sv-ctrls {
+    font-size: 20px!important;
+}
+
+@media screen and (max-width: 767px) {
+    .panel-flds-frame {
+        padding-left: 5px!important;
+       
+    }
+    .sv-ctrls {
+        font-size: 18px!important;
+    }
+    .w-xs-align {
+        margin-left: -30px!important;
+        margin-right: -30px!important;
+    }
+    .save-now-warn {
+        position: fixed; 
+        margin-left: 1%; 
+        margin-top: 10%; 
+        padding: 20px;
+        background-color: #ffffff;
+        width: 90%; 
+        z-index: 9999;
+        border: 1px solid red;
+        border-radius: 10px; 
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+   
+    }
+    .save-controls {
+        position: fixed; 
+        left: 25%; 
+        margin-top: 30px; 
+        padding: 10px;
+        background-color: #ffffff;
+        z-index: 9999;
+        font-size: 1rem;
+    }
+   
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .panel-flds-frame {
+        padding-left: 5px!important;
+       
+    }
+    
+    .sv-ctrls {
+        font-size: 18px!important;
+    }
+    .w-xs-align {
+        margin-left: -30px!important;
+        margin-right: -30px!important;
+    }
+    .save-now-warn {
+        position: fixed; 
+        margin-left: 1%; 
+        margin-top: 10%; 
+        padding: 20px;
+        background-color: #ffffff;
+        width: 90%; 
+        z-index: 9999;
+        border: 1px solid red;
+        border-radius: 10px; 
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+   
+    }
+    .save-controls {
+        position: fixed; 
+        left: 25%; 
+        margin-top: 30px; 
+        padding: 10px;
+        background-color: #ffffff;
+        z-index: 9999;
+        font-size: 1rem;
+        
+    }
+    
+}
+
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .panel-flds-frame {
+        padding-left: 50px!important;
+       
+    }
+    
+    .sv-ctrls {
+        font-size: 22px!important;
+    }
+    .w-xs-align {
+        
+    }
+    .save-now-warn {
+        position: fixed; 
+        margin-left: 33%; 
+        margin-top: 10%; 
+        padding: 20px;
+        background-color: #ffffff;
+        width: 450px; 
+        z-index: 9999;
+        border: 1px solid red;
+        border-radius: 10px; 
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+   
+    }
+    .save-controls {
+        position: fixed; 
+        right: 33%; 
+        margin-top: 30px; 
+        padding: 10px;
+        background-color: #ffffff;
+        z-index: 9999;
+        font-size: 1rem;
+    }
+    
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+    .panel-flds-frame {
+        padding-left: 50px!important;
+       
+    }
+    
+    .sv-ctrls {
+        font-size: 24px!important;
+    }
+    .w-xs-align {
+       
+    }
+    .save-now-warn {
+        position: fixed; 
+        margin-left: 33%; 
+        margin-top: 10%; 
+        padding: 20px;
+        background-color: #ffffff;
+        width: 450px; 
+        z-index: 9999;
+        border: 1px solid red;
+        border-radius: 10px; 
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+   
+    }
+    .save-controls {
+        position: fixed; 
+        right:33%; 
+        margin-top: 50px; 
+        padding: 10px;
+        background-color: #ffffff;
+        z-index: 9999;
+        font-size: 1rem;
+    }
+    
+}
+
+/* 
+    Document   : innohome
+    Created on : Dec 10, 2018, 5:06:09 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@media screen and (max-width: 767px) {
+    .eb-flds-ws {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .eb-flds-ws {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .eb-flds-ws {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .eb-flds-ws {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+

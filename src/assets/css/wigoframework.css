@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 2, 2021, 7:53:37 PM
+    Author     : xnava
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 9, 2020, 11:28:40 AM
+    Author     : xnava
+*/
+
+
+@media screen and (max-width: 767px) {
+   
+    .w-fw-body {
+        margin-top: 40px!important;
+
+    }
+    .w-fw-menu {
+        margin-top: 60px!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .w-fw-body {
+        margin-top: 40px!important;
+
+    }
+    .w-fw-menu {
+        margin-top: 60px!important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+     
+    .w-fw-body {
+        margin-top: 30px!important;
+
+    }
+    .w-fw-menu {
+        margin-top: 70px!important;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .w-fw-body {
+        margin-top: 30px!important;
+
+    }
+
+    .w-fw-menu {
+        margin-top: 80px!important;
+    }
+ 
+
+}

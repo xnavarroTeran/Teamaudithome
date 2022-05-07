@@ -9,6 +9,8 @@ export class PageHeaderComponent implements OnInit {
   landingbg = 'darkseagreen';
   applogo = '../assets/images/logo-product.png';
 
+  // field visibility
+  
   @Input() inUsername: string = '';
   @Input() inFullname: string = '';
   @Input() inErrorlogin: boolean = false;

@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 23, 2021, 9:48:16 AM
+    Author     : xnava
+*/
+
+
+@media screen and (max-width: 480px) {
+    .w-new-save {
+       position: fixed; 
+       top: 110px; 
+       right: 40px; 
+       z-index: 9998;
+       font-size: 1.1rem;
+       
+    }
+    .w-new-loading {
+        position: fixed;
+        top: 120px;
+        left: 10%;
+        z-index: 9999;
+    }
+    .w-new-entry {
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+   
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .w-new-save {
+       position: fixed; 
+       top: 110px; 
+       right: 40px; 
+       z-index: 9998;
+       font-size: 1.1rem;
+    }
+    .w-new-loading {
+        position: fixed;
+        top: 140px;
+        left: 10%;
+        z-index: 9999;
+    }
+    .w-new-entry {
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-new-save {
+       position: fixed; 
+       top: 90px; 
+       right: 40px;
+       z-index: 9998;
+       font-size: 1.3rem;
+    }
+    .w-new-entry {
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    .w-new-loading {
+        position: fixed;
+        top: 140px;
+        left: 10%;
+        z-index: 9999;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-new-save {
+       position: fixed; 
+       top: 90px; 
+       right: 80px; 
+       z-index: 9998;
+       font-size: 1.3rem;
+    }
+    .w-new-loading {
+        position: fixed;
+        top: 120px;
+        left: 10%;
+        z-index: 9999;
+    }
+    .w-new-entry {
+        padding-left: 50px!important;
+        padding-right: 50px!important;
+   
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .w-new-save {
+       position: fixed; 
+       top: 90px; 
+       right: 150px; 
+       z-index: 9998;
+       font-size: 1.3rem;
+    }
+    .w-new-loading {
+        position: fixed;
+        top: 120px;
+        left: 10%;
+        z-index: 9999;
+    }
+     .w-new-entry {
+        padding-left: 150px!important;
+        padding-right: 150px!important;
+   
+     }
+}
+
+

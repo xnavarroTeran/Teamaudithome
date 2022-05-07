@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 6, 2021, 12:42:00 PM
+    Author     : Xavier Navarro
+
+Copyright @Wigo Technolgoies 2020, 2021. All rights reserved
+*/
+
+@media screen and (max-width: 767px) {
+    .boards-selgrd {
+        display:  block!important;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .boards-selgrd {
+        display:  block!important;
+    }
+}
+
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .boards-selgrd {
+        display:  flex!important;
+    }
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+
+    .boards-selgrd {
+        display:  flex!important;
+    }
+}

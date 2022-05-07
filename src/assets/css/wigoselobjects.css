@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 6, 2021, 2:12:05 PM
+    Author     : xnava
+*/
+
+.w-flex-formcontrol {
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.w-inp-clr-cont {
+    margin-top: -40px;
+}
+.w-inp-clr {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 12px;
+}
+

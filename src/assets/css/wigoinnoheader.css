@@ -1,0 +1,241 @@
+/* 
+    Document   : wigoinnoheader
+    Created on : Mar 3, 2019, 1:32:32 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+
+ copyright @Wigo Technologies 2019
+*/
+
+.inno-header-top-frame {
+    
+    color: white!important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+.inno-header-top-frame a {
+    color: white!important;
+}
+
+@media screen and (max-width: 767px) {
+    .inno-header-border-bottom-xs {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 10px;
+    }
+    
+    .inno-header-left-border-white {
+        
+    }
+    .inno-header-search-box {
+        margin-top: 20px;
+        width: 150px;
+    }
+    
+    .inno-header-arch-search-box {
+        margin-top: 0px;
+        width: 150px;
+        font-size: 12px; 
+        color: white; 
+        background-color: black;
+        position: absolute;
+        margin-left: 145px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+    .inno-header-right-opts {
+        margin-left: 0rem;
+    }
+    .inno-header-name-box {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .inno-header-top-menu {
+        margin-left: 5px;
+    }
+    
+    .inno-header-top-menu-large {
+        margin-left: 10px;
+    }
+    
+    .wigo-hide-mobil {
+        display: none;
+    }
+    
+    .wigo-hide-mobil-xs {
+        display: none;
+    }
+    
+    .wigo-show-mobil {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .inno-header-border-bottom-xs {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 10px;
+    }
+    .inno-header-left-border-white {
+       
+    }
+    .inno-header-right-opts {
+        margin-left: 0rem;
+    }
+    .inno-header-search-box {
+        margin-top: 20px;
+        width: 150px;
+    }
+    
+    .inno-header-arch-search-box {
+        margin-top: 0px;
+        width: 150px;
+        font-size: 12px; 
+        color: white; 
+        background-color: black;
+        position: absolute;
+        margin-left: 145px;
+         -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+     .inno-header-name-box {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .inno-header-top-menu {
+        margin-left: 5px;
+    }
+    
+     .inno-header-top-menu-large {
+        margin-left: 10px;
+    }
+    
+    .wigo-hide-mobil {
+        display: none;
+    }
+    .wigo-hide-mobil-xs {
+        display: inline;
+    }
+    
+    .wigo-show-mobil {
+        display: inline;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .inno-header-border-bottom-xs {
+       
+    }
+    
+    .inno-header-left-border-white {
+        border-left: 1px solid #fff;
+    }
+    
+    .inno-header-right-opts {
+        margin-left: 20rem;
+    }
+    
+    .inno-header-search-box {
+        margin-top: 20px;
+        width: 250px;
+    }
+    
+    .inno-header-arch-search-box {
+        margin-top: 0px;
+        width: 200px;
+        margin-left: 155px;;
+        font-size: 12px; 
+        color: white; 
+        background-color: black;
+        position: absolute;
+         -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+     .inno-header-name-box {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .inno-header-top-menu {
+        margin-left: 10px;
+    }
+    
+     .inno-header-top-menu-large {
+        margin-left: 150px;
+    }
+    
+    .wigo-hide-mobil {
+        display:  inline;
+    }
+    
+    .wigo-hide-mobil-xs {
+        display:  inline;
+    }
+    
+    
+     .wigo-show-mobil {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .inno-header-border-bottom-xs {
+        
+    }
+    .inno-header-left-border-white {
+        border-left: 1px solid #fff;
+    }
+     .inno-header-right-opts {
+        margin-left: 42rem;
+    }
+    .inno-header-search-box {
+        margin-top: 20px;
+        width: 250px;
+    }
+    
+    .inno-header-arch-search-box {
+        margin-top: 0px;
+        width: 200px;
+        margin-left: 155px;
+        font-size: 12px; 
+        color: white; 
+        background-color: black;
+        position: absolute;
+         -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+     .inno-header-name-box {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .inno-header-top-menu {
+        margin-left: 10px;
+    }
+    
+     .inno-header-top-menu-large {
+        margin-left: 150px;
+    }
+    
+    .wigo-hide-mobil {
+        display: inline;
+    }
+    
+    .wigo-hide-mobil-xs {
+        display: inline;
+    }
+    
+     .wigo-show-mobil {
+        display: none;
+    }
+}

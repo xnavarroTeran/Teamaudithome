@@ -1,0 +1,87 @@
+/* 
+    Document   : witotodotbl
+    Created on : Oct 23, 2018, 2:53:40 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.wigo-panel-dropzone {
+    
+    min-height: 
+    30px; margin-top: 5px;
+    border: #000 1px dashed;
+    margin-left: -10px;
+    margin-right: -10px;
+    
+}
+.wigo-horiz-divider {
+    
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+
+}
+
+.wigo-notif-box {
+    
+    width: 100%;
+    border: #888888 3px double;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;   
+    background: white;
+    margin-bottom: 1px;
+   
+}
+
+.wigo-notif-box-noboder {
+    
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;   
+    background: white;
+    margin-bottom: 1px;
+   
+}
+
+.wigo-panel-node-divider {
+    position: relative; 
+    top: 0px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    
+}
+
+
+@media screen and (max-width: 767px) {
+    .wigo-todo-sel-user {
+        width: 100%!important;
+        font-size: 11px!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .wigo-todo-sel-user {
+        width: 100%!important;
+        font-size: 11px!important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+     
+    .wigo-todo-sel-user {
+        width: 100%!important;
+        font-size: 11px!important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+     .wigo-todo-sel-user {
+        width: 100%!important;
+        font-size: 11px!important;
+    }
+}

@@ -1,0 +1,124 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 5, 2021, 5:13:30 PM
+    Author     : xnava
+*/
+
+
+.inboards-count-graph {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.inboards-count-graph-large {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+@media screen and (max-width: 767px) {
+    .w-tb-menu-right {
+        
+    }
+    .tbm-count-click {
+        margin-right: 0px;
+    }
+    .tbm-counts-popup {
+        text-align: left;
+        border: 1px solid #00CCFF;
+        background-color: #FFFFFF;
+        color: white;
+        border-radius: 10px!important;
+        -moz-border-radius: 10px!important;
+        -webkit-border-radius: 10px!important
+        margin-top: 15px; 
+        position: absolute; 
+        min-height: 300px; 
+        min-width: 350px; 
+        left: 10px; 
+        top: 170px;
+        z-index: 9999;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-tb-menu-right {
+        
+    }
+    .tbm-count-click {
+        margin-right: 5px;
+    }
+    .tbm-counts-popup {
+        text-align: left;
+        border: 1px solid #00CCFF;
+        background-color: #FFFFFF;
+        color: white;
+        border-radius: 10px!important;
+        -moz-border-radius: 10px!important;
+        -webkit-border-radius: 10px!important
+        margin-top: 15px; 
+        position: absolute; 
+        min-height: 300px; 
+        min-width: 350px; 
+        left: 0px; 
+        top: 20px;
+        z-index: 9999;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-tb-menu-right {
+        margin-right: 50px;
+    }
+    .tbm-count-click {
+        margin-right: 50px;
+    }
+    .tbm-counts-popup {
+        text-align: left;
+        border: 1px solid #00CCFF;
+        background-color: #FFFFFF;
+        color: white;
+        border-radius: 10px!important;
+        -moz-border-radius: 10px!important;
+        -webkit-border-radius: 10px!important
+        margin-top: 15px; 
+        position: absolute; 
+        min-height: 300px; 
+        min-width: 350px; 
+        right: 0px; 
+        z-index: 9999;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+   .w-tb-menu-right {
+        margin-right: 80px;
+    }
+    .tbm-count-click {
+        margin-right: 50px;
+    }
+    .tbm-counts-popup {
+        text-align: left;
+        border: 1px solid #00CCFF;
+        background-color: #FFFFFF;
+        color: white;
+        border-radius: 10px!important;
+        -moz-border-radius: 10px!important;
+        -webkit-border-radius: 10px!important
+        margin-top: 15px; 
+        position: absolute; 
+        min-height: 300px; 
+        min-width: 550px; 
+        right: 20px; 
+        z-index: 9999;
+    }
+
+}

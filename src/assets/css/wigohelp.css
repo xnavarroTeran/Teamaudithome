@@ -1,0 +1,142 @@
+/* 
+    Document   : wigohelp
+    Created on : Sep 1, 2018, 10:59:51 AM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+@media screen and (max-width: 767px) {
+    /*font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;*/
+    
+    .innohelp-header {
+        font-size: 16px;
+        color: blue!important;
+        text-align: center;
+
+    }
+    
+    .innohelp-topic-header {
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
+        font-size: 18px;
+        color:  #000;
+        font-weight: 600;
+        
+
+    }
+    
+    .innohelp-article   {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .innohelp-article p ol li {
+      
+        font-size: 16px;
+        color: #434a54;
+      
+        
+    }
+    
+    
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .innohelp-header {
+        font-size: 20px;
+        color: blue!important;
+        text-align: center;
+
+    }
+    
+    .innohelp-topic-header {
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
+        font-size: 20px;
+        color:  #000;
+        font-weight: 600;
+        
+
+    }
+    
+    .innohelp-article   {
+      
+        padding-left: 10px;
+        padding-right: 10px;
+         
+    }
+    
+     .innohelp-article p ol li {
+        font-size: 18px;
+        color: #434a54;
+        
+         
+    }
+    
+    
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .innohelp-header {
+        font-size: 24px;
+        color: blue!important;
+        text-align: center;
+
+    }
+    
+    .innohelp-topic-header {
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
+        font-size: 24px;
+        color:  #000;
+        font-weight: 600;
+        
+
+    }
+    
+    .innohelp-article {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+     .innohelp-article p ol li {
+        font-size: 18px;
+        color: #434a54;
+         
+        
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .innohelp-header {
+        font-size: 20px;
+        color: blue!important;
+        text-align: center;
+
+    }
+    
+     .innohelp-topic-header {
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif!important;
+        font-size: 24px;
+        color:  #000;
+        font-weight: 600;
+        
+
+    }
+    
+    .innohelp-article   {
+       
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    }
+    .innohelp-article p ol li {
+        font-size: 18px;
+        color: #434a54;
+        
+    }
+    
+}
+

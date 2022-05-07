@@ -1,0 +1,780 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 15, 2021, 12:55:10 PM
+    Author     : xnava
+*/
+
+
+.wfunnel-top {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+   
+}
+
+@media screen and (max-width: 399px) {
+    .wf-prizes-lbls {
+        position: relative;
+    }
+    .wf-legends-main {
+        padding-left: 30px;
+        padding-top: 5px;
+        margin-left: -25px;
+    }
+
+    .wf-leg-entered {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        font-size: 10px;
+    }
+    .wf-leg-inproc {
+        position: absolute;
+        top: 80px;
+        right: 100px;
+        font-size: 10px;
+    }
+  
+    .wf-leg-approved {
+        position: absolute;
+        top: 140px;
+        right: 110px;
+        font-size: 10px;
+    }
+    .wf-leg-finalized {
+        position: absolute;
+        top: 200px;
+        right: 120px;
+        font-size: 10px;
+    }
+     .wf-leg-entered-val {
+        position: absolute;
+        top: 10px;
+        right: -30px;
+        font-size: 12px;
+    }
+    .wf-leg-inproc-val {
+        position: absolute;
+        top: 80px;
+        right: -30px;
+        font-size: 12px;
+    }
+    .wf-leg-approved-val {
+        position: absolute;
+        top: 150px;
+        right: -30px;
+        font-size: 12px;
+    }
+    .wf-leg-finalized-val {
+        position: absolute;
+        top: 200px;
+        right: -30px;
+        font-size: 12px;
+    }
+    .wf-prizes-recog {
+        display: inline-block;
+        position: relative;
+        top: 20px;
+        right: 10px;
+     
+    }
+    .wf-prizes-recog-val {
+       
+     
+    }
+    
+    .wf-prizes-partics {
+        display: inline-block;
+        position: relative;
+        top: 50px;
+        right: 10px;
+    }
+    .wf-prizes-partics-val {
+       
+    }
+    .wf-prizes-actives {
+       display: inline-block;
+        position: relative;
+        top: 100px;
+        right: 10px;
+    }
+    .wf-prizes-actives-val {
+       
+    }
+    
+    .wf-legends-lbls {
+        margin-left: 0px;
+        position: relative;
+    }
+    
+    .wfunnel-leg-back {
+        margin-left: -25px;
+    }
+
+    .wfunnel-container {
+        margin-left: -20px;
+    }   
+    .wf-img-top img {
+        height: 70px;
+        width: auto;
+    }
+    #wfunnel-leg-top img {
+         height: 30px;
+         width: auto;
+    }
+    #wfunnel-top--1 {
+        display: block;
+        padding-left: 54px; 
+        padding-right: 100px; 
+        margin-top: -13px;
+    }
+    .wf-img-1 img {
+        height: 54px;
+        width: auto;
+    }
+    .wfunnel-leg--1 img {
+         height: 30px;
+         width: auto;
+    }
+    .wf-img-2 img {
+        height: 52px;
+        width: auto;
+    }
+    #wfunnel-top--2 {
+        display: block;
+        padding-left: 74px;
+        margin-top: -14px;
+    }
+    
+   
+    .wf-img-3 img {
+        height: 54px;
+        width: auto;
+    }
+    #wfunnel-top--3 {
+        display: block;
+        padding-left: 86px;
+        margin-top: -10px;
+    }
+    .wf-legs-img img {
+        height: 240px;
+        width: auto;
+    }
+}
+
+
+@media (min-width: 400px) and (max-width: 767px) {
+    .wf-prizes-lbls {
+        position: relative;
+    }
+    .wf-legends-main {
+        padding-left: 30px;
+        padding-top: 5px;
+        margin-left: -25px;
+    }
+
+    .wf-leg-entered {
+        position: absolute;
+        top: 10px;
+        right: 90px;
+        font-size: 10px;
+    }
+    .wf-leg-inproc {
+        position: absolute;
+        top: 80px;
+        right: 150px;
+        font-size: 10px;
+    }
+  
+    .wf-leg-approved {
+        position: absolute;
+        top: 140px;
+        right: 170px;
+        font-size: 10px;
+    }
+    .wf-leg-finalized {
+        position: absolute;
+        top: 200px;
+        right: 190px;
+        font-size: 10px;
+    }
+     .wf-leg-entered-val {
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        font-size: 12px;
+    }
+    .wf-leg-inproc-val {
+        position: absolute;
+        top: 80px;
+        right: -10px;
+        font-size: 12px;
+    }
+    .wf-leg-approved-val {
+        position: absolute;
+        top: 150px;
+        right: -10px;
+        font-size: 12px;
+    }
+    .wf-leg-finalized-val {
+        position: absolute;
+        top: 200px;
+        right: -10px;
+        font-size: 12px;
+    }
+    .wf-prizes-recog {
+        display: inline-block;
+        position: relative;
+        top: 20px;
+        right: 10px;
+     
+    }
+    .wf-prizes-recog-val {
+       
+     
+    }
+    
+    .wf-prizes-partics {
+        display: inline-block;
+        position: relative;
+        top: 50px;
+        right: 10px;
+    }
+    .wf-prizes-partics-val {
+       
+    }
+    .wf-prizes-actives {
+       display: inline-block;
+        position: relative;
+        top: 100px;
+        right: 10px;
+    }
+    .wf-prizes-actives-val {
+       
+    }
+    
+    .wf-legends-lbls {
+        margin-left: 0px;
+        position: relative;
+    }
+    
+    .wfunnel-leg-back {
+        margin-left: -25px;
+    }
+
+    .wfunnel-container {
+        margin-left: -20px;
+    }   
+    .wf-img-top img {
+        height: 70px;
+        width: auto;
+    }
+    #wfunnel-leg-top img {
+         height: 30px;
+         width: auto;
+    }
+    #wfunnel-top--1 {
+        display: block;
+        padding-left: 54px; 
+        padding-right: 100px; 
+        margin-top: -13px;
+    }
+    .wf-img-1 img {
+        height: 54px;
+        width: auto;
+    }
+    .wfunnel-leg--1 img {
+         height: 30px;
+         width: auto;
+    }
+    .wf-img-2 img {
+        height: 52px;
+        width: auto;
+    }
+    #wfunnel-top--2 {
+        display: block;
+        padding-left: 74px;
+        margin-top: -14px;
+    }
+    
+   
+    .wf-img-3 img {
+        height: 54px;
+        width: auto;
+    }
+    #wfunnel-top--3 {
+        display: block;
+        padding-left: 86px;
+        margin-top: -10px;
+    }
+    .wf-legs-img img {
+        height: 240px;
+        width: auto;
+    }
+}
+    
+@media (min-width: 768px) and (max-width: 991px) {
+    .wf-prizes-lbls {
+        position: absolute;
+    }
+    .wf-legends-main {
+        padding-left: 50px;
+        padding-top: 70px;
+        margin-left: -25px;
+    }
+
+    .wf-leg-entered {
+        position: absolute;
+        top: 10px;
+        right: 70px;
+        font-size: 12px;
+    }
+    .wf-leg-inproc {
+        position: absolute;
+        top: 60px;
+        right: 120px;
+        font-size: 12px;
+    }
+  
+    .wf-leg-approved {
+        position: absolute;
+        top: 120px;
+        right: 140px;
+        font-size: 12px;
+    }
+    .wf-leg-finalized {
+        position: absolute;
+        top: 170px;
+        right: 150px;
+        font-size: 12px;
+    }
+     .wf-leg-entered-val {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 18px;
+    }
+    .wf-leg-inproc-val {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        font-size: 18px;
+    }
+    .wf-leg-approved-val {
+        position: absolute;
+        top: 120px;
+        right: 10px;
+        font-size: 18px;
+    }
+    .wf-leg-finalized-val {
+        position: absolute;
+        top: 170px;
+        right: 20px;
+        font-size: 18px;
+    }
+    .wf-prizes-recog {
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        width: 50%;
+    }
+    .wf-prizes-recog-val {
+        position: absolute;
+        top: 120px;
+        right: 30px;
+        width: 50%;
+    }
+    
+    .wf-prizes-partics {
+        position: absolute;
+        top: 165px;
+        right: 30px;
+        width: 50%;
+    }
+    .wf-prizes-partics-val {
+        position: absolute;
+        top: 210px;
+        right: 30px;
+        width: 50%;
+    }
+    .wf-prizes-actives {
+        position: absolute;
+        top: 250px;
+        right: 30px;
+        width: 50%;
+    }
+    .wf-prizes-actives-val {
+        position: absolute;
+        top: 295px;
+        right: 30px;
+        width: 50%;
+    }
+   
+    .wf-legends-lbls {
+        margin-left: 0px;
+        position: absolute;
+    }
+    
+    .wfunnel-leg-back {
+        margin-left: -25px;
+    }
+    .wfunnel-container {
+        margin-left: -30px;
+    }
+    .wf-img-top img {
+        height: 90px;
+        width: auto;
+    }
+    #wfunnel-leg-top img {
+         height: 50px;
+         width: auto;
+    }
+    #wfunnel-top--1 {
+        display: block;
+        padding-left: 66px; 
+        padding-right: 100px; 
+        margin-top: -14px;
+    }
+    .wf-img-1 img {
+        height: 68px;
+        width: auto;
+    }
+    .wfunnel-leg--1 img {
+         height: 50px;
+         width: auto;
+    }
+    .wf-img-2 img {
+        height: 64px;
+        width: auto;
+    }
+    #wfunnel-top--2 {
+        display: block;
+        padding-left: 94px;
+        margin-top: -12px;
+    }
+    .wf-img-3 img {
+        height: 64px;
+        width: auto;
+    }
+    #wfunnel-top--3 {
+        display: block;
+        padding-left: 110px;
+        margin-top: -10px;
+    }
+    .wf-legs-img img {
+        height: 220px;
+        width: auto;
+    }
+}
+    
+@media (min-width: 992px) and (max-width: 1199px) {
+    .wf-prizes-lbls {
+        position: absolute;
+    }
+    .wf-legends-main {
+        padding-left: 50px;
+        padding-top: 70px;
+        margin-left: -25px;
+    }
+
+    .wf-leg-entered {
+        position: absolute;
+        top: 20px;
+        right: 100px;
+    }
+    .wf-leg-inproc {
+        position: absolute;
+        top: 80px;
+        right: 150px;
+    }
+    .wf-leg-approved {
+        position: absolute;
+        top: 160px;
+        right: 180px;
+    }
+    .wf-leg-finalized {
+        position: absolute;
+        top: 240px;
+        right: 200px;
+    }
+     .wf-leg-entered-val {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        font-size: 24px;
+    }
+    .wf-leg-inproc-val {
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        font-size: 24px;
+    }
+    .wf-leg-approved-val {
+        position: absolute;
+        top: 160px;
+        right: 10px;
+        font-size: 24px;
+    }
+    .wf-leg-finalized-val {
+        position: absolute;
+        top: 240px;
+        right: 10px;
+        font-size: 24px;
+    }
+    .wf-prizes-recog {
+        position: absolute;
+        top: 70px;
+        right: 50px;
+        width: 50%;
+    }
+    .wf-prizes-recog-val {
+        position: absolute;
+        top: 120px;
+        right: 50px;
+        width: 50%;
+    }
+    
+    .wf-prizes-partics {
+        position: absolute;
+        top: 165px;
+        right: 50px;
+        width: 50%;
+    }
+    .wf-prizes-partics-val {
+        position: absolute;
+        top: 210px;
+        right: 50px;
+        width: 50%;
+    }
+    .wf-prizes-actives {
+        position: absolute;
+        top: 250px;
+        right: 50px;
+        width: 50%;
+    }
+    .wf-prizes-actives-val {
+        position: absolute;
+        top: 295px;
+        right: 50px;
+        width: 50%;
+    }
+   
+    .wf-legends-lbls {
+        margin-left: 0px;
+        position: absolute;
+    }
+    
+    .wfunnel-leg-back {
+        margin-left: -25px;
+    }
+    .wfunnel-container {
+    
+   }
+    .wf-img-top img {
+        height: 120px;
+        width: auto;
+    }
+    #wfunnel-leg-top img {
+         height: 80px;
+         width: auto;
+    }
+    .wf-img-1 img {
+        height: 92px;
+        width: auto;
+    }
+    #wfunnel-top--1 {
+        display: block;
+        padding-left: 81px; 
+        padding-right: 100px; 
+        margin-top: -20px;
+    }
+    .wfunnel-leg--1 img {
+         height: 50px;
+         width: auto;
+    }
+    .wf-img-2 img {
+        height: 85px;
+        width: auto;
+    }
+    #wfunnel-top--2 {
+        display: block;
+        padding-left: 120px;
+        margin-top: -14px;
+    }
+    .wf-img-3 img {
+        height: 85px;
+        width: auto;
+    }
+    #wfunnel-top--3 {
+        display: block;
+        padding-left: 141px;
+        margin-top: -10px;
+    }
+   
+    .wf-legs-img img {
+        height: 300px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wf-prizes-lbls {
+        position: absolute;
+    }
+    .wf-legends-main {
+        padding-left: 50px;
+        padding-top: 70px;
+        margin-left: -25px;
+    }
+
+    .wf-leg-entered {
+        position: absolute;
+        top: 20px;
+        right: 150px;
+    }
+    
+    .wf-leg-inproc {
+        position: absolute;
+        top: 80px;
+        right: 210px;
+    }
+    .wf-leg-approved {
+        position: absolute;
+        top: 160px;
+        right: 230px;
+    }
+    .wf-leg-finalized {
+        position: absolute;
+        top: 240px;
+        right: 260px;
+    }
+    .wf-leg-entered-val {
+        position: absolute;
+        top: 20px;
+        right: 70px;
+        font-size: 26px;
+    }
+    .wf-leg-inproc-val {
+        position: absolute;
+        top: 80px;
+        right: 70px;
+        font-size: 26px;
+    }
+    .wf-leg-approved-val {
+        position: absolute;
+        top: 160px;
+        right: 70px;
+        font-size: 26px;
+    }
+    .wf-leg-finalized-val {
+        position: absolute;
+        top: 240px;
+        right: 70px;
+        font-size: 26px;
+    }
+    .wf-prizes-recog {
+        position: absolute;
+        top: 70px;
+        width: 50%;
+        font-size: 26px;
+    }
+    .wf-prizes-recog-val {
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        font-size: 26px;
+      
+        
+    }
+    .wf-prizes-partics {
+        position: absolute;
+        top: 160px;
+        width: 50%;
+        font-size: 26px;
+    }
+    .wf-prizes-partics-val {
+        position: absolute;
+        top: 160px;
+        right: 30px;
+        font-size: 26px;
+      
+        
+    }
+    .wf-prizes-actives {
+        position: absolute;
+        top: 250px;
+        width: 50%;
+        font-size: 26px;
+    }
+    .wf-prizes-actives-val {
+        position: absolute;
+        top: 250px;
+        right: 30px;
+        font-size: 26px;
+      
+        
+    }
+    .wf-legends-lbls {
+        margin-left: -50px;
+        position: absolute;
+    }
+    
+    .wfunnel-leg-back {
+        margin-left: -45px;
+    }
+    .wfunnel-container {
+    
+   }
+   
+   .wf-img-top img {
+        height: 120px;
+        width: auto;
+    }
+    #wfunnel-leg-top img {
+         height: 80px;
+         width: auto;
+    }
+    
+    .wf-img-1 img {
+        height: 92px;
+        width: auto;
+    }
+    #wfunnel-top--1 {
+        display: block;
+        padding-left: 81px; 
+        padding-right: 100px; 
+        margin-top: -20px;
+    }
+    .wfunnel-leg--1 img {
+         height: 80px;
+         width: auto;
+    }
+    
+    .wf-img-2 img {
+        height: 85px;
+        width: auto;
+    }
+    #wfunnel-top--2 {
+        display: block;
+        padding-left: 120px;
+        margin-top: -14px;
+    }
+    .wf-img-3 img {
+        height: 85px;
+        width: auto;
+    }
+    #wfunnel-top--3 {
+        display: block;
+        padding-left: 141px;
+        margin-top: -10px;
+    }
+    .wf-legs-img img {
+        height: 300px;
+        width: auto;
+    }
+}
+

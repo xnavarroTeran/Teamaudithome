@@ -1,0 +1,152 @@
+/* 
+    Document   : wigodashlets
+    Created on : Jun 13, 2019, 3:57:33 PM
+    Author     : xaviernavarro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+.goals-main {
+    position: relative;
+    background:  #d9edf7;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out ;
+    -ms-transition: all .15s ease-out ;
+    -o-transition: all .15s ease-out ;
+    transition: all .15s ease-out ;
+}
+
+.goals-maintenance {
+    background:  #ffffff;
+    min-height: 850px!important;
+    margin-bottom: 30px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out ;
+    -ms-transition: all .15s ease-out ;
+    -o-transition: all .15s ease-out ;
+    transition: all .15s ease-out ;
+}
+
+
+@media screen and (max-width: 767px) {
+   
+    .goals-main-sizing {
+        height: auto;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    .goals-main-desc {
+        font-family: sans-serif;
+        font-size: 12px;
+        height: auto;
+        overflow: hidden;
+
+    }
+    
+    #biz-goal-tacticals {
+        width: 100%;
+        font-size: 9px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .goals-main-sizing {
+        height: auto;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    .goals-main-desc {
+        font-family: sans-serif;
+        font-size: 12px;
+        max-height: 210px; 
+        min-height: 210px; 
+        overflow: hidden;
+
+    }
+    
+     
+    #biz-goal-tacticals {
+        width: 100%;
+        font-size: 9px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .goals-main-sizing {
+        max-height: 220px!important;
+        min-height: 220px!important;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    .goals-main-desc {
+        font-family: sans-serif;
+        font-size: 18px;
+        max-height: 210px; 
+        min-height: 210px; 
+        overflow: hidden;
+    }
+    
+     
+    #biz-goal-tacticals {
+        width: 60%;
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+    .goals-main-sizing {
+        max-height: 220px!important;
+        min-height: 220px!important;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    .goals-main-desc {
+        font-family: sans-serif;
+        font-size: 18px;
+        max-height: 210px; 
+        min-height: 210px; 
+        overflow: hidden;
+    }
+    
+     
+    #biz-goal-tacticals {
+        width: 100%;
+        font-size: 12px;
+    }
+}
