@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-vmenu-main',
@@ -9,7 +9,7 @@ export class VmenuMainComponent implements OnInit {
 
   @Input() bgcolor: string = "#000000";
   @Input() fgcolor: string = "ffffff";
-  
+  @Output() showAuditors = new EventEmitter<string>();
   colStyle: string  = "#ffffff";
   constructor() {
     
@@ -20,4 +20,8 @@ export class VmenuMainComponent implements OnInit {
 
   }
 
+  goShowAuditors()
+  {
+    this.showAuditors.next('');
+  }
 }

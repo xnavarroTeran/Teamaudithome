@@ -10,39 +10,78 @@
   <div id="boardmaster-panel-main" class="container-fluid wheader-main">
     <div class="row">
       <div id="innodtl-vert-menu" [ngStyle]="{ background: menubgcolor, color: menufgcolor}" class="col-2 col-md-1  whead-vmenu21 w-padding-50">
-          <app-vmenu-main bgcolor="{{menubgcolor}}" fgcolor="{{menufgcolor}}"></app-vmenu-main>
+          <app-vmenu-main (showAuditors)="openBoardFilters()" bgcolor="{{menubgcolor}}" fgcolor="{{menufgcolor}}"></app-vmenu-main>
       </div>
       <div id="innoview-comms" class="col-10 col-md-11 w-resp-pad-left-20 w-top-30 border-bottom w-top-120 w-padding-bottom-100">
         <div class="container-fluid w-top-20">
-          <div class="row">
-            <div class="d-none d-lg-flex col-lg-1"></div>
-            <div class="col-12 col-lg-3">
-         
-              <a href="javascript: void(0);" (click)="openBoardFilters()">
-                  <i *ngIf="filtersviewop" class="fas fa-filter"></i>
-                  <i *ngIf="!filtersviewop" class="fas fa-angle-up"></i>
-                  <span class="wigo-sm-font-size">
-                    {{'MENU.FILTERS' | translate}}
-                  </span>&nbsp;
-                 
-              </a>
+          <div  class="row">
+            <div *ngIf="!filtersview" class="col-12 col-lg-2">
+              <div class="w-width-full w-padding-10 border rounded">
+                <a href="javascript:void(0)" (click)="openBoardFilters()">
+                  <mat-icon>filter_list</mat-icon>
+                  {{'MENU.lBLSELAUDITORS' | translate}}
+                </a>
+                
+              </div>
             </div>
-          </div>
-          <div *ngIf="filtersview" class="row">
-            <div class="d-none d-lg-flex col-lg-1"></div>
-            <div class="col-12 col-lg-3">
+            <div *ngIf="filtersview" class="col-12 col-lg-3">
               <mat-form-field appearance="outline" class="w-width-full">
                 <mat-label> {{'APPHOME.SELAUDITOR' | translate}}</mat-label>
                 <mat-select multiple [formControl]="selectedFW">
-                  <mat-option *ngFor="let one of json.data" [value]="json.id">
-                  {{ json.firstname }}
-                 </mat-option>
+                  <mat-option *ngFor="let one of ddauditors" [value]="one.value">
+                  {{ one.viewValue }}
+                </mat-option>
                 </mat-select>
               </mat-form-field>
               <app-loading-indicator *ngIf="loadingauditors"></app-loading-indicator>
             </div>
+            <div class="col-12 col-lg-2">
+              <mat-form-field appearance="outline" class="w-width-full">
+                <mat-label> {{'APPHOME.SELSTATE' | translate}}</mat-label>
+                <mat-select [(value)] = 'statesdefault'>
+                  <mat-option [value]="1">
+                    {{'GLOBAL.ALLFEM' | translate}}
+                  </mat-option>
+                  <mat-option [value]="2">
+                    
+                    {{'GLOBAL.ACTIVESFEM' | translate}}
+                  </mat-option>
+                  <mat-option [value]="3">
+                    {{'GLOBAL.FINALIZED' | translate}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div  class="col-12 col-lg-2">
+              <mat-form-field appearance="fill">
+                <mat-label>
+                  <strong>
+                    {{'GLOBAL.FROM' | translate}}
+                  </strong>
+                </mat-label>
+                <input matInput [matDatepicker]="fromdate" [(ngModel)]="datefrom" (dateInput)="addEvent('input', $event)"
+                  (dateChange)="addEvent('change', $event)">
+                <mat-datepicker-toggle matSuffix [for]="fromdate"></mat-datepicker-toggle>
+                <mat-datepicker #fromdate>
+                </mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div  class="col-12 col-lg-2 w-resp-pad-left-10">
+              <mat-form-field appearance="fill">
+                <mat-label>
+                  <strong>
+                    {{'GLOBAL.TO' | translate}}
+                  </strong>
+                </mat-label>
+                <input matInput [matDatepicker]="todate" [(ngModel)]="dateto" (dateInput)="addToEvent('input', $event)"
+                  (dateChange)="addToEvent('change', $event)">
+                <mat-datepicker-toggle matSuffix [for]="todate"></mat-datepicker-toggle>
+                <mat-datepicker #todate>
+                </mat-datepicker>
+              </mat-form-field>
+            </div>
           </div>
-        </div>
+          
         
          
       </div>

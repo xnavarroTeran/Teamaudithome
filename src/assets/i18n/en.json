@@ -1,0 +1,53 @@
+{
+    "LANDING": {
+      "MAIN_TITLE": "Normas Internaciones para el Ejercicios Profesional de la Auditoría Interna (NIEPAI)",
+      "SUB_TITLE": "La Auditoría Interna es una actividad independiente y objetiva de aseguramiento y consulta, concebida para agregar valor y mejorar las operaciones de una organización.",
+      "LINE2": "Testing NGX-translate",
+      "LINE3": "Greetings everyone! I am Shubhrank Rastogi",
+      "SELCOMPANY": "Seleccione una empresa",
+      "TT_LOGIN": "Clic aqui para ingresar a empresa",
+      "NOTVALIDATED": "El usuario no ha sido validado. Clic Re-enviar para recibir un nuevo correo de validación.",
+      "PROPERTY": {
+        "LINE": "Translating using property binding"
+      }
+    },
+    "GLOBAL": {
+        "CONTINUE": "Continuar",
+        "LOGIN": "Ingresar",
+        "CANCEL": "Cancelar",
+        "PH_EMAIL":"Ingrese su correo electrónico...",
+        "PH_PWD": "Ingrese su contraseña...",
+        "FORGOT_PWD": "Olvide mi contraseña",
+        "REMEMBERME": "Recordar",
+        "RESEND": "Reenviar",
+        "ALL": "Todo(a)s",
+        "ALLFEM": "Todas",
+        "ACTIVESFEM": "Activas",
+        "FINALIZED":"Finalizadas"
+    },
+    "MENU": {
+        "MYACCT":"My Account",
+        "SETTINGS": "Settings",
+        "MASTERTABLES": "Tablas Maestras",
+        "HOME":"Inicio",
+        "FILTERS":"Filtros",
+        "REPORTS":"Reportes",
+        "ADDAUDIT": "Agregar Auditoria",
+        "lBLSELAUDITORS": "Seleccionar Auditores"
+   
+    },
+    "APPHOME": {
+        "SELAUDITOR": "Seleccione los Auditores",
+        "SELSTATE": "Estado"
+        
+    },
+    "FORMATS": {
+      "DATE": "DD/MM/YYYY"
+    },
+    "ERRORS": {
+        "REQUIRED": "Campo es requirido, no puede quedar vacio.",
+        "NOEMAIL": "Correo electrónico no existe en el catalogo de usuarios. ",
+        "BADPWD": "contraseña es invalida."
+        
+    }
+  }

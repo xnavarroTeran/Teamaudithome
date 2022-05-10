@@ -20,7 +20,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -34,11 +35,26 @@ import { LoadingIndicatorComponent } from './shared-components/loading-indicator
 import { TeamauditHomeComponent } from './components/teamaudit-home/teamaudit-home.component';
 import { MyAcctComponent } from './components/myacct/myacct.component';
 import { VmenuMainComponent } from './shared-components/vmenu-main/vmenu-main.component';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { first } from 'rxjs/operators';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
+const APP_FORMATS = {
+  parse: {
+    dateInput: 'DD-MM-YYYY',
+  },
+  display: {
+    dateInput: 'DD-MM-YYYY',
+    monthYearLabel: 'MMMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
 
 @NgModule({
   declarations: [
@@ -73,20 +89,27 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatMenuModule,
     MatSidenavModule,
     MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     FlexLayoutModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatInputModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       },
-      defaultLanguage: 'sp',
+      defaultLanguage: 'es',
     })
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_FORMATS, useValue: APP_FORMATS },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

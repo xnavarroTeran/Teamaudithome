@@ -8,7 +8,7 @@
         
       </div>
       <span class="home-title-font w-margin-left-50 d-none d-lg-block">{{apptitle | uppercase}}</span>
-      <nav class="primary-menu text-md-right">
+      <nav class="primary-menu text-md-right w-padding-right-50">
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <span class="text-white">
             {{inUsername}}
@@ -40,10 +40,10 @@
             {{inUsername}}
         </span>
       -->
-        <span *ngIf="inErrorlogin" matTooltip = "{{inFullname}}">
+        <span *ngIf="inErrorlogin" matTooltip = "{{inFullname}}" class="w-margin-right-50">
         
          
-          <a  (click)="callLogin()" class="login btn btn-primary btn-sm">
+          <a  (click)="callLogin()" class="login btn btn-primary btn-sm w-margin-right-50">
             <span class="text-white">{{'GLOBAL.LOGIN' | translate}}</span>
           </a>
        

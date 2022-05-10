@@ -19,7 +19,13 @@
         "PH_PWD": "Ingrese su contraseña...",
         "FORGOT_PWD": "Olvide mi contraseña",
         "REMEMBERME": "Recordar",
-        "RESEND": "Reenviar"
+        "RESEND": "Reenviar",
+        "ALL": "Todo(a)s",
+        "ALLFEM": "Todas",
+        "ACTIVESFEM": "Activas",
+        "FINALIZED":"Finalizadas",
+        "FROM": "Desde",
+        "TO": "Hasta"
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",
@@ -28,11 +34,17 @@
         "HOME":"Inicio",
         "FILTERS":"Filtros",
         "REPORTS":"Reportes",
-        "ADDAUDIT": "Agregar Auditoria"
+        "ADDAUDIT": "Agregar Auditoria",
+        "lBLSELAUDITORS": "Seleccionar Auditores"
    
     },
     "APPHOME": {
-        "SELAUDITOR": "Seleccione los Auditores"
+        "SELAUDITOR": "Seleccione los Auditores",
+        "SELSTATE": "Estado"
+        
+    },
+    "FORMATS": {
+      "DATE": "DD/MM/YYYY"
     },
     "ERRORS": {
         "REQUIRED": "Campo es requirido, no puede quedar vacio.",

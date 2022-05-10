@@ -941,7 +941,7 @@ td div-rezizable {
 }
 
 .w-padding-right-50 {
-    padding-right: 50px;
+    padding-right: 50px!important;
 }
 
 
@@ -1229,6 +1229,9 @@ td div-rezizable {
 
 @media screen and (max-width: 767px) {
     
+    .w-resp-padding-left-10 {
+
+    }
     .w-width-lg-80-md-90 {
         width: 90%;
     }
@@ -1325,6 +1328,9 @@ td div-rezizable {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .w-resp-padding-left-10 {
+        
+    }
     .w-width-lg-80-md-90 {
         width: 90%;
     }
@@ -1422,6 +1428,9 @@ td div-rezizable {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+    .w-resp-padding-left-10 {
+        padding-left: 10px!important;   
+    }
     .w-width-lg-80-md-90 {
         width: 80%;
     }
@@ -1531,6 +1540,9 @@ td div-rezizable {
 }
 
 @media screen and (min-width: 1200px) {
+    .w-resp-padding-left-10 {
+        padding-left: 10px!important;   
+    }
     .w-width-lg-80-md-90 {
         width: 80%;
     }

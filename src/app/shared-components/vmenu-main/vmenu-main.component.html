@@ -32,6 +32,22 @@
             <br>
             <div id="innohome_boards_tab_div" class="wigo-vtransp-menu-divider"></div>    
         </div>
+        <div id="innohome_vmenu_selauditors" style="width: 100%;" class="wigovmenu text-center w-top-10" data-container='body' data-html='true' data-placement='right'>
+            <a href="javascript:void(0)" (click)="goShowAuditors()">
+                <div id="inno-boards-icon" class="text-center" [ngStyle] = "{color: colStyle}">
+                    <mat-icon>filter_list</mat-icon>
+                    <!-- <i id='ih_vm_dash_i' class="fas fa-home pull-center"></i>&nbsp; -->
+                </div>
+                <div id="inno-boards-text" class="text-center">
+                    <span class="wigo-xs-noshow wigo-sm-font-size" [ngStyle] = "{color: colStyle}">
+                        {{'MENU.lBLSELAUDITORS' | translate}}
+                    </span>
+                </div>
+          
+            </a>
+            <br>
+            <div id="innohome_boards_tab_div" class="wigo-vtransp-menu-divider"></div>    
+        </div>
         <div id="ih-vmenu-reps" style="width: 100%;" class="wigovmenu w-top-10 text-center" data-container='body' data-html='true' data-placement='right'>
      
             <a href="#" onclick="return showDashboard();">
