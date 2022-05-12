@@ -81,7 +81,31 @@
               </mat-form-field>
             </div>
           </div>
-          
+          <div class="row w-top-30">
+            <div  id="active-boards" class="col-12">
+              <div fxLayout="row wrap">
+                <mat-card *ngFor="let js of jsonboards"class="border rounded"  fxFlex="50">
+                  <mat-card-title class="text-left w-padding-left-10">
+                    <span class="boardphase">
+                      <i class="{{js.phaseicon}}" [ngStyle]="{'color': js.phasecolor, 'font-size.px': phaseicosize}" ></i>&nbsp;
+                      {{js.phasename}}
+                    </span>
+                  </mat-card-title>
+                  <div class=" w-top-30 text-center">
+                    <a href="#" class="text-primary">
+                     
+                        <strong>
+                          {{js.boardname}}
+                        </strong>
+                     
+                    </a>
+                  </div>
+
+                </mat-card>
+              </div>
+              
+            </div>
+          </div>
         
          
       </div>

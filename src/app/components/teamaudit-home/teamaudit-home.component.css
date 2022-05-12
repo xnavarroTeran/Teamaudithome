@@ -1,3 +1,16 @@
 #taudit-filters {
     background-color: lightgrey;
 }
+
+
+.boardphase {
+    position: relative;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #828c97;
+    line-height: 1;
+    text-transform: uppercase;
+}
+

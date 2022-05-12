@@ -1,10 +1,11 @@
-import {Component, AfterViewInit,ViewChild} from "@angular/core";
+import {Component, AfterViewInit,ViewChild, HostListener} from "@angular/core";
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { InputEmailComponent } from "src/app/shared-components/input-email/input-email.component";
 import { VmenuMainComponent } from "src/app/shared-components/vmenu-main/vmenu-main.component";
 import { LoginServiceService } from 'src/app/shared-services/login-service.service';
 import { LoadingIndicatorComponent } from 'src/app/shared-components/loading-indicator/loading-indicator.component';
 import { UsersServiceService } from 'src/app/shared-services/users-service.service';
+import { BoardsServiceService } from 'src/app/shared-services/boards-service.service';
 import { FramecommonService } from 'src/app/shared-services/framecommon.service';
 import {TranslateService} from '@ngx-translate/core';
 import { ActivatedRoute } from "@angular/router";
@@ -21,6 +22,12 @@ declare var TweenMax: any;
 export interface DDLoader {
   value: number;
   viewValue: string;
+}
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
 }
 
 @Component({
@@ -40,7 +47,6 @@ export class TeamauditHomeComponent implements AfterViewInit {
   "loginEm": boolean = false;
   "loginPw": boolean = true;
   "selcomp": boolean = false;
-  "jsonobj": JSON;
   menubgcolor: string = '#000000';
   menufgcolor: string = '#ffffff';
   selected: string = 'option2';
@@ -92,12 +98,13 @@ export class TeamauditHomeComponent implements AfterViewInit {
     private router: ActivatedRoute,
     private logservices: LoginServiceService,
     private frameserv: FramecommonService,private userserv: UsersServiceService,
+    private boardserv:BoardsServiceService,
     private localize: TranslateService,
     private formBuilder: FormBuilder
     ) 
   {
-    
     this.localize.setDefaultLang("es");
+    this.initializeBoardsArray();
     const today = new Date();
     const month = today.getMonth();
     const year = today.getFullYear();
@@ -213,9 +220,54 @@ export class TeamauditHomeComponent implements AfterViewInit {
         }
         this.selectedFW.setValue(0);
         this.auditorsloaded = true;
-        
+        this.loadBoards();
       });
       
+  }
+
+  // boards section..
+  boardsOffset = 0;
+  boardsNumToRead = 10;
+  jsonboards: any = {};
+  phaseicosize:  number = 11;
+  phaselblsize: number = 12;
+  mybreakpoint: number = 0;
+  loadBoards()
+  {
+    
+      this.boardserv.getBoards(this.boardsOffset, this.boardsNumToRead).subscribe((res)=>{
+       
+        this.mybreakpoint = (window.innerWidth <= 600) ? 1 : 6;
+        var html = "<div class='auditboard'> This is a test.. let's see.</div>";
+        if (res != null) {
+          this.boardsOffset += this.boardsNumToRead;
+          this.jsonboards = res.data;        
+        }  else {
+            this.initializeBoardsArray();
+          }
+        console.log(" boards ==> ", this.jsonboards);
+      });
+      
+  }
+
+  handleSize(event: any) {
+    this.mybreakpoint = (event.target.innerWidth <= 600) ? 1 : 6;
+    }
+  initializeBoardsArray()
+  {
+    this.jsonboards = [
+      {"id": 1},
+      {"boardname":"Empty Name"}
+    ];
+
+  }
+  @HostListener("window:scroll", ["$event"])
+  onWindowScroll() {
+    //In chrome and some browser scroll is given to body tag
+    var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+    if (scrollBottom <= 30) {
+      this.loadBoards();
+    }
   }
 }
 
