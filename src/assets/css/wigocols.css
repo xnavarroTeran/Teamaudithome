@@ -1287,11 +1287,18 @@ td div-rezizable {
     .w-margin-right-md-30 {
     }
 
+    .w-margin-left-md-30 {
+       
+    }
+
     .w-padding-right-md-30 {
     }
     .w-padding-right-md-40 {
     }
 
+
+    .w-margin-left-md-50 {
+    }
     .wigo-cols-xs-12 {
         width: 100%;
         
@@ -1384,11 +1391,16 @@ td div-rezizable {
     }
     .w-margin-right-md-30 {
     }
+    .w-margin-left-md-30 {
+
+    }
     .w-padding-right-md-30 {
     }
     .w-padding-right-md-40 {
     }
-
+    .w-margin-left-md-50 {
+       
+    }
     .wigo-cols-sm-12 {
         width: 100%;
         display: block;
@@ -1486,6 +1498,9 @@ td div-rezizable {
     .w-margin-right-md-30 {
         margin-right: 30px !important;
     }
+    .w-margin-left-md-30 {
+        margin-left: 30px !important;
+    }
     .w-padding-right-md-30 {
         padding-right: 30px !important;
     }
@@ -1493,7 +1508,9 @@ td div-rezizable {
      .w-padding-right-md-40 {
          padding-right: 40px !important;
     }
-
+    .w-margin-left-md-50 {
+        margin-left: 50px !important;
+    }
     .wigo-cols-md-12 {
         width: 100%;
         display: table-cell;
@@ -1598,10 +1615,16 @@ td div-rezizable {
     .w-margin-right-md-30 {
         margin-right: 30px !important;
     }
+    
     .w-padding-right-md-40 {
         padding-right: 40px !important;
     }
-
+    .w-margin-left-md-30 {
+        margin-left: 30px !important;
+    }
+    .w-margin-left-md-50 {
+        margin-left: 50px !important;
+    }
      .wigo-cols-lg-12 {
         width: 100%;
         margin-left: 5px;

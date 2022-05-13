@@ -39,6 +39,7 @@ import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { first } from 'rxjs/operators';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import { AuditsGridComponent } from './components/audits-grid/audits-grid.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -64,7 +65,8 @@ const APP_FORMATS = {
     LoadingIndicatorComponent,
     TeamauditHomeComponent,
     MyAcctComponent,
-    VmenuMainComponent
+    VmenuMainComponent,
+    AuditsGridComponent
   ],
   
   imports: [

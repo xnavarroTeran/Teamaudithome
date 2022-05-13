@@ -23,7 +23,8 @@
         "ALL": "Todo(a)s",
         "ALLFEM": "Todas",
         "ACTIVESFEM": "Activas",
-        "FINALIZED":"Finalizadas"
+        "FINALIZED":"Finalizadas",
+        "VIEWNOTE":"View Note."
     },
     "MENU": {
         "MYACCT":"My Account",

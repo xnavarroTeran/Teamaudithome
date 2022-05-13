@@ -1,0 +1,30 @@
+
+
+<div fxLayout="row wrap">
+    <mat-card *ngFor="let js of jsonarray; let i = index" class="border rounded w-margin-left-md-50"  fxFlex="40">
+        <mat-card-title class="text-left w-padding-left-10">
+            <span class="boardphase">
+                <i class="{{js.phaseicon}}" [ngStyle]="{'color': js.phasecolor, 'font-size.px': phaseicosize}" ></i>&nbsp;
+                {{js.phasename}}
+            </span>
+        </mat-card-title>
+        <br/>
+        <br/>
+        <mat-card-title class=text-center w-top-30>
+            <a href="javascript:void(0)" class="text-primary wigo_header_level_3_blue">
+            
+                <strong>
+                    <span>
+                        {{js.boardname}}&nbsp;
+                    </span>
+                </strong>
+            </a>
+            <i class="{{boardcommclass[i]}} w-cursor-link" (click)="showBoardTooltip(i)" matTooltip="{{'GLOBAL.VIEWNOTE' | translate}}"></i>
+
+            <div *ngIf="boardcommvisible[i]"  [innerHTML]="js.description" class="w-widt-full w-padding-5 text-left">
+               
+            </div>
+        </mat-card-title>
+    </mat-card>
+    
+  </div>

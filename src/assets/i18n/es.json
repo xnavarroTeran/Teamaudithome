@@ -25,7 +25,8 @@
         "ACTIVESFEM": "Activas",
         "FINALIZED":"Finalizadas",
         "FROM": "Desde",
-        "TO": "Hasta"
+        "TO": "Hasta",
+        "VIEWNOTE":"Ver nota"
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",
