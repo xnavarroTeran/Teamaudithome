@@ -113,17 +113,17 @@ export class TeamauditHomeComponent implements AfterViewInit {
       start: new FormControl(new Date(year, month, 13)),
       end: new FormControl(new Date(year, month, 16)),
     });
-
+    this.initialization();
   }
 
   ngOnInit() {
-    this.initialization();
+    
     this.setLabels();
    }
 
    ngAfterViewInit(): void {
     // this.menuhtml = this.frameserv.formVMenu('innodtl-vert-menu', '006400');
-   
+    
      
    }
 
@@ -220,7 +220,7 @@ export class TeamauditHomeComponent implements AfterViewInit {
         }
         this.selectedFW.setValue(0);
         this.auditorsloaded = true;
-        this.loadBoards();
+      
       });
       
   }

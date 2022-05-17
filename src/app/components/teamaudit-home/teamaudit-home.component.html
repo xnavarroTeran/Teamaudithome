@@ -6,16 +6,19 @@
     </app-page-header>
   
   </div>
-
+  
   <div id="boardmaster-panel-main" class="container-fluid wheader-main">
     <div class="row">
       <div id="innodtl-vert-menu" [ngStyle]="{ background: menubgcolor, color: menufgcolor}" class="col-2 col-md-1  whead-vmenu21 w-padding-50">
           <app-vmenu-main (showAuditors)="openBoardFilters()" bgcolor="{{menubgcolor}}" fgcolor="{{menufgcolor}}"></app-vmenu-main>
       </div>
       <div id="innoview-comms" class="col-10 col-md-11 w-resp-pad-left-20 w-top-30 border-bottom w-top-120 w-padding-bottom-100">
+      
         <div class="container-fluid w-top-20">
+
           <div  class="row">
-            <div *ngIf="!filtersview" class="col-12 col-lg-2">
+            <div class="d-none d-lg-flex col-lg-1"></div>
+            <div *ngIf="!filtersview" class="col-12 col-md-6 col-lg-3">
               <div class="w-width-full w-padding-10 border rounded">
                 <a href="javascript:void(0)" (click)="openBoardFilters()">
                   <mat-icon>filter_list</mat-icon>
@@ -24,7 +27,7 @@
                 
               </div>
             </div>
-            <div *ngIf="filtersview" class="col-12 col-lg-3">
+            <div *ngIf="filtersview" class="col-12 col-md-6 col-lg-3">
               <mat-form-field appearance="outline" class="w-width-full">
                 <mat-label> {{'APPHOME.SELAUDITOR' | translate}}</mat-label>
                 <mat-select multiple [formControl]="selectedFW">
@@ -35,7 +38,7 @@
               </mat-form-field>
               <app-loading-indicator *ngIf="loadingauditors"></app-loading-indicator>
             </div>
-            <div class="col-12 col-lg-2">
+            <div class="col-12 col-md-6 col-lg-2">
               <mat-form-field appearance="outline" class="w-width-full">
                 <mat-label> {{'APPHOME.SELSTATE' | translate}}</mat-label>
                 <mat-select [(value)] = 'statesdefault'>
@@ -52,8 +55,8 @@
                 </mat-select>
               </mat-form-field>
             </div>
-            <div  class="col-12 col-lg-2">
-              <mat-form-field appearance="fill">
+            <div  class="col-12 col-md-6 col-lg-2">
+              <mat-form-field appearance="outline">
                 <mat-label>
                   <strong>
                     {{'GLOBAL.FROM' | translate}}
@@ -66,8 +69,8 @@
                 </mat-datepicker>
               </mat-form-field>
             </div>
-            <div  class="col-12 col-lg-2 w-resp-pad-left-10">
-              <mat-form-field appearance="fill">
+            <div  class="col-12 col-md-6 col-lg-2">
+              <mat-form-field appearance="outline">
                 <mat-label>
                   <strong>
                     {{'GLOBAL.TO' | translate}}

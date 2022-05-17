@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BoardsServiceService } from 'src/app/shared-services/boards-service.service';
 import { FramecommonService } from 'src/app/shared-services/framecommon.service';
 import {TranslateService} from '@ngx-translate/core';
@@ -27,12 +27,15 @@ export class AuditsGridComponent implements OnInit {
   showboardttip: boolean = false;
   
   constructor(private boardserv:BoardsServiceService,) { 
-    this.loadBoards();
+    
 
   }
 
   ngOnInit(): void {
+    this.loadBoards();
   }
+ 
+
 
   // boards section..
   
@@ -49,7 +52,7 @@ export class AuditsGridComponent implements OnInit {
           this.jsonboards = res; 
           this.jsonarray = this.jsonboards.data;     
           this.boardcommvisible = this.jsonboards.data.map(() => false);   
-          this.boardcommclass = this.jsonboards.data.map(() => "fa fa-caret-down");
+          this.boardcommclass = this.jsonboards.data.map(() => "visibility");
           console.log("boardcommclass ==> ", this.boardcommclass);
         }  else {
             this.initializeBoardsArray();
@@ -61,7 +64,7 @@ export class AuditsGridComponent implements OnInit {
   showBoardTooltip(i: number): void {
     this.boardcommvisible[i] = !this.boardcommvisible[i];
 
-    this.boardcommclass[i] = (this.boardcommclass[i] == "fa fa-caret-down") ? "fa fa-caret-up" : "fa fa-caret-down";
+    this.boardcommclass[i] = (this.boardcommclass[i] == "visibility") ? "visibility_off" : "visibility";
   }
   
   initializeBoardsArray()

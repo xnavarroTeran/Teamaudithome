@@ -26,7 +26,11 @@
         "FINALIZED":"Finalizadas",
         "FROM": "Desde",
         "TO": "Hasta",
-        "VIEWNOTE":"Ver nota"
+        "VIEWNOTE":"Nota",
+        "HIDENOTE":"Esconder",
+        "PLAN": "Plan",
+        "STARTDATE": "Fecha inicio",
+        "ENDDATE": "Fecha fin."
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",
@@ -39,6 +43,10 @@
         "lBLSELAUDITORS": "Seleccionar Auditores"
    
     },
+    "AUDITS": {
+        "AUDITDEPT": "Dept. Auditado",
+        "AUDITOR": "Auditor"
+    },
     "APPHOME": {
         "SELAUDITOR": "Seleccione los Auditores",
         "SELSTATE": "Estado"
@@ -48,7 +56,7 @@
       "DATE": "DD/MM/YYYY"
     },
     "ERRORS": {
-        "REQUIRED": "Campo es requirido, no puede quedar vacio.",
+        "REQUIRED": "Campo es requerido, no puede quedar vacio.",
         "NOEMAIL": "Correo electrónico no existe en el catalogo de usuarios. ",
         "BADPWD": "contraseña es invalida."
         

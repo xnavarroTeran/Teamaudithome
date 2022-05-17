@@ -8,3 +8,23 @@
     line-height: 1;
     text-transform: uppercase;
 }
+
+.audit-card-footer {
+   
+    font-size: 12px;
+    font-weight: 600;
+    color: #828c97;
+}
+.audit-card-footer-div {
+    position: relative;
+    text-align: right;
+    padding-top: 15px;
+    
+}
+
+.card-sect-title {
+    height: 40px;
+}
+.card-sect-shortdesc {
+    height: 80px;
+}

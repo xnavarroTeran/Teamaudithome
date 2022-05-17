@@ -1,16 +1,19 @@
 
 
-<div fxLayout="row wrap">
-    <mat-card *ngFor="let js of jsonarray; let i = index" class="border rounded w-margin-left-md-50"  fxFlex="40">
+
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+    
+    <mat-card *ngFor="let js of jsonarray; let i = index" class="border rounded w-top-10 w-margin-left-md-50"  fxFlex="100" fxFlex.gt-md="40">
         <mat-card-title class="text-left w-padding-left-10">
             <span class="boardphase">
                 <i class="{{js.phaseicon}}" [ngStyle]="{'color': js.phasecolor, 'font-size.px': phaseicosize}" ></i>&nbsp;
                 {{js.phasename}}
             </span>
+           
         </mat-card-title>
         <br/>
-        <br/>
-        <mat-card-title class=text-center w-top-30>
+       
+        <mat-card-title class="text-center w-top-20 card-sect-title">
             <a href="javascript:void(0)" class="text-primary wigo_header_level_3_blue">
             
                 <strong>
@@ -19,12 +22,90 @@
                     </span>
                 </strong>
             </a>
-            <i class="{{boardcommclass[i]}} w-cursor-link" (click)="showBoardTooltip(i)" matTooltip="{{'GLOBAL.VIEWNOTE' | translate}}"></i>
+           
 
-            <div *ngIf="boardcommvisible[i]"  [innerHTML]="js.description" class="w-widt-full w-padding-5 text-left">
+          
+        </mat-card-title>
+        
+        <mat-card-title class="text-left w-top-20 w-font-main-para-sm card-sect-shortdesc">
+            <div class="w-cursor-link">
+                {{js.shortdesc}}
+            </div>
+            
+        </mat-card-title>
+        
+        <mat-card-title *ngIf="boardcommvisible[i]" class="text-left w-top-20 w-font-main-para-sm">
+            <div  [innerHTML]="js.description" class="w-widt-full w-padding-5 text-left w-font-main-para-sm">
+                
                
+            </div>
+            <div class="w-width-full text-right">
+                <span class="w-cursor-link text-primary w-cursor-link audit-card-footer-mnu"  (click)="showBoardTooltip(i)">
+                    <mat-icon>
+                        {{boardcommclass[i]}}
+                    </mat-icon>
+                    {{'GLOBAL.HIDENOTE' | translate}}
+                </span>
+            </div>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        
+        <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer w-top-20">
+
+            <div fxFlex="25%">
+                <i class="fa fa-check text-primary"></i>&nbsp;
+                {{'AUDITS.AUDITDEPT' | translate}}:
+            </div>
+
+            <div fxFlex="75%" fxFlexOrder="3">
+               {{js.deptname}}
+            </div>
+        </div>
+        <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer">
+
+            <div fxFlex="25%">
+                <i class="fa fa-check text-primary"></i>&nbsp;
+                {{'AUDITS.AUDITOR' | translate}}:
+            </div>
+
+            <div fxFlex="75%" fxFlexOrder="3">
+               {{js.auditleader}}
+            </div>
+        </div>
+        <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer">
+
+            <div fxFlex="25%">
+                <i class="fa fa-check text-primary"></i>&nbsp;
+                {{'GLOBAL.STARTDATE' | translate}}:
+            </div>
+
+            <div fxFlex="75%">
+               {{js.startdate}}
+                <span class="w-margin-left-10">
+                    {{'GLOBAL.ENDDATE' | translate}}:
+                </span>
+                <span class="w-margin-left-10">
+                    {{js.enddate}}
+                </span>
+
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <mat-card-title class="audit-card-footer text-right" style="height: 25px;">
+            <div class="audit-card-footer-div">
+                <span class="w-cursor-link w-font-16 text-primary w-cursor-link audit-card-footer-mnu"  (click)="showBoardTooltip(i)">
+                    <mat-icon class="w-font-16">
+                        {{boardcommclass[i]}}
+                    </mat-icon>
+                    {{'GLOBAL.VIEWNOTE' | translate}}
+                </span>
+                <span class="w-cursor-link w-font-16 text-primary w-top-30 w-cursor-link audit-card-footer-mnu">
+                        <mat-icon class="w-font-16">explore</mat-icon>
+                        {{'GLOBAL.PLAN' | translate}}
+                </span>
             </div>
         </mat-card-title>
     </mat-card>
     
   </div>
+
