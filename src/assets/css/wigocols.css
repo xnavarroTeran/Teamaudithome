@@ -932,6 +932,9 @@ td div-rezizable {
     padding-top: 0px;
 }
 
+.w-padding-top-3 {
+    padding-top: 3px!important;
+}
 .w-padding-right-5 {
     padding-right: 5px;
 }

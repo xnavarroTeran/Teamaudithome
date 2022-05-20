@@ -30,7 +30,9 @@
         "HIDENOTE":"Esconder",
         "PLAN": "Plan",
         "STARTDATE": "Fecha inicio",
-        "ENDDATE": "Fecha fin."
+        "ENDDATE": "Fecha fin.",
+        "REFRESH": "Refrescar",
+        "SEARCH": "Buscar"
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",
@@ -40,17 +42,25 @@
         "FILTERS":"Filtros",
         "REPORTS":"Reportes",
         "ADDAUDIT": "Agregar Auditoria",
-        "lBLSELAUDITORS": "Seleccionar Auditores"
-   
+        "LOGOUT": "Salir"
     },
     "AUDITS": {
         "AUDITDEPT": "Dept. Auditado",
-        "AUDITOR": "Auditor"
+        "AUDITOR": "Auditor",
+        "AUDITLST": "Listado de Auditorias",
+        "LAST20": "Últimas 20 auditorias",
+        "BYDATE": "Mostrar por fechas",
+        "lBLSELAUDITORS": "Seleccionar Auditores",
+        "NUMAUDITS":"Numbero de Auditorias"
     },
     "APPHOME": {
         "SELAUDITOR": "Seleccione los Auditores",
         "SELSTATE": "Estado"
         
+    },
+    "TOOLTIPS": {
+        "REFRESH": "Clic para refrescar el reporte",
+        "SEARCH": "Ingrese el texto que desea bscar..."
     },
     "FORMATS": {
       "DATE": "DD/MM/YYYY"

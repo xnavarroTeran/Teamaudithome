@@ -28,10 +28,10 @@
                 {{'MENU.SETTINGS' | translate}}
             </span>
           </button>
-          <button mat-menu-item>
-            <mat-icon>build</mat-icon>
+          <button mat-menu-item (click)="callLogout()">
+            <mat-icon class="text-danger">exit_to_app</mat-icon>
             <span>
-              {{'MENU.MASTERTABLES' | translate}}
+              {{'MENU.LOGOUT' | translate}}
             </span>
           </button>
         </mat-menu>

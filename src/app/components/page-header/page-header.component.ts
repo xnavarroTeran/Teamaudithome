@@ -1,10 +1,15 @@
 import {Component, OnInit, Input} from "@angular/core";
+import { WigoconfigsService } from 'src/app/shared-services/wigoconfigs.service';
+import { LoginServiceService } from 'src/app/shared-services/login-service.service';
 
 declare let $: any;
 
 @Component({selector: "app-page-header", templateUrl: "./page-header.component.html", styleUrls: ["./page-header.component.css"]})
 export class PageHeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private wconfigserv: WigoconfigsService,
+              private loginserv: LoginServiceService) {
+
+  }
   apptitle = 'Team Audit';
   landingbg = 'darkseagreen';
   applogo = '../assets/images/logo-product.png';
@@ -67,5 +72,12 @@ export class PageHeaderComponent implements OnInit {
   callLogin()
   {
     window.location.href="http://localhost:4200";
+  }
+  
+  callLogout()
+  {
+    var url = this.wconfigserv.getTeamauditLanding();
+    this.loginserv.localClearCmpPref();
+    window.location.href=url;
   }
 }

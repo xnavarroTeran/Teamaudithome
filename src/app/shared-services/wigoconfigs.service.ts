@@ -23,6 +23,7 @@ export class WigoconfigsService {
     "HOST_MODE": "local", // modes: local or cloud or cloud test
     "hWigos":
         [{
+            "tauditland": "http://localhost:4200",
             "taudithome": "http://localhost:4201/teamaudit-home", 
             "wigoworld": "http://localhost:8082/",
             "tauditapi": "http://localhost:8081/",
@@ -42,6 +43,7 @@ export class WigoconfigsService {
            
         },
         {
+            "tauditland": "http://www.teamadit.net",
             "taudithome": "http://www.teamaudit.net/",
             "wigoworld": "http://localhost:8082/",
             "tauditapi": "http://localhost:8081/", 
@@ -61,6 +63,7 @@ export class WigoconfigsService {
            
         },
         {
+            "tauditland": "http://www.teamadit.net",
             "taudithome": "http://www.teamaudit.net/", 
             "wigoworld": "http://localhost:8082/",
             "tauditapi": "http://localhost:8081/", 
@@ -104,6 +107,11 @@ export class WigoconfigsService {
               break;
       }
       return ndx;
+  }
+  getTeamauditLanding()
+  {
+    var ndx = this.getHOSTMode();
+    return this.wigoHosts.hWigos[ndx].tauditland;
   }
   getTeamauditHome()
   {

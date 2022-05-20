@@ -104,5 +104,9 @@ getHostedJson()
     return json;
   }
 
-  
+  localClearCmpPref()
+  {
+    
+    sessionStorage.removeItem(this.getEntryToken());
+  }
 }

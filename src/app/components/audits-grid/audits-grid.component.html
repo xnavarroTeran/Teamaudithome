@@ -1,5 +1,134 @@
 
 
+<div class="container-fluid w-top-20">
+    <div class="row">
+      <div class="col-12">
+        <div>
+          <span class="text-default w-font-main-para">
+            <strong>
+              {{'AUDITS.AUDITLST' | translate}}
+            </strong>
+          </span>
+        </div>
+        <div *ngIf="last20nodate">
+            {{'AUDITS.LAST20' | translate}}&nbsp;
+          </div>
+        <div *ngIf="!last20nodate">
+          {{'AUDITS.NUMAUDITS' | translate}}:&nbsp;{{numauditsread}}
+        </div>
+      </div>
+    </div>
+    <div class="row w-top-10">
+        <div class="d-none d-lg-flex col-1"></div>
+        <div class="col-12 col-lg-2 border-right border-bottom text-center">
+            <mat-checkbox [checked]="chkbydate" class="example-margin" color="primary" (change)="openFromToDate()">
+                {{'AUDITS.BYDATE' | translate}}
+            </mat-checkbox>
+        </div>
+        <div *ngIf="selbyauditIs" class="col-12 col-lg-2 border-right border-bottom text-center">
+            <mat-checkbox class="example-margin" color="primary" (change)="openFilterAuditors()">
+                {{'AUDITS.lBLSELAUDITORS' | translate}}
+            </mat-checkbox>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 col-xl-3 border-right border-bottom text-center">
+            <mat-radio-group [(ngModel)]="statesdefault" color="primary" (change)="loadBoards()">
+                <mat-radio-button value="0">{{'GLOBAL.ALLFEM' | translate}}</mat-radio-button>
+                <mat-radio-button value="1" class="w-margin-left-10"> {{'GLOBAL.ACTIVESFEM' | translate}}</mat-radio-button>
+                <mat-radio-button value="2" class="w-margin-left-10"> {{'GLOBAL.FINALIZED' | translate}}</mat-radio-button>
+            </mat-radio-group>
+            
+        </div> 
+        <div class="col-12 col-md-1 w-font-main-para border-bottom text-center">
+            <a href="javascript: void" (click)="openViewSearch()">
+                <mat-icon *ngIf="!isviewsearch" color="primary">
+                    search
+                </mat-icon>
+                <mat-icon *ngIf="isviewsearch" class="text-danger">
+                    zoom_out
+                </mat-icon>
+                <mat-label *ngIf="!isviewsearch" class="w-font-r85">
+                    {{'GLOBAL.SEARCH' | translate}}
+                </mat-label>
+                <mat-label *ngIf="isviewsearch" class="w-font-r85 text-danger">
+                    {{'GLOBAL.SEARCH' | translate}}
+                </mat-label>
+            </a>
+        </div>
+    </div>
+    <div *ngIf="isviewsearch" class="row w-top-10">
+        <div class="d-none d-lg-flex col-1"></div>
+        <div class="col-11 col-lg-5">
+            
+            <input matInput id="searchtext" name="searchtext" type="search" class="w-form-control" placeholder="{{'TOOLTIPS.SEARCH' | translate}}" value="">
+        </div>
+    </div>
+    <div class="row w-top-10">
+        <div class="d-none d-lg-flex col-1"></div>
+        <div *ngIf="filtersview" class="col-12 col-lg-3"> 
+            <form [formGroup]="selectedFW" fxFlex fxLayout="column" autocomplete="off">
+                <mat-form-field appearance="outline" class="w-width-full">
+                    <mat-label> {{'APPHOME.SELAUDITOR' | translate}}</mat-label>
+                    
+                    <mat-select multiple formControlName="userType" 
+                                [(ngModel)]="selectedauditors" 
+                                (click)="tosslePerOne(allSelected.viewValue)">
+                        <mat-option #allSelected (click)="toggleAllSelection()" [value]="0">All</mat-option>
+                        <mat-option *ngFor="let one of ddauditors" [value]="one.value">
+                            {{ one.viewValue }}
+                        </mat-option>
+                       
+                    </mat-select>
+                </mat-form-field>
+               
+            </form>
+            <app-loading-indicator *ngIf="loadingauditors"></app-loading-indicator>
+        </div>
+        <div  *ngIf="filtersdate" class="col-12 col-md-6 col-lg-2">
+            <mat-form-field appearance="outline">
+              <mat-label>
+                <strong>
+                  {{'GLOBAL.FROM' | translate}}
+                </strong>
+              </mat-label>
+              <input matInput [matDatepicker]="fromdate" [(ngModel)]="datefrom" (dateInput)="addEvent('input', $event)"
+                (dateChange)="addEvent('change', $event)">
+              <mat-datepicker-toggle matSuffix [for]="fromdate"></mat-datepicker-toggle>
+              <mat-datepicker #fromdate>
+              </mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div *ngIf="filtersdate" class="col-12 col-md-6 col-lg-2">
+            <mat-form-field appearance="outline">
+              <mat-label>
+                <strong>
+                  {{'GLOBAL.TO' | translate}}
+                </strong>
+              </mat-label>
+              <input matInput [matDatepicker]="todate" [(ngModel)]="dateto" (dateInput)="addToEvent('input', $event)"
+                (dateChange)="addToEvent('change', $event)">
+              <mat-datepicker-toggle matSuffix [for]="todate"></mat-datepicker-toggle>
+              <mat-datepicker #todate>
+              </mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div *ngIf="showrefreshbtn" class="col-12 col-lg-2 text-right w-padding-top-10">
+            <button mat-raised-button color="primary" matTooltip = "{{'TOOLTIPS.REFRESH' | translate}}" (click)="loadBoards()"> 
+                <mat-icon>
+                    refresh
+                </mat-icon>
+                {{'GLOBAL.REFRESH' | translate}}
+            </button>
+        </div>
+    </div>
+    
+    <div *ngIf="loadingaudits" class="row w-top-20">
+        <div class="col-12 text-center">
+            <app-loading-indicator></app-loading-indicator>
+        </div>
+    </div>  
+      
+      
+  
 
 <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start">
     
@@ -50,44 +179,56 @@
         </mat-card-title>
         <mat-divider></mat-divider>
         
-        <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer w-top-20">
+        <div fxLayout="row" fxLayout.lt-md="column"  fxLayoutAlign="start" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer w-top-20">
 
-            <div fxFlex="25%">
-                <i class="fa fa-check text-primary"></i>&nbsp;
+            <div fxFlex="25%" fxFlex.lt-md="100%">
+                <span *ngIf="!ismobile">
+                    <i class="fa fa-check text-primary"></i>&nbsp;
+                </span>
                 {{'AUDITS.AUDITDEPT' | translate}}:
             </div>
 
-            <div fxFlex="75%" fxFlexOrder="3">
+            <div fxFlex="75%" fxFlex.lt-md="100%">
                {{js.deptname}}
             </div>
         </div>
-        <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer">
+        <div fxLayout="row" fxLayout.lt-md="column"   fxLayoutAlign="start" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer">
 
-            <div fxFlex="25%">
-                <i class="fa fa-check text-primary"></i>&nbsp;
+            <div fxFlex="25%" fxFlex.lt-md="100%">
+                <span *ngIf="!ismobile">
+                    <i class="fa fa-check text-primary"></i>&nbsp;
+                </span>
                 {{'AUDITS.AUDITOR' | translate}}:
             </div>
 
-            <div fxFlex="75%" fxFlexOrder="3">
+            <div fxFlex="75%" fxFlex.lt-md="100%">
                {{js.auditleader}}
             </div>
         </div>
-        <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer">
+        <div fxLayout="row" fxLayout.lt-md="COLUMN" fxLayoutAlign="start" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer">
 
-            <div fxFlex="25%">
-                <i class="fa fa-check text-primary"></i>&nbsp;
+            <div fxFlex="25%" fxFlex.lt-md="100%">
+                <span *ngIf="!ismobile">
+                    <i class="fa fa-check text-primary"></i>&nbsp;
+                </span>
                 {{'GLOBAL.STARTDATE' | translate}}:
             </div>
 
-            <div fxFlex="75%">
-               {{js.startdate}}
-                <span class="w-margin-left-10">
-                    {{'GLOBAL.ENDDATE' | translate}}:
-                </span>
-                <span class="w-margin-left-10">
-                    {{js.enddate}}
-                </span>
+            <div fxFlex="75%" fxFlex.lt-md="100%">
+               {{js.startdate}}&nbsp;
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.lt-md="COLUMN" fxLayoutAlign="start" fxLayoutGap="10px" fxLayoutGap.xs="0" class="audit-card-footer">
 
+            <div fxFlex="25%" fxFlex.lt-md="100%">
+                <span *ngIf="!ismobile">
+                    <i class="fa fa-check text-primary"></i>&nbsp;
+                </span>
+                {{'GLOBAL.ENDDATE' | translate}}:
+            </div>
+
+            <div fxFlex="75%" fxFlex.lt-md="100%">
+               {{js.enddate}}&nbsp;
             </div>
         </div>
         <mat-divider></mat-divider>

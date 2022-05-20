@@ -22,6 +22,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +38,7 @@ import { TeamauditHomeComponent } from './components/teamaudit-home/teamaudit-ho
 import { MyAcctComponent } from './components/myacct/myacct.component';
 import { VmenuMainComponent } from './shared-components/vmenu-main/vmenu-main.component';
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
+
 import { first } from 'rxjs/operators';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
@@ -100,6 +103,8 @@ const APP_FORMATS = {
     MatDatepickerModule,
     MatMomentDateModule,
     MatInputModule,
+    MatCheckboxModule,
+    MatRadioModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
