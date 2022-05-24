@@ -1,4 +1,5 @@
 import { Component, OnInit, Input,HostListener, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { BoardsServiceService } from 'src/app/shared-services/boards-service.service';
 import { FramecommonService } from 'src/app/shared-services/framecommon.service';
 import {TranslateService} from '@ngx-translate/core';
@@ -9,11 +10,13 @@ import { ActivatedRoute } from "@angular/router";
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatOption, MAT_DATE_FORMATS } from '@angular/material/core';
+
 import * as _util from '../../ts/utilities';
 import * as dayjs from 'dayjs'
 import * as isLeapYear from 'dayjs/plugin/isLeapYear' // import plugin
 
 import * as _moment from 'moment';
+
 const moment = require('moment');
 
 
@@ -72,6 +75,7 @@ export class AuditsGridComponent implements OnInit {
   filtersviewop: boolean = true;
   selbyauditIs: boolean = false;
   isviewsearch: boolean = false;
+  iserroronsearch: boolean = false;
   datefrom = moment();
   dateto = moment();
   searchtext: string = "";
@@ -95,7 +99,9 @@ export class AuditsGridComponent implements OnInit {
               private userserv: UsersServiceService,
               private logservices: LoginServiceService,
               private datefmt: WdateFormattingService,
-              private fb: FormBuilder
+              private fb: FormBuilder,
+              private router: Router,
+              private route: ActivatedRoute
               ) { 
     
         this.selectedFW = this.fb.group({
@@ -155,7 +161,40 @@ export class AuditsGridComponent implements OnInit {
       var selAuditors = "0";
       if (this.filtersview == true)
         selAuditors = this.selectedauditors;
-      this.boardserv.getBoards(this.statesdefault, selAuditors,fDate, tDate, this.searchtext, this.boardsOffset, this.boardsNumToRead).subscribe((res)=>{
+      this.boardserv.getBoards(this.statesdefault, selAuditors,fDate, tDate, this.boardsOffset, this.boardsNumToRead).subscribe((res)=>{
+       
+        this.loadingaudits = false;
+        this.mybreakpoint = (window.innerWidth <= 600) ? 1 : 6;
+        if (res != null) {
+          this.boardsOffset += this.boardsNumToRead;
+          this.jsonboards = res; 
+          this.jsonarray = this.jsonboards.data;     
+          this.numauditsread = this.jsonboards.data.length;
+          this.boardcommvisible = this.jsonboards.data.map(() => false);   
+          this.boardcommclass = this.jsonboards.data.map(() => "visibility");
+          if (this.jsonboards.selbyaudit == "Y")
+            this.selbyauditIs = true;
+        }  
+      });
+      
+  }
+  
+  searchBoards()
+  {
+
+     
+     
+      if (this.searchtext == '') {
+        
+        this.iserroronsearch = true;
+        setTimeout(() => {
+          this.iserroronsearch = false;
+        }, 3000);
+        return;
+      }
+      this.initializeBoardsArray;
+      this.loadingaudits = true;
+      this.boardserv.searchBoards(this.statesdefault, this.searchtext).subscribe((res)=>{
        
         this.loadingaudits = false;
         this.mybreakpoint = (window.innerWidth <= 600) ? 1 : 6;
@@ -190,10 +229,17 @@ export class AuditsGridComponent implements OnInit {
   openViewSearch()
   {
     this.isviewsearch = !this.isviewsearch;
-    this.procRefreshButton();
+    if (this.isviewsearch)
+      this.forceFiltersClose();
   }
 
   // process methods
+  forceFiltersClose()
+  {
+    this.filtersview = false;
+    this.filtersdate = false;
+    this.procRefreshButton();
+  }
   openFilterAuditors()
   {
 
@@ -220,7 +266,7 @@ export class AuditsGridComponent implements OnInit {
   
   procRefreshButton()
   {
-    if (this.filtersdate == false && this.filtersview == false && this.isviewsearch == false)
+    if (this.filtersdate == false && this.filtersview == false)
       this.showrefreshbtn = false;
     else
       this.showrefreshbtn = true;
@@ -298,5 +344,8 @@ export class AuditsGridComponent implements OnInit {
     this.selToYear = this.dateto.format('YYYY');
   }
 
- 
+  gotoInnoAudits(auditno: string)
+  {
+    this.router.navigate(['/teamaudit-grid'], { queryParams: { "auditno": auditno} });
+  }
 }

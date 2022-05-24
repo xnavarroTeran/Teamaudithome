@@ -24,7 +24,7 @@ export class BoardsServiceService {
 
   }
   
-  getBoards(status: string,selauditors: string, datefrom: Date, dateto: Date, searchterm: string, offset: number, limit: number): Observable<any>{
+  getBoards(status: string,selauditors: string, datefrom: Date, dateto: Date,  offset: number, limit: number): Observable<any>{
     
     var params = this.logservices.localGetCompPrefs();
     
@@ -48,6 +48,28 @@ export class BoardsServiceService {
       })
     };
   
+    
+    return this.http.get(url, callOptions);
+  }
+
+  searchBoards(status: string,searchterm: string): Observable<any>{
+    
+    var params = this.logservices.localGetCompPrefs();
+    var userid = params.userid;
+    var authToken = this.configservice.getMicrotken() + "~" + params.companytoken + "~" + userid;
+    const url = this.configservice.getTeamauditApi() + "searchBoards/" + userid + "/" + status + "/" + searchterm;
+    
+    var callOptions = {
+        responseType: 'json' as const,
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': 'true',
+          'X-Authorization': authToken
+      })
+    };
+  
+    
     return this.http.get(url, callOptions);
   }
 }

@@ -59,7 +59,15 @@
         <div class="d-none d-lg-flex col-1"></div>
         <div class="col-11 col-lg-5">
             
-            <input matInput id="searchtext" name="searchtext" type="search" class="w-form-control" placeholder="{{'TOOLTIPS.SEARCH' | translate}}" value="">
+            <input matInput id="searchtext" name="searchtext" [(ngModel)]="searchtext" type="search" class="w-form-control" placeholder="{{'TOOLTIPS.SEARCH' | translate}}" value="">
+            <span class="float-right">
+                <a href="javascript:void" (click)="searchBoards()" class="text-info w-font-r85">
+                    {{'GLOBAL.SEARCH' | translate}}
+                </a>
+            </span>
+            <div *ngIf="iserroronsearch" class="w-width-full text-danger">
+                {{'ERRORS.REQUIRED' | translate}}
+            </div>
         </div>
     </div>
     <div class="row w-top-10">
@@ -158,7 +166,9 @@
         
         <mat-card-title class="text-left w-top-20 w-font-main-para-sm card-sect-shortdesc">
             <div class="w-cursor-link">
-                {{js.shortdesc}}
+                <a href="javascript:void" (click)="gotoInnoAudits(js.boardid);">
+                    {{js.shortdesc}}
+                </a>
             </div>
             
         </mat-card-title>

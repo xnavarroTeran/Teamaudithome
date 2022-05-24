@@ -1,6 +1,4 @@
-import {Component, AfterViewInit,ViewChild} from "@angular/core";
-import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
-import { InputEmailComponent } from "src/app/shared-components/input-email/input-email.component";
+import { Component, OnInit } from '@angular/core';
 import { VmenuMainComponent } from "src/app/shared-components/vmenu-main/vmenu-main.component";
 import { LoginServiceService } from 'src/app/shared-services/login-service.service';
 import { LoadingIndicatorComponent } from 'src/app/shared-components/loading-indicator/loading-indicator.component';
@@ -13,33 +11,13 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 
-
-
-declare let $: any;
-declare var TweenMax: any;
-
-
 @Component({
-  selector: 'app-teamaudit-home',
-  templateUrl: './teamaudit-home.component.html',
-  styleUrls: ['./teamaudit-home.component.css']
+  selector: 'app-teamaudit-grid',
+  templateUrl: './teamaudit-grid.component.html',
+  styleUrls: ['./teamaudit-grid.component.css']
 })
-export class TeamauditHomeComponent implements AfterViewInit {
+export class TeamauditGridComponent implements OnInit {
 
-  
-  @ViewChild(InputEmailComponent)
-  title = 'angular-responsive-sidebar';
-  primaryInputEmailComponent!: InputEmailComponent;
- 
-
-  "loginB": boolean = true;
-  "loginEm": boolean = false;
-  "loginPw": boolean = true;
-  "selcomp": boolean = false;
-  menubgcolor: string = '#000000';
-  menufgcolor: string = '#ffffff';
-  selected: string = 'option2';
-  
   // data
   inUsername: string = '';
   inFullname: string = '';
@@ -48,13 +26,10 @@ export class TeamauditHomeComponent implements AfterViewInit {
   menuhtml: string = '';
   vmenustyle: string = 'blue';
   
-  
-
-  // fields setup
-  filtersview = false;
-
-
-  
+  menubgcolor: string = '#000000';
+  menufgcolor: string = '#ffffff';
+  // data elements..
+  auditno: any; 
   constructor(
     private router: ActivatedRoute,
     private logservices: LoginServiceService,
@@ -62,38 +37,13 @@ export class TeamauditHomeComponent implements AfterViewInit {
     private boardserv:BoardsServiceService,
     private localize: TranslateService,
     private formBuilder: FormBuilder
-    ) 
-  {
-
-    
+  ) { 
     this.localize.setDefaultLang("es");
-    this.initializeBoardsArray();
-    
+    this.auditno = router.snapshot.queryParamMap.get('auditno');
+    alert(" audit no ==> " + this.auditno);
     this.initialization();
   }
 
-  ngOnInit() {
-    
-    
-   }
-
-   ngAfterViewInit(): void {
-    // this.menuhtml = this.frameserv.formVMenu('innodtl-vert-menu', '006400');
-    
-     
-   }
-
-  
-  onAppReady()
-  {
-    
-
-  }
-  
- 
-  
-  
-  fatimescircle = faTimesCircle;
   initialization() {
     this.router.queryParams
       .subscribe(params => {
@@ -123,8 +73,7 @@ export class TeamauditHomeComponent implements AfterViewInit {
           this.menufgcolor = '#ffffff'; //json.fgcolor;
       
         }
-        this.onAppReady();
-       
+     
       }
       
 
@@ -133,30 +82,7 @@ export class TeamauditHomeComponent implements AfterViewInit {
 
     
   }
-
-  
-  
- 
-  // boards section..
-  boardsOffset = 0;
-  boardsNumToRead = 10;
-  jsonboards: any = {};
-  phaseicosize:  number = 11;
-  phaselblsize: number = 12;
-  mybreakpoint: number = 0;
- 
-  handleSize(event: any) {
-    this.mybreakpoint = (event.target.innerWidth <= 600) ? 1 : 6;
-    }
-  
-    initializeBoardsArray()
-  {
-    this.jsonboards = [
-      {"id": 1},
-      {"boardname":"Empty Name"}
-    ];
-
+  ngOnInit(): void {
   }
- 
-}
 
+}
