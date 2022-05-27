@@ -30,6 +30,7 @@ export class TeamauditGridComponent implements OnInit {
   menufgcolor: string = '#ffffff';
   // data elements..
   auditno: any; 
+  outBoardid: string = "";
   constructor(
     private router: ActivatedRoute,
     private logservices: LoginServiceService,
@@ -40,7 +41,12 @@ export class TeamauditGridComponent implements OnInit {
   ) { 
     this.localize.setDefaultLang("es");
     this.auditno = router.snapshot.queryParamMap.get('auditno');
-    alert(" audit no ==> " + this.auditno);
+    try {
+      this.outBoardid = this.auditno;
+    } catch(e) {
+      console.log("Error parsing Audit Number. ")
+      this.outBoardid = "";
+    }
     this.initialization();
   }
 

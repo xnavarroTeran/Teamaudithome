@@ -9,13 +9,13 @@
     
     <div class="row">
       <div id="innodtl-vert-menu" [ngStyle]="{ background: menubgcolor, color: menufgcolor}" class="col-2 col-md-1  whead-vmenu21 w-padding-50">
-          <app-vmenu-main  bgcolor="{{menubgcolor}}" fgcolor="{{menufgcolor}}"></app-vmenu-main>
+          <app-vmenu-grid  bgcolor="{{menubgcolor}}" fgcolor="{{menufgcolor}}"></app-vmenu-grid>
       </div>
       <div id="innoview-comms" class="col-10 col-md-11 w-resp-pad-left-20 w-top-30 border-bottom w-top-120 w-padding-bottom-100">
         
-          <div class="row w-top-30">
+          <div class="row">
             <div  id="active-boards" class="col-12">
-          
+                <app-findings-grid inBoardid="{{outBoardid}}"></app-findings-grid>
             </div>
           </div>
         

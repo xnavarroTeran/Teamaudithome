@@ -44,6 +44,8 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import { MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { AuditsGridComponent } from './components/audits-grid/audits-grid.component';
 import { TeamauditGridComponent } from './components/teamaudit-grid/teamaudit-grid.component';
+import { VmenuGridComponent } from './shared-components/vmenu-grid/vmenu-grid.component';
+import { FindingsGridComponent } from './components/findings-grid/findings-grid.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -71,7 +73,9 @@ const APP_FORMATS = {
     MyAcctComponent,
     VmenuMainComponent,
     AuditsGridComponent,
-    TeamauditGridComponent
+    TeamauditGridComponent,
+    VmenuGridComponent,
+    FindingsGridComponent
   ],
   
   imports: [

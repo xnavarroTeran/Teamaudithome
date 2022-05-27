@@ -22,6 +22,7 @@
         "RESEND": "Reenviar",
         "ALL": "Todo(a)s",
         "ALLFEM": "Todas",
+        "ALLMALE": "Todos",
         "ACTIVESFEM": "Activas",
         "FINALIZED":"Finalizadas",
         "FROM": "Desde",
@@ -32,13 +33,21 @@
         "STARTDATE": "Fecha inicio",
         "ENDDATE": "Fecha fin.",
         "REFRESH": "Refrescar",
-        "SEARCH": "Buscar"
+        "SEARCH": "Buscar",
+        "SORTBY": "Ordenar por",
+        "DATEENTERED": "Fecha de Ingreso"
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",
         "SETTINGS": "Configuración",
         "MASTERTABLES": "Tablas Maestras",
         "HOME":"Inicio",
+        "BACK":"Regresar",
+        "ALLFINDS":"Todos las fases",
+        "PROPOSAL":"Propuestos",
+        "REVIEW":"Revisión",
+        "IMPLEMENT":"Implementación",
+        "FINALIZED":"Finalizados",
         "FILTERS":"Filtros",
         "REPORTS":"Reportes",
         "ADDAUDIT": "Agregar Auditoria",
@@ -51,8 +60,14 @@
         "LAST20": "Últimas 20 auditorias",
         "BYDATE": "Mostrar por fechas",
         "lBLSELAUDITORS": "Seleccionar Auditores",
-        "NUMAUDITS":"Numbero de Auditorias"
-    },
+        "NUMAUDITS":"Numbero de Auditorias",
+        "FINDSTITLE":"Listado de Hallazgos",
+        "LASTUPDATEDESC":"Última modificaicón Descendente",
+        "INDATEDESC":"Fecha de ingreso descendente",
+        "LASTUPDATEASC":"Última modificaicón Ascendente",
+        "INDATEASC":"Fecha de ingreso Ascendente"
+    
+      },
     "APPHOME": {
         "SELAUDITOR": "Seleccione los Auditores",
         "SELSTATE": "Estado"

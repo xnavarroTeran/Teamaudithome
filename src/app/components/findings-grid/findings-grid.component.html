@@ -1,0 +1,116 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div>
+                <span class="text-default w-font-main-para">
+                    <strong>
+                    {{'AUDITS.FINDSTITLE' | translate}}
+                    </strong>
+                </span>
+            </div>
+            <div>
+                <span class="wigo_header_level_3_blue">
+                    Audit title goes here..
+                </span>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 w-padding-right-100">
+            
+        </div>
+    </div>
+</div>
+
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start" class="w-padding-left-20 w-top-20">
+    <mat-toolbar>
+        <div fxFlex="50%">
+           <a href="javascript:void" mat-button>
+            <i class="fa fa-object-group w-font-r85"></i>
+               {{'GLOBAL.ALLMALE' | translate}}
+            </a>
+            <a href="javascript:void" mat-button class="text-info">
+                <i class="fa fa-lightbulb w-font-r85"></i>
+                {{'MENU.PROPOSAL' | translate}}
+            </a>
+            <a href="javascript:void" mat-button class="text-warning">
+                <i class="fa fa-user w-font-r85"></i>
+                {{'MENU.REVIEW' | translate}}
+             </a>
+             <a href="javascript:void" mat-button class="text-danger">
+                <i class="fa fa-wrench w-font-r85"></i>
+                {{'MENU.IMPLEMENT' | translate}}
+             </a>
+             <a href="javascript:void" mat-button class="text-success">
+                <i class="fa fa-trophy w-font-r85"></i>
+                {{'MENU.FINALIZED' | translate}}
+             </a>
+        </div>
+        
+        <div fxFlex="40%" fxLayoutAlign="flex-end center">
+            <span class="w-margin-right-10">
+                <i class="fa fa-share-alt-square text-primary"></i>
+            </span>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <span class="text-primary">
+                    {{'GLOBAL.SORTBY' | translate}}
+                </span>
+                <mat-icon>arrow_drop_down</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>
+                        {{'AUDITS.LASTUPDATEDESC' | translate}}
+                    </span>
+                </button>
+                <button mat-menu-item>
+                    <span>
+                        {{'AUDITS.INDATEDESC' | translate}}
+                    </span>
+                </button>
+                <button mat-menu-item>
+                    <span>
+                        {{'AUDITS.LASTUPDATEASC' | translate}}
+                    </span>
+                </button>
+                <button mat-menu-item>
+                    <span>
+                        {{'AUDITS.INDATEASC' | translate}}
+                    </span>
+                    </button>
+            </mat-menu>
+               
+        </div>
+    
+    </mat-toolbar>
+</div>
+
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+    <div *ngIf="loadingfindings" class="text-center" fxFlex="100">
+        <div class="col-12 text-center">
+            <app-loading-indicator></app-loading-indicator>
+        </div>
+    </div>  
+    <mat-card *ngFor="let js of jsonarray; let i = index" class="border rounded w-top-10 w-margin-left-md-50"  fxFlex="100" fxFlex.gt-md="40">
+        
+        <mat-card-title class="text-left w-padding-left-10 w-font-r85 innophase">
+            <i class="fa fa-circle text-danger w-font-r85 {{js.phaseclass}}"></i>&nbsp;
+            {{js.phasename}}
+            <span class="float-right w-font-r85" matTooltip = "{{'GLOBAL.DATEENTERED' | translate}}:&nbsp;{{js.dateenteredfmt}}">
+                {{js.lastupdatefmt}}
+            </span>
+        </mat-card-title>
+        <mat-card-title class="w-padding-left-5 text-center w-top-20">
+            <div class="w-width-full w-top-20">
+                <span class="text-center text-primary w-font-main-para">
+                    {{js.innotitle}}
+                </span>
+            </div>
+        </mat-card-title>
+        <mat-card-title class="w-padding-left-5 text-left">
+                <span class="text-center text-primary w-font-r85 text-default">
+                    {{js.problem}}
+                </span>
+        </mat-card-title>
+        <mat-divider class="{{js.phasebgclass}} w-top-20 w-bottom-20"></mat-divider>
+    </mat-card>
+    
+  </div>
