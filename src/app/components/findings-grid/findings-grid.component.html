@@ -10,8 +10,15 @@
             </div>
             <div>
                 <span class="wigo_header_level_3_blue">
-                    Audit title goes here..
+                    {{boardname}}
+                    <span (click)="expandDescription()">
+                        <i *ngIf="!showboarddesc" class="fa fa-caret-down"></i>
+                        <i *ngIf="showboarddesc" class="fa fa-caret-up"></i>
+                    </span>
                 </span>
+            </div>
+            <div *ngIf="showboarddesc">
+                {{boarddesc}}
             </div>
         </div>
         <div class="col-12 col-md-6 w-padding-right-100">
@@ -20,97 +27,246 @@
     </div>
 </div>
 
-<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start" class="w-padding-left-20 w-top-20">
-    <mat-toolbar>
-        <div fxFlex="50%">
-           <a href="javascript:void" mat-button>
-            <i class="fa fa-object-group w-font-r85"></i>
-               {{'GLOBAL.ALLMALE' | translate}}
-            </a>
-            <a href="javascript:void" mat-button class="text-info">
-                <i class="fa fa-lightbulb w-font-r85"></i>
-                {{'MENU.PROPOSAL' | translate}}
-            </a>
-            <a href="javascript:void" mat-button class="text-warning">
-                <i class="fa fa-user w-font-r85"></i>
-                {{'MENU.REVIEW' | translate}}
-             </a>
-             <a href="javascript:void" mat-button class="text-danger">
-                <i class="fa fa-wrench w-font-r85"></i>
-                {{'MENU.IMPLEMENT' | translate}}
-             </a>
-             <a href="javascript:void" mat-button class="text-success">
-                <i class="fa fa-trophy w-font-r85"></i>
-                {{'MENU.FINALIZED' | translate}}
-             </a>
-        </div>
-        
-        <div fxFlex="40%" fxLayoutAlign="flex-end center">
-            <span class="w-margin-right-10">
-                <i class="fa fa-share-alt-square text-primary"></i>
-            </span>
-            <button mat-icon-button [matMenuTriggerFor]="menu">
-                <span class="text-primary">
-                    {{'GLOBAL.SORTBY' | translate}}
-                </span>
-                <mat-icon>arrow_drop_down</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>
+<div class="w-top-20">
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <a href="javascript:void" mat-button fxHide.lt-md="true">
+                    <i class="fa fa-object-group w-font-r85"></i>
                     <span>
-                        {{'AUDITS.LASTUPDATEDESC' | translate}}
+                        {{'GLOBAL.ALLMALE' | translate}}
                     </span>
-                </button>
-                <button mat-menu-item>
+                </a>
+                <a href="javascript:void" mat-button class="text-info" fxHide.lt-md="true">
+                    <i class="fa fa-lightbulb w-font-r85"></i>
                     <span>
-                        {{'AUDITS.INDATEDESC' | translate}}
+                        {{'MENU.PROPOSAL' | translate}}
                     </span>
-                </button>
-                <button mat-menu-item>
+                </a>
+                <a href="javascript:void" mat-button class="text-warning" fxHide.lt-md="true">
+                    <i class="fa fa-user w-font-r85"></i>
                     <span>
-                        {{'AUDITS.LASTUPDATEASC' | translate}}
+                        {{'MENU.REVIEW' | translate}}
                     </span>
-                </button>
-                <button mat-menu-item>
+                </a>
+                <a href="javascript:void" mat-button class="text-danger" fxHide.lt-md="true">
+                    <i class="fa fa-wrench w-font-r85"></i>
                     <span>
-                        {{'AUDITS.INDATEASC' | translate}}
+                        {{'MENU.IMPLEMENT' | translate}}
                     </span>
+                </a>
+                <a href="javascript:void" mat-button class="text-success" fxHide.lt-md="true">
+                    <i class="fa fa-trophy w-font-r85"></i>
+                    <span>
+                        {{'MENU.FINALIZED' | translate}}
+                    </span>
+                </a>
+                <span class="w-margin-left-10">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <span class="text-primary">
+                            {{'GLOBAL.SORTBY' | translate}}
+                        </span>
+                        <mat-icon>arrow_drop_down</mat-icon>
                     </button>
-            </mat-menu>
-               
-        </div>
-    
-    </mat-toolbar>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <span>
+                                {{'AUDITS.LASTUPDATEDESC' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <span>
+                                {{'AUDITS.INDATEDESC' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <span>
+                                {{'AUDITS.LASTUPDATEASC' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <span>
+                                {{'AUDITS.INDATEASC' | translate}}
+                            </span>
+                        </button>
+                    </mat-menu>
+                </span>
+                <span class="w-margin-left-50" fxHide fxShow.lt-md="true">
+                    <button mat-icon-button [matMenuTriggerFor]="menu_sm">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <mat-menu #menu_sm="matMenu">
+                        <button mat-menu-item>
+                            <i class="fa fa-object-group w-font-r85"></i>
+                            <span>
+                                {{'GLOBAL.ALLMALE' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <i class="fa fa-lightbulb w-font-r85"></i>
+                            <span>
+                                {{'MENU.PROPOSAL' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <i class="fa fa-user w-font-r85"></i>
+                            <span>
+                                {{'MENU.REVIEW' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <i class="fa fa-wrench w-font-r85"></i>
+                            <span>
+                                {{'MENU.IMPLEMENT' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <i class="fa fa-trophy w-font-r85"></i>
+                            <span>
+                                {{'MENU.FINALIZED' | translate}}
+                            </span>
+                        </button>
+                        <button mat-menu-item>
+                            <i class="fa fa-share-alt-square text-primary"></i>
+                            <span fxHide.lt-md>
+                                {{'MENU.EXPORT' | translate}}
+                            </span>
+                        </button>
+                    </mat-menu>
+                </span>
+                <span class="w-margin-left-50">
+                <a href="javascript:void" mat-button fxHide.lt-md>
+                    <i class="fa fa-share-alt-square text-primary"></i>
+                    <span fxHide.lt-md>
+                        {{'MENU.EXPORT' | translate}}
+                    </span>
+                </a>
+                </span>
+            </mat-toolbar-row>
+          
+        </mat-toolbar>
 </div>
 
-<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-    <div *ngIf="loadingfindings" class="text-center" fxFlex="100">
-        <div class="col-12 text-center">
-            <app-loading-indicator></app-loading-indicator>
-        </div>
-    </div>  
-    <mat-card *ngFor="let js of jsonarray; let i = index" class="border rounded w-top-10 w-margin-left-md-50"  fxFlex="100" fxFlex.gt-md="40">
-        
-        <mat-card-title class="text-left w-padding-left-10 w-font-r85 innophase">
-            <i class="fa fa-circle text-danger w-font-r85 {{js.phaseclass}}"></i>&nbsp;
-            {{js.phasename}}
-            <span class="float-right w-font-r85" matTooltip = "{{'GLOBAL.DATEENTERED' | translate}}:&nbsp;{{js.dateenteredfmt}}">
-                {{js.lastupdatefmt}}
-            </span>
-        </mat-card-title>
-        <mat-card-title class="w-padding-left-5 text-center w-top-20">
-            <div class="w-width-full w-top-20">
-                <span class="text-center text-primary w-font-main-para">
-                    {{js.innotitle}}
+
+<div *ngIf="loadingfindings" fxLayout="row" fxLayoutAlign="flex-start">
+    <div class="col-12 text-center">
+        <app-loading-indicator></app-loading-indicator>
+    </div>
+</div>  
+
+<div *ngIf="findmodenorm" 
+     fxLayout="row wrap" 
+     fxLayout.lt-md="column" 
+     fxLayoutGap="10px" 
+     fxLayoutGap.lt-md="1px" 
+     fxLayoutAlign="space-around">
+    <mat-card *ngFor="let js of jsonarray; let i = index" class="border rounded w-top-10"  fxFlex.lt-md="100" fxFlex.gt-md="30">
+        <mat-card-header>
+            <mat-card-title class="text-left w-top-10 w-font-r85 innophase">
+                <i class="fa fa-circle text-danger w-font-r85 {{js.phaseclass}}"></i>&nbsp;
+                {{js.phasename}}
+                <span class="float-right w-font-r85" matTooltip = "{{'GLOBAL.DATEENTERED' | translate}}:&nbsp;{{js.dateenteredfmt}}">
+                    {{js.lastupdatefmt}}
                 </span>
-            </div>
-        </mat-card-title>
-        <mat-card-title class="w-padding-left-5 text-left">
+            </mat-card-title>
+            <mat-card-subtitle class="text-center w-top-20">
+                    <span class="text-center text-primary w-font-main-para">
+                        {{js.innotitle}}
+                    </span>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content id="{{js.divid}}"  class="w-padding-left-5 text-left card-sect-shortdesc">
                 <span class="text-center text-primary w-font-r85 text-default">
                     {{js.problem}}
                 </span>
-        </mat-card-title>
-        <mat-divider class="{{js.phasebgclass}} w-top-20 w-bottom-20"></mat-divider>
+                <br/>
+        </mat-card-content>
+        <div  *ngIf="checkOverflow(js.divid)" fxLayout="column" fxLayoutAlign="end end" class="card-sect-zoom">
+            <div fxFlex>
+                <a href="javascript:void" (click) = "expandFindings(js)">
+                   <mat-icon>zoom_in</mat-icon>
+                </a>
+            </div>
+        </div>
+        <div  *ngIf="!checkOverflow(js.divid)" fxLayout="column" fxLayoutAlign="end end" class="card-sect-zoom">
+            <div fxFlex>
+            </div>
+        </div>
+        <mat-divider class="{{js.phasebgclass}}"></mat-divider>
+        <mat-card-footer>
+           <mat-card-title class="w-padding-10 w-font-r85">
+               
+               {{'AUDITS.RISK' | translate}}:
+               <span [ngStyle]="{'color': js.risklevelcolor}">
+                    <strong>
+                        {{js.risklevel}}
+                    </strong>
+               </span>
+               <span class="float-right w-margin-left-20">
+                   <mat-icon>access_time</mat-icon>
+                   
+               </span>
+               <span class="float-right w-margin-left-10" (click)="toggleComments(i,js.id)">
+                    <mat-icon *ngIf="!boardcommvisible[i]">comment</mat-icon>
+                    <mat-icon *ngIf="boardcommvisible[i]" color="accent">remove_circle</mat-icon>
+                
+                </span>
+           </mat-card-title>
+        </mat-card-footer>
+        
+        <mat-card-footer *ngIf="boardcommvisible[i]">
+            <mat-divider class="w-top-10 w-bottom-10"></mat-divider>
+            <div *ngIf="" class="w-width-full w-top-30 text-center">
+
+            </div>
+            <div class="w-width-full w-top-30 w-padding-left-10 w-padding-right-10">
+                <app-inno-comments [iscommentmodeedit]="iscommentmodeedit" [isdelcomments]="isdeleditcomments" [commentconfdel]="commentsdelconfirm" [commentindex]="i" [inAuditid]="js.id" [inComments]="jsoncomments[i]" (closeComments)="toggleComments(i,js.id)" ></app-inno-comments>
+            </div>
+        </mat-card-footer>
     </mat-card>
     
-  </div>
+</div>
+
+<div *ngIf="!findmodenorm" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="1px" fxLayoutAlign="space-evenly">
+    <mat-card class="border rounded w-top-10"  fxFlex.gt-md="70" fxFlex.lt-md="100">
+        <mat-card-title class="w-bottom-10 w-padding-10 text-right">
+            <a href="javascript:void" (click)="contractFindings();">
+                <mat-icon class="fa-2x text-danger">
+                    zoom_out
+                </mat-icon>
+            </a>
+        </mat-card-title>
+        <mat-divider class="{{selecteddata.phasebgclass}}"></mat-divider>
+        <mat-card-title class="text-left w-padding-left-10 innophase card-sect-title w-top-20">
+            <i class="fa fa-circle text-danger w-font-r85 {{selecteddata.phaseclass}}"></i>&nbsp;
+            {{selecteddata.phasename}}
+            <span class="float-right w-font-r85" matTooltip = "{{'GLOBAL.DATEENTERED' | translate}}:&nbsp;{{selecteddata.dateenteredfmt}}">
+                {{selecteddata.lastupdatefmt}}
+            </span>
+        </mat-card-title>
+        <mat-card-subtitle class="w-padding-left-5 text-center w-top-20 card-sect-title">
+                <span class="text-center text-primary w-font-main-para">
+                    {{selecteddata.innotitle}}
+                </span>
+        </mat-card-subtitle>
+        
+        <mat-card-content class="w-padding-left-5 w-font-18 text-left">
+                <span class="text-center text-default">
+                    {{selecteddata.problem}}
+                </span>
+                <br/>
+        </mat-card-content>
+        <mat-divider class="{{selecteddata.phasebgclass}}"></mat-divider>
+        <mat-card-footer>
+           <mat-card-title class="w-padding-10 w-font-r85">
+               {{'AUDITS.RISK' | translate}}:
+               <span [ngStyle]="{'color': selecteddata.risklevelcolor}">
+                    <strong>
+                        {{selecteddata.risklevel}} 
+                    </strong>
+               </span>
+           </mat-card-title>
+        </mat-card-footer>
+        <mat-divider class="{{selecteddata.phasebgclass}}"></mat-divider>
+        
+    </mat-card>
+</div>

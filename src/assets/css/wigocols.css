@@ -738,7 +738,7 @@ td div-rezizable {
 
 
 .w-top-20 {
-    margin-top: 20px;
+    margin-top: 20px!important;
 }
 
 
@@ -751,7 +751,7 @@ td div-rezizable {
 }
 
 .w-top-10 {
-    margin-top: 10px;
+    margin-top: 10px!important;
 }
 .w-top--10 {
     margin-top: -10px;
@@ -833,7 +833,16 @@ td div-rezizable {
     margin-left: 60px !important;
 }
 
+.w-margin-left-70 {
+    margin-left: 70px!important;
+}
+.w-margin-left-80 {
+    margin-left: 80px!important;
+}
 
+.w-margin-left-90 {
+    margin-left: 90px!important;
+}
 .w-padding-left-0 {
     padding-left: 0px !important;
 }

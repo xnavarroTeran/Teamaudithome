@@ -35,7 +35,10 @@
         "REFRESH": "Refrescar",
         "SEARCH": "Buscar",
         "SORTBY": "Ordenar por",
-        "DATEENTERED": "Fecha de Ingreso"
+        "DATEENTERED": "Fecha de Ingreso",
+        "ON": "El",
+        "WROTE": "Escribió",
+        "CONFDELCOMMENT": "¿Seguro que desea eliminar este comentario?"
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",
@@ -51,7 +54,8 @@
         "FILTERS":"Filtros",
         "REPORTS":"Reportes",
         "ADDAUDIT": "Agregar Auditoria",
-        "LOGOUT": "Salir"
+        "LOGOUT": "Salir",
+        "EXPORT": "Exportar"
     },
     "AUDITS": {
         "AUDITDEPT": "Dept. Auditado",
@@ -65,7 +69,8 @@
         "LASTUPDATEDESC":"Última modificaicón Descendente",
         "INDATEDESC":"Fecha de ingreso descendente",
         "LASTUPDATEASC":"Última modificaicón Ascendente",
-        "INDATEASC":"Fecha de ingreso Ascendente"
+        "INDATEASC":"Fecha de ingreso Ascendente",
+        "RISK": "Riesgo"
     
       },
     "APPHOME": {
@@ -75,7 +80,8 @@
     },
     "TOOLTIPS": {
         "REFRESH": "Clic para refrescar el reporte",
-        "SEARCH": "Ingrese el texto que desea bscar..."
+        "SEARCH": "Ingrese el texto que desea bscar...",
+        "COMMENT": "Ingrese comentario..."
     },
     "FORMATS": {
       "DATE": "DD/MM/YYYY"

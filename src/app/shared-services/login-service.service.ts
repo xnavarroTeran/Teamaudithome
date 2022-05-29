@@ -67,7 +67,6 @@ getHostedJson()
   {
     
     var formData: any = new FormData();
-    console.log(" microtoken ==> ", this.wigoserv.getMicrotken());
     formData.append("microtoken", this.wigoserv.getMicrotken());
     formData.append("loggeduser",1);
     formData.append("companytoken",companytoken);

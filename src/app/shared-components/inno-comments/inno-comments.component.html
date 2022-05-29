@@ -1,0 +1,65 @@
+
+
+<div *ngIf="showloadingcomm">
+        <app-loading-indicator></app-loading-indicator>
+
+</div>
+<mat-form-field>
+    <textarea [(ngModel)]="textcomment" matInput rows="5" placeholder="{{'TOOLTIPS.COMMENT' | translate}}">
+    </textarea>
+</mat-form-field>
+<div class="text-right w-padding-right-10">
+    <mat-icon class="w-margin-left-10 w-font-16 text-primary">send</mat-icon>
+</div>
+
+<div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutGap.lt-md="1px" fxLayoutAlign="flex-start">
+    <mat-card *ngFor="let inC of inComments; let i = index" class="border rounded w-top-10 w-bottom-20"  fxFlex="100">
+        <mat-card-header>
+            <mat-card-title class="text-left w-top-10">
+                <span class="w-font-r75 innophase">
+                    {{'GLOBAL.ON' | translate}}&nbsp;{{inC.fmtdate}}&nbsp;{{inC.fullname}}&nbsp;{{'GLOBAL.WROTE' | translate}}... 
+                </span>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content *ngIf="!iscommentmodeedit[i]" class="w-padding-left-5 text-left card-sect-shortdesc">
+                <span class="text-left text-primary w-font-r85 text-default">
+                    {{inC.comment}}
+                </span>
+                <br/>
+        </mat-card-content>
+        <mat-form-field *ngIf="iscommentmodeedit[i]">
+            <textarea [(ngModel)]="inC.comment" matInput rows="5" placeholder="{{'TOOLTIPS.COMMENT' | translate}}">
+            </textarea>
+            <div class="w-width-full text-right border-top w-padding-top-5">
+
+                <a href="javascript:void" (click)="cancelEdit(i)">
+                    <mat-icon color="accent">clear</mat-icon>
+                </a>
+                <a href="javascript:void" class="w-margin-left-10" (click)="saveComment(inC.id,i,inC.comment)">
+                    <mat-icon color="primary">save</mat-icon>
+                </a>
+            </div>
+        </mat-form-field>
+        <mat-card-footer *ngIf="ismodenormal">
+            <div class="w-width-full w-padding-10 text-right border-top w-padding-top-10">
+                <a *ngIf="setIsDeleteComment(inC.userid)" href="javascript:void" href="javascript:void" (click)="deleteConfirm(i)">
+                    <mat-icon color="primary">delete_sweep</mat-icon>
+                </a>
+                <a *ngIf="setIsDeleteComment(inC.userid)">
+                    <mat-icon color="primary" class="w-margin-left-10" (click)="setEditMode(i)">edit</mat-icon>
+                </a>
+            </div>
+            
+        </mat-card-footer>
+        <div *ngIf="commentconfdel[i]" class="w-width-full text-left w-font-r75 border-top w-padding-top-10">
+            {{'GLOBAL.CONFDELCOMMENT' | translate}}<br>
+            <a href="javascript:void" (click)="deleteComment(inC.id,i)" class="text-danger">
+                {{'GLOBAL.CONTINUE' | translate}}
+            </a>
+            <a href="javascript:void" (click)="deleteCancel(i)" class="text-primary">
+                {{'GLOBAL.CANCEL' | translate}}
+            </a>
+        </div>
+    </mat-card>
+    
+</div>

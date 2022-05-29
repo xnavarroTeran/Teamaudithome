@@ -46,6 +46,7 @@ import { AuditsGridComponent } from './components/audits-grid/audits-grid.compon
 import { TeamauditGridComponent } from './components/teamaudit-grid/teamaudit-grid.component';
 import { VmenuGridComponent } from './shared-components/vmenu-grid/vmenu-grid.component';
 import { FindingsGridComponent } from './components/findings-grid/findings-grid.component';
+import { InnoCommentsComponent } from './shared-components/inno-comments/inno-comments.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -75,7 +76,9 @@ const APP_FORMATS = {
     AuditsGridComponent,
     TeamauditGridComponent,
     VmenuGridComponent,
-    FindingsGridComponent
+    FindingsGridComponent,
+    InnoCommentsComponent
+   
   ],
   
   imports: [
