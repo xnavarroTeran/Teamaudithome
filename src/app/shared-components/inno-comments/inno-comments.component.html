@@ -9,7 +9,8 @@
     </textarea>
 </mat-form-field>
 <div class="text-right w-padding-right-10">
-    <mat-icon class="w-margin-left-10 w-font-16 text-primary">send</mat-icon>
+    <i class="fa fa-times-circle w-font-16 w-text-faded w-cursor-link" (click)="clearSearchText()"></i>
+    <mat-icon class="w-margin-left-5 w-font-16 text-primary" (click)="addComment()">send</mat-icon>
 </div>
 
 <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutGap.lt-md="1px" fxLayoutAlign="flex-start">

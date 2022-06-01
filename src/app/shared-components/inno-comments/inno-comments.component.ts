@@ -94,17 +94,36 @@ export class InnoCommentsComponent implements OnInit {
   }
   deleteComment(commid: number, ndx: number)
   {
-
+        this.commserv.deleteComment(commid).subscribe((res)=>{
+        this.inComments.splice(ndx,ndx);
+    });
+    this.cancelEdit(ndx);
   }
 
   saveComment(commid: number, ndx: number, comment: string)
   {
-      this.commserv.saveComment(commid,comment).subscribe((res)=>{
+      this.commserv.saveComment(this.inAuditid, commid,comment).subscribe((res)=>{
      
       });
       this.cancelEdit(ndx);
   
   }
+
+  addComment()
+  {
+    if (this.textcomment == '')
+      return false;
+    this.commserv.saveComment(this.inAuditid, 0,this.textcomment).subscribe((res)=>{
+      if (res != null) {
+        console.log("returned data ===> ", res.data);
+        this.inComments.unshift(res.data[0]);
+        this.textcomment = "";
+      }
+     
+    });
+    return true;
+  }
+
   setIsDeleteComment(userid: number)
   {
     if (userid == this.currentuserid || this.isdelcomments)
@@ -112,5 +131,10 @@ export class InnoCommentsComponent implements OnInit {
     return false;
   }
 
+  clearSearchText()
+  {
+    this.textcomment = "";
+  }
+  
 }
 

@@ -45,35 +45,33 @@ export class CommentsService {
     var authToken = this.configservice.getMicrotken() + "~" + params.companytoken + "~" + userid;
     
     var formData: any = new FormData();
-    formData.append("userid",1);
+    formData.append("userid",userid);
     formData.append("commentid",commentid);
     var callOptions = {
       responseType: 'json' as const,
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': 'true',
         'X-Authorization': authToken
       })
     };
-    const url = "http://localhost:8081/deleteComment";
+    const url = this.configservice.getTeamauditApi() + "archiveComment";
     return this.http.post(url,formData,callOptions);
   }
 
-  saveComment(commentid: number,comment: string) : Observable<any>
+  saveComment(auditid: number, commentid: number,comment: string) : Observable<any>
   {
     var params = this.logservices.localGetCompPrefs();
     var userid = params.userid;
     var authToken = this.configservice.getMicrotken() + "~" + params.companytoken + "~" + userid;
-    
     var formData: any = new FormData();
-    formData.append("userid",1);
+    formData.append("userid",userid);
     formData.append("commentid",commentid);
+    formData.append("auditid",auditid);
     formData.append("comment",comment);
     var callOptions = {
       responseType: 'json' as const,
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': 'true',
         'X-Authorization': authToken

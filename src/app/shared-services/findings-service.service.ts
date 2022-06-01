@@ -37,4 +37,23 @@ export class FindingsServiceService {
     };
     return this.http.get(url, callOptions);
   }
+  
+  getTimeline(auditid: number): Observable<any>{
+    
+    var params = this.logservices.localGetCompPrefs();
+    var userid = params.userid;
+    var authToken = this.configservice.getMicrotken() + "~" + params.companytoken + "~" + userid;
+    const url = this.configservice.getTeamauditApi() + "getTimeline/" + userid + "/" + auditid;
+    
+    var callOptions = {
+        responseType: 'json' as const,
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': 'true',
+          'X-Authorization': authToken
+      })
+    };
+    return this.http.get(url, callOptions);
+  }
 }

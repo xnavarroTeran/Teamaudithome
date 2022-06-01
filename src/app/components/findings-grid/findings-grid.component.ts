@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FindingsServiceService } from 'src/app/shared-services/findings-service.service';
 import { CommentsService } from 'src/app/shared-services/comments.service';
+import { json } from 'body-parser';
 
 @Component({
   selector: 'app-findings-grid',
@@ -47,6 +48,7 @@ export class FindingsGridComponent implements OnInit {
   boardcommvisible: any;
   boardcommclass: any;
   jsoncomments: any;
+  jsontimelines: any;
 
   loadFindings()
   {
@@ -64,6 +66,7 @@ export class FindingsGridComponent implements OnInit {
           this.boardcommvisible = this.jsonboards.data.map(() => false);  
           this.jsoncomments = this.jsonboards.data.map(() => []) ;
           this.boardcommclass = this.jsonboards.data.map(() => "visibility");
+          this.jsontimelines = this.jsonboards.data.map(() => "Xavier");
           this.numcomments = this.jsonboards.data.map(() => 0) ;
           
         }  
@@ -108,12 +111,13 @@ export class FindingsGridComponent implements OnInit {
 
   commentsdelconfirm: any;  
   iscommentmodeedit: any;
-
+  loadingfirstcomments: boolean = false;
   loadComments(ndx: number,auditid: number)
   {
-
+    this.loadingfirstcomments = true;
       this.commserv.loadInnocomments(auditid,this.numtoread).subscribe((res)=>{
        
+        this.loadingfirstcomments = false;
         if (res != null) {
           this.jsoncomments[ndx] = res.data;     
           this.numcomments[ndx] = this.jsonboards.data.length;
@@ -125,4 +129,21 @@ export class FindingsGridComponent implements OnInit {
       
   }
   
+  showTimeline(ndx: number,auditid: number)
+  {
+    this.loadingfirstcomments = true;
+    this.findsev.getTimeline(auditid).subscribe((res)=>{
+       
+        this.loadingfirstcomments = false;
+        if (res != null) {
+          this.jsoncomments[ndx] = res.data;     
+          this.numcomments[ndx] = this.jsonboards.data.length;
+          this.commentsdelconfirm = this.jsonboards.data.map(() => false);  
+          this.iscommentmodeedit = this.jsonboards.data.map(() => false);  
+          this.isdeleditcomments = (res.isdelcomm == "Y") ? true : false;
+        }  
+      });
+      
+  }
+
 }
