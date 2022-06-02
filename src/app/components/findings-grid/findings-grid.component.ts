@@ -21,8 +21,9 @@ export class FindingsGridComponent implements OnInit {
   boardid: number = 0;
   boardname: string = "";
   boarddesc: string = "";
-
+  timelinetitle: string = "";
   showboarddesc: boolean = false;
+  showtimeline: boolean = false;
   isshowcomments: boolean = false;
   isdeleditcomments: boolean = false;
 
@@ -48,7 +49,7 @@ export class FindingsGridComponent implements OnInit {
   boardcommvisible: any;
   boardcommclass: any;
   jsoncomments: any;
-  jsontimelines: any;
+  jsontimeline: any;
 
   loadFindings()
   {
@@ -66,7 +67,6 @@ export class FindingsGridComponent implements OnInit {
           this.boardcommvisible = this.jsonboards.data.map(() => false);  
           this.jsoncomments = this.jsonboards.data.map(() => []) ;
           this.boardcommclass = this.jsonboards.data.map(() => "visibility");
-          this.jsontimelines = this.jsonboards.data.map(() => "Xavier");
           this.numcomments = this.jsonboards.data.map(() => 0) ;
           
         }  
@@ -131,19 +131,20 @@ export class FindingsGridComponent implements OnInit {
   
   showTimeline(ndx: number,auditid: number)
   {
-    this.loadingfirstcomments = true;
+    this.timelinetitle = this.jsonboards.data[ndx].innotitle;
+    this.showtimeline = true;
     this.findsev.getTimeline(auditid).subscribe((res)=>{
        
-        this.loadingfirstcomments = false;
         if (res != null) {
-          this.jsoncomments[ndx] = res.data;     
-          this.numcomments[ndx] = this.jsonboards.data.length;
-          this.commentsdelconfirm = this.jsonboards.data.map(() => false);  
-          this.iscommentmodeedit = this.jsonboards.data.map(() => false);  
-          this.isdeleditcomments = (res.isdelcomm == "Y") ? true : false;
+          this.jsontimeline = res.data;
+          console.log("jsontimeline data ==> ",this.jsontimeline);
         }  
       });
       
   }
 
+  closeTimeline(nothing: string)
+  {
+    this.showtimeline = false;
+  }
 }

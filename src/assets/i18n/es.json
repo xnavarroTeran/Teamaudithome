@@ -38,7 +38,8 @@
         "DATEENTERED": "Fecha de Ingreso",
         "ON": "El",
         "WROTE": "Escribió",
-        "CONFDELCOMMENT": "¿Seguro que desea eliminar este comentario?"
+        "CONFDELCOMMENT": "¿Seguro que desea eliminar este comentario?",
+        "BY": "Por"
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",

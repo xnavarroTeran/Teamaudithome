@@ -202,7 +202,7 @@
                     </strong>
                </span>
                <span class="float-right w-margin-left-20" (click)="showTimeline(i,js.id)">
-                   <mat-icon>access_time</mat-icon>
+                   <mat-icon (click)="showTimeline(i,js.id)">access_time</mat-icon>
                    
                </span>
                <span class="float-right w-margin-left-10" (click)="toggleComments(i,js.id)">
@@ -222,10 +222,7 @@
                 <app-loading-indicator *ngIf="loadingfirstcomments"></app-loading-indicator>
                 <app-inno-comments [iscommentmodeedit]="iscommentmodeedit" [isdelcomments]="isdeleditcomments" [commentconfdel]="commentsdelconfirm" [commentindex]="i" [inAuditid]="js.id" [inComments]="jsoncomments[i]" (closeComments)="toggleComments(i,js.id)" ></app-inno-comments>
             </div>
-            <div class="w-width-full w-top-30 w-padding-left-10 w-padding-right-10">
-                {{jsontimelines[i]}}
-            </div>
-
+        
         </mat-card-footer>
     </mat-card>
     
@@ -275,3 +272,7 @@
         
     </mat-card>
 </div>
+<app-timeline *ngIf="showtimeline" [timelinetitle]="timelinetitle" [jsontimeline]="jsontimeline" (closeTimeline)="closeTimeline('')">
+
+</app-timeline>
+

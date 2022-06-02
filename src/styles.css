@@ -15,3 +15,70 @@ a {
     font-weight: 500 !important;
     text-decoration: none!important;
 }
+
+
+
+
+@media screen and (max-width: 767px) {
+    
+    .w-global-view {
+        position: absolute; 
+        top: 180px; 
+        left: 10%; 
+        background-color: 
+        white; 
+        z-index: 9999; 
+        width: 80%; 
+        min-height: 550px;
+       
+    
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .w-global-view {
+        position: absolute; 
+        top: 180px; 
+        left: 10%; 
+        background-color: 
+        white; 
+        z-index: 9999; 
+        width: 80%; 
+        min-height: 550px;
+       
+    
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .w-global-view {
+        position: absolute; 
+        top: 180px; 
+        left: 10%; 
+        background-color: 
+        white; 
+        z-index: 9999; 
+        width: 80%; 
+        min-height: 550px;
+       
+    
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .w-global-view {
+        position: absolute; 
+        top: 180px; 
+        left: 10%; 
+        background-color: 
+        white; 
+        z-index: 9999; 
+        width: 80%; 
+        min-height: 550px;
+       
+    
+    }
+    
+    
+      
+}
