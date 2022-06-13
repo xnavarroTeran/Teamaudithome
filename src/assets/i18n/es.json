@@ -43,7 +43,7 @@
     },
     "MENU": {
         "MYACCT":"Mi Cuenta",
-        "SETTINGS": "Configuración",
+        "SETTINGS": "Configurar",
         "MASTERTABLES": "Tablas Maestras",
         "HOME":"Inicio",
         "BACK":"Regresar",
@@ -71,7 +71,10 @@
         "INDATEDESC":"Fecha de ingreso descendente",
         "LASTUPDATEASC":"Última modificaicón Ascendente",
         "INDATEASC":"Fecha de ingreso Ascendente",
-        "RISK": "Riesgo"
+        "RISK": "Riesgo",
+        "NORECS": "No se encontro Ningún hallazgo en esta fase",
+        "LOADALL": "Load all comments"
+       
     
       },
     "APPHOME": {

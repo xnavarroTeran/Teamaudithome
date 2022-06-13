@@ -18,11 +18,9 @@ export class InnoCommentsComponent implements OnInit {
   @Input() lblwrittenby: string = 'Written...';
   @Input() lbldate: string = 'Date';
   @Input() lblcomment: string = 'Comment';
-  @Input() inComments: any = [];
-  @Input() isdelcomments: boolean = false;
   @Input() commentindex: number = 0;
-  @Input() commentconfdel: any;
-  @Input() iscommentmodeedit: any;
+  
+  
 
   @Input() inAuditid: number = 0;
   @Output() closeComments = new EventEmitter<number>();
@@ -32,6 +30,12 @@ export class InnoCommentsComponent implements OnInit {
   showloadingcomm: boolean = false;
   jsonboards: any = {};
   jsonarray: any[] = [];
+  inComments: any = [];
+
+  iscommentmodeedit: any;
+  commentconfdel: any;
+  isdelcomments: boolean = false;
+  
   currentuserid: number = 0;
   numcomments: number = 0;
   numtoread: number = 10;
@@ -44,7 +48,7 @@ export class InnoCommentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
+    this.loadComments();
   }
 
   exitComments()
@@ -52,6 +56,11 @@ export class InnoCommentsComponent implements OnInit {
       this.closeComments.next(this.commentindex);
   }
 
+  loadAllComments()
+  {
+    this.numtoread = 0;
+    this.loadComments();
+  }
   loadComments()
   {
 
@@ -63,11 +72,17 @@ export class InnoCommentsComponent implements OnInit {
           this.jsonboards = res; 
           this.inComments = this.jsonboards.data;     
           this.numcomments = this.jsonboards.data.length;
+          this.iscommentmodeedit = this.jsonboards.data.map(() => false);  
+          this.isdelcomments = (res.isdelcomm == "Y") ? true : false;
+          this.commentconfdel = this.jsonboards.data.map(() => false);  
+       
         }  
       });
       
   }
 
+  
+  
   // delete section
 
   setEditMode(ndx: number) {
@@ -96,6 +111,10 @@ export class InnoCommentsComponent implements OnInit {
   {
         this.commserv.deleteComment(commid).subscribe((res)=>{
         this.inComments.splice(ndx,ndx);
+        this.iscommentmodeedit.splice(ndx,ndx);
+        this.commentconfdel.splice(ndx,ndx);
+     
+
     });
     this.cancelEdit(ndx);
   }
@@ -135,6 +154,7 @@ export class InnoCommentsComponent implements OnInit {
   {
     this.textcomment = "";
   }
+  
   
 }
 

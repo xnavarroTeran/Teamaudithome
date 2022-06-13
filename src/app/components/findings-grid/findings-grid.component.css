@@ -23,4 +23,13 @@
     height: 20px;
 }
 
+.card-norecs-found{
+    min-height: 650px;
+}
+
+#img-no-recs {
+    width: 250px!important;
+    height: auto!important;
+}
+
 

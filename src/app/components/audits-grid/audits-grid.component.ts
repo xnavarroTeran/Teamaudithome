@@ -115,7 +115,6 @@ export class AuditsGridComponent implements OnInit {
   ngOnInit(): void {
     
     
-
     if (window.screen.width < 768) { // 768px portrait
       this.ismobile = true;
     } else
@@ -179,6 +178,11 @@ export class AuditsGridComponent implements OnInit {
       
   }
   
+  searchKP(e: any)
+  {
+    if (e.which === 13)
+      this.searchBoards(); 
+  }
   searchBoards()
   {
 

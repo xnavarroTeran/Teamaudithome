@@ -11,6 +11,13 @@ import { json } from 'body-parser';
 export class FindingsGridComponent implements OnInit {
 
   @Input() inBoardid: string = "";
+
+  phasecodeall: string = "all";
+  phasecodeprop: string = "A";
+  phasecodereview: string = "C";
+  phasecodeimplement: string = "P";
+  phasecodefinal: string = "S";
+
   jsonboards: any = {};
   jsonarray: any[] = [];
   numcomments: number[] = [];
@@ -26,10 +33,14 @@ export class FindingsGridComponent implements OnInit {
   showtimeline: boolean = false;
   isshowcomments: boolean = false;
   isdeleditcomments: boolean = false;
+  
 
   numfindings = 0;
   loadingfindings: boolean = true;
   findmodenorm: boolean = true;
+  showmodeexpanded: boolean = false;
+  shownorecsfound: boolean = false;
+
   constructor(private findsev:FindingsServiceService,
               private commserv: CommentsService ) { 
    
@@ -50,15 +61,15 @@ export class FindingsGridComponent implements OnInit {
   boardcommclass: any;
   jsoncomments: any;
   jsontimeline: any;
-
+  phasecode: string = "all";
   loadFindings()
   {
 
       this.loadingfindings = true;
-      this.findsev.getFindings(this.boardid).subscribe((res)=>{
+      this.findsev.getFindings(this.boardid, this.phasecode).subscribe((res)=>{
        
         this.loadingfindings = false;
-        if (res != null) {
+        if (res != null && res.data.length > 0) {
           this.jsonboards = res; 
           this.jsonarray = this.jsonboards.data;     
           this.numfindings = this.jsonboards.data.length;
@@ -68,10 +79,24 @@ export class FindingsGridComponent implements OnInit {
           this.jsoncomments = this.jsonboards.data.map(() => []) ;
           this.boardcommclass = this.jsonboards.data.map(() => "visibility");
           this.numcomments = this.jsonboards.data.map(() => 0) ;
+          this.findmodenorm=true;
+          this.showmodeexpanded=false;
+          this.shownorecsfound=false;
           
-        }  
+        }  else {
+          this.findmodenorm=false;
+          this.showmodeexpanded=false;
+          this.shownorecsfound=true;
+        }
       });
       
+  }
+
+  findingsPhasecode(pcode:string = "all")
+  {
+    this.phasecode = pcode;
+    this.loadFindings();
+
   }
 
   checkOverflow (element: any) {
@@ -91,6 +116,7 @@ export class FindingsGridComponent implements OnInit {
   {
     this.selecteddata = data;
     this.findmodenorm = !this.findmodenorm;
+    this.showmodeexpanded = !this.showmodeexpanded;
   }
   contractFindings()
   {
@@ -105,8 +131,7 @@ export class FindingsGridComponent implements OnInit {
   toggleComments(i: number, auditid: number)
   {
     this.boardcommvisible[i] = !this.boardcommvisible[i];
-    if (this.boardcommvisible[i] == true)
-      this.loadComments(i,auditid);
+    
   }
 
   commentsdelconfirm: any;  
@@ -133,13 +158,6 @@ export class FindingsGridComponent implements OnInit {
   {
     this.timelinetitle = this.jsonboards.data[ndx].innotitle;
     this.showtimeline = true;
-    this.findsev.getTimeline(auditid).subscribe((res)=>{
-       
-        if (res != null) {
-          this.jsontimeline = res.data;
-          console.log("jsontimeline data ==> ",this.jsontimeline);
-        }  
-      });
       
   }
 

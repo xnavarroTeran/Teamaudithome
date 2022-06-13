@@ -19,12 +19,13 @@ export class FindingsServiceService {
 
     }
 
-  getFindings(boardid: number): Observable<any>{
+  getFindings(boardid: number,phasecode: string): Observable<any>{
     
+    phasecode = (phasecode == '' || phasecode == undefined || phasecode == null) ? 'all' : phasecode;
     var params = this.logservices.localGetCompPrefs();
     var userid = params.userid;
     var authToken = this.configservice.getMicrotken() + "~" + params.companytoken + "~" + userid;
-    const url = this.configservice.getTeamauditApi() + "getFindings/" + userid + "/" + boardid;
+    const url = this.configservice.getTeamauditApi() + "getFindings/" + userid + "/" + boardid + "/" + phasecode;
     
     var callOptions = {
         responseType: 'json' as const,

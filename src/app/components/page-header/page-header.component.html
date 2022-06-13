@@ -1,5 +1,5 @@
 <!-- Header start -->
-<header class="header">
+<header class="header" [ngStyle]="{color: fgcolor}">
     <div class="container d-flex align-items-center">
       <div class-="w-padding-5" style="display: inline;">
         <a class="logo" href="/">
@@ -16,7 +16,7 @@
           <mat-icon class="text-white">arrow_drop_down</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="callMyacct()">
             <mat-icon>account_circle</mat-icon>
             <span>
               {{'MENU.MYACCT' | translate}}

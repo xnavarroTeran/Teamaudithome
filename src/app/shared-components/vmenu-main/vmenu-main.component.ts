@@ -1,4 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { LoginServiceService } from 'src/app/shared-services/login-service.service';
 
 @Component({
   selector: 'app-vmenu-main',
@@ -11,7 +12,7 @@ export class VmenuMainComponent implements OnInit {
   @Input() fgcolor: string = "ffffff";
   @Output() showAuditors = new EventEmitter<string>();
   colStyle: string  = "#ffffff";
-  constructor() {
+  constructor(private logservices: LoginServiceService) {
     
    }
 
@@ -23,5 +24,14 @@ export class VmenuMainComponent implements OnInit {
   goShowAuditors()
   {
     this.showAuditors.next('');
+  }
+
+  
+  goAddAudit()
+  {
+    var fparam = this.logservices.localGetCompPrefs();
+    var b64param = btoa(JSON.stringify(fparam));
+    var url = "http://localhost:8083/index/" + b64param;
+    window.location.href = url;
   }
 }

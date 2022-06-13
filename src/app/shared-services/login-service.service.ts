@@ -73,7 +73,7 @@ getHostedJson()
     formData.append("email",email);
     formData.append("pwd",pwd);
     console.log("form data microtoken is ==> ", formData.get("microtoken"));
-    const url = "http://localhost:8080/userLogin";
+    const url = "http://localhost:8082/userLogin";
     return this.http.post(url,formData,optionsPost);
   }
 
@@ -101,6 +101,17 @@ getHostedJson()
     }
     var json = JSON.parse(strJson);
     return json;
+  }
+
+  localGetCompPrefsAsB64()
+  {
+    var strJson = sessionStorage.getItem(this.getEntryToken());
+    if (strJson == undefined || strJson == null) {
+      return null;
+    }
+    var json = JSON.parse(strJson);
+    var b64 = btoa(JSON.stringify(json));
+    return b64;
   }
 
   localClearCmpPref()

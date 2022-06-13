@@ -26,6 +26,7 @@ export class WigoconfigsService {
             "tauditland": "http://localhost:4200",
             "taudithome": "http://localhost:4201/teamaudit-home", 
             "wigoworld": "http://localhost:8082/",
+            "tjavaurl": "http://localhost:8083/",
             "tauditapi": "http://localhost:8081/",
             "wapistats": "http://localhost:3000/",
             "wframe": "http://localhost:3001/",
@@ -46,6 +47,7 @@ export class WigoconfigsService {
             "tauditland": "http://www.teamadit.net",
             "taudithome": "http://www.teamaudit.net/",
             "wigoworld": "http://localhost:8082/",
+            "tjavaurl": "http://localhost:8083/",
             "tauditapi": "http://localhost:8081/", 
             "wapistats": "https://innotips.com/wapistatsnjs/",
             "wframe": "https://innotips.com/wsframe/",
@@ -66,6 +68,7 @@ export class WigoconfigsService {
             "tauditland": "http://www.teamadit.net",
             "taudithome": "http://www.teamaudit.net/", 
             "wigoworld": "http://localhost:8082/",
+            "tjavaurl": "http://localhost:8083/",
             "tauditapi": "http://localhost:8081/", 
             "wapistats": "https://innoboards.com/wapistatsnjs/",
             "wframe": "https://innoboards.com/wsframe/",
@@ -128,6 +131,21 @@ export class WigoconfigsService {
     var ndx = this.getHOSTMode();
     return this.wigoHosts.hWigos[ndx].tauditapi;
   }
+  getTeamJavaUrl()
+  {
+    var ndx = this.getHOSTMode();
+    return this.wigoHosts.hWigos[ndx].tjavaurl;
+  }
+
+  formMyAcctCall(json: any)
+  {
+    var b64Str = btoa(JSON.stringify(json));
+    var url = this.getTeamJavaUrl();
+    url += "index?cpage=useracct&sp=" + b64Str;
+    return url;
+  }
+
+
 }
 
 

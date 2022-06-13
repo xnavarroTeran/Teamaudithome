@@ -59,7 +59,15 @@
         <div class="d-none d-lg-flex col-1"></div>
         <div class="col-11 col-lg-5">
             
-            <input matInput id="searchtext" name="searchtext" [(ngModel)]="searchtext" type="search" class="w-form-control" placeholder="{{'TOOLTIPS.SEARCH' | translate}}" value="">
+            <input matInput 
+                   id="searchtext" 
+                   name="searchtext" 
+                   [(ngModel)]="searchtext" 
+                   type="search" 
+                   class="w-form-control" 
+                   placeholder="{{'TOOLTIPS.SEARCH' | translate}}" 
+                   value=""
+                   (keypress)="searchKP($event)">
             <span class="float-right">
                 <a href="javascript:void" (click)="searchBoards()" class="text-info w-font-r85">
                     {{'GLOBAL.SEARCH' | translate}}
@@ -151,7 +159,7 @@
         <br/>
        
         <mat-card-title class="text-center w-top-20 card-sect-title">
-            <a href="javascript:void(0)" class="text-primary wigo_header_level_3_blue">
+            <a href="javascript:void(0)" class="text-primary wigo_header_level_3_blue" (click)="gotoInnoAudits(js.boardid);">
             
                 <strong>
                     <span>

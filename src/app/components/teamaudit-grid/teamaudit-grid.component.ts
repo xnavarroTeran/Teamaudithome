@@ -75,8 +75,8 @@ export class TeamauditGridComponent implements OnInit {
           this.inFullname = json.firstname + " " + json.lastname;
           this.inOklogin = true;
           this.inErrorlogin = false;
-          this.menubgcolor = 'darkseagreen'; //json.bgcolor;
-          this.menufgcolor = '#ffffff'; //json.fgcolor;
+          this.menubgcolor = json.data[0].themebg;
+          this.menufgcolor = json.data[0].themefg;
       
         }
      

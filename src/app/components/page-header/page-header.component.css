@@ -8,3 +8,76 @@
     letter-spacing: 10px; 
     text-shadow:2px 0 0;
   }
+
+  .navbar-pad-bottom {
+    padding-bottom: 0px!important;
+}
+
+.home-title-font {
+    font-family:'Raleway', sans-serif;
+    letter-spacing: 2px; 
+    font-weight: bold; 
+    color: white; 
+    margin: 0; 
+    font-size: 2.5rem; 
+    letter-spacing: 10px; 
+    text-shadow:2px 0 0;
+}
+  
+@media screen and (max-width: 767px) {
+   
+    .tophdr-container {
+        width: 100%!important;
+        padding-left: 60px!important;
+    }
+    .tophdr-menu{
+        padding-left: 5px;
+        min-height: 30px;
+    }
+    .tophdr-title {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .tophdr-container {
+        width: 100%;
+        padding-left: 60px!important;
+    }
+    .tophdr-menu {
+        padding-left: 5px;
+        min-height: 30px;
+    }
+    .tophdr-title {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tophdr-container {
+        width: 100%;
+        padding-left: 100px!important;
+    }
+    .tophdr-menu {
+        padding-left: 20px;
+        min-height: 30px;
+    }
+    .tophdr-title {
+        display: inline-flex;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tophdr-container {
+        width: 100%;
+        padding-left: 100px!important;
+    }
+   .tophdr-menu {
+        padding-left: 20px;
+        min-height: 30px;
+    }
+    .tophdr-title {
+        display: inline-flex;
+    }
+}
+

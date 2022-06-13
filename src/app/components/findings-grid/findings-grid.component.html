@@ -30,31 +30,31 @@
 <div class="w-top-20">
         <mat-toolbar>
             <mat-toolbar-row>
-                <a href="javascript:void" mat-button fxHide.lt-md="true">
+                <a href="javascript:void" mat-button fxHide.lt-md="true" (click)="findingsPhasecode(phasecodeall)">
                     <i class="fa fa-object-group w-font-r85"></i>
                     <span>
                         {{'GLOBAL.ALLMALE' | translate}}
                     </span>
                 </a>
-                <a href="javascript:void" mat-button class="text-info" fxHide.lt-md="true">
+                <a href="javascript:void" mat-button class="text-info" fxHide.lt-md="true" (click)="findingsPhasecode(phasecodeprop)">
                     <i class="fa fa-lightbulb w-font-r85"></i>
                     <span>
                         {{'MENU.PROPOSAL' | translate}}
                     </span>
                 </a>
-                <a href="javascript:void" mat-button class="text-warning" fxHide.lt-md="true">
+                <a href="javascript:void" mat-button class="text-warning" fxHide.lt-md="true" (click)="findingsPhasecode(phasecodereview)">
                     <i class="fa fa-user w-font-r85"></i>
                     <span>
                         {{'MENU.REVIEW' | translate}}
                     </span>
                 </a>
-                <a href="javascript:void" mat-button class="text-danger" fxHide.lt-md="true">
+                <a href="javascript:void" mat-button class="text-danger" fxHide.lt-md="true" (click)="findingsPhasecode(phasecodeimplement)">
                     <i class="fa fa-wrench w-font-r85"></i>
                     <span>
                         {{'MENU.IMPLEMENT' | translate}}
                     </span>
                 </a>
-                <a href="javascript:void" mat-button class="text-success" fxHide.lt-md="true">
+                <a href="javascript:void" mat-button class="text-success" fxHide.lt-md="true" (click)="findingsPhasecode(phasecodefinal)">
                     <i class="fa fa-trophy w-font-r85"></i>
                     <span>
                         {{'MENU.FINALIZED' | translate}}
@@ -95,31 +95,31 @@
                         <mat-icon>menu</mat-icon>
                     </button>
                     <mat-menu #menu_sm="matMenu">
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="findingsPhasecode(phasecodeall)">
                             <i class="fa fa-object-group w-font-r85"></i>
                             <span>
                                 {{'GLOBAL.ALLMALE' | translate}}
                             </span>
                         </button>
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="findingsPhasecode(phasecodeprop)">
                             <i class="fa fa-lightbulb w-font-r85"></i>
                             <span>
                                 {{'MENU.PROPOSAL' | translate}}
                             </span>
                         </button>
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="findingsPhasecode(phasecodereview)">
                             <i class="fa fa-user w-font-r85"></i>
                             <span>
                                 {{'MENU.REVIEW' | translate}}
                             </span>
                         </button>
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="findingsPhasecode(phasecodeimplement)"> 
                             <i class="fa fa-wrench w-font-r85"></i>
                             <span>
                                 {{'MENU.IMPLEMENT' | translate}}
                             </span>
                         </button>
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="findingsPhasecode(phasecodefinal)">
                             <i class="fa fa-trophy w-font-r85"></i>
                             <span>
                                 {{'MENU.FINALIZED' | translate}}
@@ -220,7 +220,7 @@
             </div>
             <div class="w-width-full w-top-30 w-padding-left-10 w-padding-right-10">
                 <app-loading-indicator *ngIf="loadingfirstcomments"></app-loading-indicator>
-                <app-inno-comments [iscommentmodeedit]="iscommentmodeedit" [isdelcomments]="isdeleditcomments" [commentconfdel]="commentsdelconfirm" [commentindex]="i" [inAuditid]="js.id" [inComments]="jsoncomments[i]" (closeComments)="toggleComments(i,js.id)" ></app-inno-comments>
+                <app-inno-comments [commentindex]="i" [inAuditid]="js.id" (closeComments)="toggleComments(i,js.id)" ></app-inno-comments>
             </div>
         
         </mat-card-footer>
@@ -228,7 +228,7 @@
     
 </div>
 
-<div *ngIf="!findmodenorm" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="1px" fxLayoutAlign="space-evenly">
+<div *ngIf="showmodeexpanded" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutGap.lt-md="1px" fxLayoutAlign="space-evenly">
     <mat-card class="border rounded w-top-10"  fxFlex.gt-md="70" fxFlex.lt-md="100">
         <mat-card-title class="w-bottom-10 w-padding-10 text-right">
             <a href="javascript:void" (click)="contractFindings();">
@@ -272,7 +272,21 @@
         
     </mat-card>
 </div>
-<app-timeline *ngIf="showtimeline" [timelinetitle]="timelinetitle" [jsontimeline]="jsontimeline" (closeTimeline)="closeTimeline('')">
+<div *ngIf="shownorecsfound" fxLayout="row wrap"  fxLayoutAlign="center center" fxFlexFill class="card-norecs-found">
+    <div fxFlex="100" class="w-h5 text-info text-center">
+        <a href="javascript:void" (click)="findingsPhasecode(phasecodeall)">
+            
+                *** {{'AUDITS.NORECS' | translate}} ***
+               
+
+        
+        </a>
+    </div>
+    <div fxFlex="50" fxLayoutAlign="center center" class="w-top-30">
+        <img id="img-no-recs" src="assets/innogallery/icon-boards.png"/>
+    </div>
+</div>
+<app-timeline *ngIf="showtimeline" [timelinetitle]="timelinetitle" [auditid]="boardid" (closeTimeline)="closeTimeline('')">
 
 </app-timeline>
 

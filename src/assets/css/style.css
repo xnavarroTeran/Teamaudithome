@@ -155,7 +155,7 @@ section {
   .btn-filled {
     background-color: #256be6; }
     .btn-filled:hover {
-      background-color: darkseagreen;
+      background-color: #8fbc8f;
       box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05); }
       .btn-filled:hover i {
         color: #000;
@@ -598,10 +598,10 @@ section {
   width: 100%;
   z-index: 9;
   transition: all .5s;
-  background-color: darkseagreen; }
+  background-color: #8fbc8f; }
   .header.fixed-header {
     position: fixed;
-    background: darkseagreen; }
+    background: #8fbc8f; }
   .header .container {
     position: relative;
     height: 100%; }
@@ -677,7 +677,7 @@ section {
           width: 7px;
           height: 1px;
           border-radius: 50%;
-          background: darkseagreen;
+          background: #8fbc8f;
           display: block;
           position: absolute;
           left: 10px;
@@ -685,7 +685,7 @@ section {
           transform: scale(1);
           transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .header .primary-menu ul li.has-menu-child ul.sub-menu a:hover {
-          background-color: darkseagreen;
+          background-color: #8fbc8f;
           color: #fff; }
         .header .primary-menu ul li.has-menu-child ul.sub-menu a:hover:before {
           background: #fff;
@@ -713,7 +713,7 @@ section {
               top: 13px;
               position: relative; }
               .header .primary-menu ul li a.login.btn.btn-outline.btn-round:hover span, .header .primary-menu ul li .iconBox a.login.btn.btn-outline:hover span, .iconBox .header .primary-menu ul li a.login.btn.btn-outline:hover span {
-                color: darkseagreen; } }
+                color: #8fbc8f; } }
           @media screen and (max-width: 991px) {
             .header .primary-menu ul li a.login.btn.btn-outline.btn-round, .header .primary-menu ul li .iconBox a.login.btn.btn-outline, .iconBox .header .primary-menu ul li a.login.btn.btn-outline {
               border: none;
@@ -812,7 +812,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background: darkseagreen;
+    background: #8fbc8f;
     opacity: .7; }
   .banner.v2 {
     background-image: url("../images/banner/4.jpg"); }
@@ -1118,7 +1118,7 @@ section {
   background-position: center top;
   background-repeat: no-repeat;
   background-image: url("../images/footer-bg.png");
-  background-color: darkseagreen;
+  background-color: #8fbc8f;
   position: relative; }
   .footer .foo-top {
     padding: 100px 0 90px; }
@@ -1758,7 +1758,7 @@ section {
     .ps-works .video-box, .ps-works .video-box-round {
       padding: 0 15px; } }
   .ps-works .video-box:after, .ps-works .video-box-round:after {
-    background-color: darkseagreen;
+    background-color: #8fbc8f;
     clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
     max-width: 730px;
     height: calc(100% + 140px);

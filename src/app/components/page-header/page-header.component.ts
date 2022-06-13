@@ -16,6 +16,9 @@ export class PageHeaderComponent implements OnInit {
 
   // field visibility
   
+  
+  @Input() bgcolor: string = "#000000";
+  @Input() fgcolor: string = "ffffff";
   @Input() inUsername: string = '';
   @Input() inFullname: string = '';
   @Input() inErrorlogin: boolean = false;
@@ -79,5 +82,13 @@ export class PageHeaderComponent implements OnInit {
     var url = this.wconfigserv.getTeamauditLanding();
     this.loginserv.localClearCmpPref();
     window.location.href=url;
+  }
+  callMyacct()
+  {
+    var json = this.loginserv.localGetCompPrefs();
+    var url = this.wconfigserv.formMyAcctCall(json);
+    window.location.href= url;
+
+
   }
 }
