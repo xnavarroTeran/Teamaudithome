@@ -50,9 +50,13 @@
             <div id="innohome_boards_tab_div" class="wigo-vtransp-menu-divider"></div>    
         </div>
         <div id="ih-vmenu-sets" style="width: 100%;" class="wigovmenu w-top-10 text-center" data-container='body' data-html='true' data-placement='right'>
-            <a href="#" onclick="return showDashboard();">
-                <div id="inno-boards-icon" class="text-center" [ngStyle] = "{color: colStyle}">
-                    <mat-icon>settings</mat-icon>
+            <a href="javascript:void" (click)="showSubMenu()">
+                <div *ngIf="!showsubmenu" id="inno-boards-icon" class="text-center" [ngStyle] = "{color: colStyle}">
+                    <mat-icon>arrow_downward</mat-icon>
+                    <!-- <i class="fas fa-filter pull-center"></i>&nbsp; -->
+                </div>
+                <div *ngIf="showsubmenu" id="inno-boards-icon" class="text-center" [ngStyle] = "{color: colStyle}">
+                    <mat-icon>arrow_upward</mat-icon>
                     <!-- <i class="fas fa-filter pull-center"></i>&nbsp; -->
                 </div>
                 <div id="inno-boards-text" class="text-center">
@@ -64,5 +68,46 @@
             <br>
             <div id="innohome_boards_tab_div" class="wigo-vtransp-menu-divider"></div>    
         </div>
+
+        <div *ngIf="showsubmenu" [ngStyle] = "{background: bgcolor}" [ngStyle]="{color: fgcolor}">
+            <div id="is-vmenu-lpref" style="width: 100%;" class="wigovmenu w-top-10 text-center" data-container='body' data-html='true' data-placement='right'>
+                <a href="#" click="return showDashboard();">
+                    <div id="inno-boards-icon" class="text-center" [ngStyle] = "{color: colStyle}">
+                        <mat-icon>settings</mat-icon>
+                        
+                    </div>
+                    <div id="inno-boards-text" class="text-center">
+                        <span class="wigo-xs-noshow wigo-sm-font-size" [ngStyle] = "{color: colStyle}">
+                            {{'MENU.PREFERENCES' | translate}}
+                        </span>
+                    </div>
+                </a>
+                <br>
+                <div id="innohome_boards_tab_div" class="wigo-vtransp-menu-divider"></div>    
+            </div>
+    
+        </div>
+
+        <div *ngIf="showsubmenu" [ngStyle] = "{background: bgcolor}" [ngStyle]="{color: fgcolor}">
+            <div id="is-vmenu-notif" style="width: 100%;" class="wigovmenu w-top-10 text-center" data-container='body' data-html='true' data-placement='right'>
+                <a href="#" click="return showDashboard();">
+                    <div id="inno-boards-icon" class="text-center" [ngStyle] = "{color: colStyle}">
+                       <!---- <mat-icon>settings</mat-icon> -->
+                        <i class="fa fa-at"></i>
+                        <!-- <i class="fas fa-filter pull-center"></i>&nbsp; -->
+                    </div>
+                    <div id="inno-boards-text" class="text-center">
+                        <span class="wigo-xs-noshow wigo-sm-font-size" [ngStyle] = "{color: colStyle}">
+                            {{'MENU.NOTIF' | translate}}
+                        </span>
+                    </div>
+                </a>
+                <br>
+                <div id="innohome_boards_tab_div" class="wigo-vtransp-menu-divider"></div>    
+            </div>
+    
+        </div>
+
+
        
    

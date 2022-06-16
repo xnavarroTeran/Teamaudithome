@@ -56,7 +56,9 @@
         "REPORTS":"Reportes",
         "ADDAUDIT": "Agregar Auditoria",
         "LOGOUT": "Salir",
-        "EXPORT": "Exportar"
+        "EXPORT": "Exportar",
+        "PREFERENCES": "Preferencias",
+        "NOTIF":"Plantillas"
     },
     "AUDITS": {
         "AUDITDEPT": "Dept. Auditado",

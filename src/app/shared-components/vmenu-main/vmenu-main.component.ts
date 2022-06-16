@@ -12,6 +12,8 @@ export class VmenuMainComponent implements OnInit {
   @Input() fgcolor: string = "ffffff";
   @Output() showAuditors = new EventEmitter<string>();
   colStyle: string  = "#ffffff";
+  showsubmenu: boolean = false;
+
   constructor(private logservices: LoginServiceService) {
     
    }
@@ -33,5 +35,10 @@ export class VmenuMainComponent implements OnInit {
     var b64param = btoa(JSON.stringify(fparam));
     var url = "http://localhost:8083/index/" + b64param;
     window.location.href = url;
+  }
+
+  showSubMenu()
+  {
+    this.showsubmenu = !this.showsubmenu;
   }
 }

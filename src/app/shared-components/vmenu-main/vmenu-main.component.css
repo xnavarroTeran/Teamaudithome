@@ -1,16 +1,43 @@
 @media screen and (max-width: 767px) {
-
-      
+    .v-sub-main {
+            position: absolute; 
+            top: 150px; 
+            left: 120px; 
+            min-height: 450px; 
+            min-width: 200px; 
+            z-index: 9999;
+    }
 }
     
 @media (min-width: 768px) and (max-width: 991px) {
-   
+    .v-sub-main {
+        position: absolute; 
+        top: 100px; 
+        left: 80px; 
+        min-height: 450px; 
+        min-width: 180px; 
+        z-index: 9999;
+    }
 }
     
 @media (min-width: 992px) and (max-width: 1199px) {
-
+    .v-sub-main {
+        position: absolute; 
+        top: 120px; 
+        left: 120px; 
+        min-height: 450px; 
+        min-width: 180px; 
+        z-index: 9999;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-
+    .v-sub-main {
+        position: absolute; 
+        top: 120px; 
+        left: 120px; 
+        min-height: 450px; 
+        min-width: 180px; 
+        z-index: 9999;
+    }
 }
